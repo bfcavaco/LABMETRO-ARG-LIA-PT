@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DSRepEmpresa" targetNamespace="http://tempuri.org/DSRepEmpresa.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DSRepEmpresa.xsd" xmlns:mstns="http://tempuri.org/DSRepEmpresa.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DSRepEmpresa" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Contacto">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idContacto" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="idEmpresa" type="xs:int" />
+							<xs:element name="idUtilizador" type="xs:int" minOccurs="0" />
+							<xs:element name="idLocalidade" type="xs:int" minOccurs="0" />
+							<xs:element name="idTitulo" type="xs:int" minOccurs="0" />
+							<xs:element name="idPais" type="xs:int" minOccurs="0" />
+							<xs:element name="nome" type="xs:string" />
+							<xs:element name="contactoPrincipal" type="xs:boolean" />
+							<xs:element name="cargo" type="xs:string" minOccurs="0" />
+							<xs:element name="departamento" type="xs:string" minOccurs="0" />
+							<xs:element name="extensaoEmpresa" type="xs:string" minOccurs="0" />
+							<xs:element name="telefoneEmpresa" type="xs:string" minOccurs="0" />
+							<xs:element name="faxEmpresa" type="xs:string" minOccurs="0" />
+							<xs:element name="emailEmpresa" type="xs:string" minOccurs="0" />
+							<xs:element name="moradaCasa" type="xs:string" minOccurs="0" />
+							<xs:element name="codigoPostal" type="xs:string" minOccurs="0" />
+							<xs:element name="telefoneCasa" type="xs:string" minOccurs="0" />
+							<xs:element name="telemovel" type="xs:string" minOccurs="0" />
+							<xs:element name="emailCasa" type="xs:string" minOccurs="0" />
+							<xs:element name="activo" type="xs:boolean" />
+							<xs:element name="observacoes" type="xs:string" minOccurs="0" />
+							<xs:element name="dtCriacao" type="xs:dateTime" />
+							<xs:element name="idUtilCriacao" type="xs:int" />
+							<xs:element name="dtAlteracao" type="xs:dateTime" />
+							<xs:element name="idUtilAlteracao" type="xs:int" />
+							<xs:element name="idContactoOld" type="xs:int" minOccurs="0" />
+							<xs:element name="Titulo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Empresa">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idEmpresa" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="idEmpresaPai" type="xs:int" minOccurs="0" />
+							<xs:element name="idLocalidade" type="xs:int" minOccurs="0" />
+							<xs:element name="idTipoEmpresa" type="xs:int" minOccurs="0" />
+							<xs:element name="idPais" type="xs:int" minOccurs="0" />
+							<xs:element name="idEstadoEmpresa" type="xs:int" />
+							<xs:element name="nome" type="xs:string" />
+							<xs:element name="nomeAbreviado" type="xs:string" minOccurs="0" />
+							<xs:element name="nif" type="xs:string" minOccurs="0" />
+							<xs:element name="morada" type="xs:string" minOccurs="0" />
+							<xs:element name="codigoPostal" type="xs:string" minOccurs="0" />
+							<xs:element name="telefone" type="xs:string" minOccurs="0" />
+							<xs:element name="telefone2" type="xs:string" minOccurs="0" />
+							<xs:element name="fax" type="xs:string" minOccurs="0" />
+							<xs:element name="email" type="xs:string" minOccurs="0" />
+							<xs:element name="numCliente" type="xs:string" minOccurs="0" />
+							<xs:element name="sede" type="xs:boolean" />
+							<xs:element name="concessionario" type="xs:boolean" minOccurs="0" />
+							<xs:element name="pagamentoAtraso" type="xs:boolean" />
+							<xs:element name="percDesconto" type="xs:decimal" minOccurs="0" />
+							<xs:element name="dtEstado" type="xs:dateTime" />
+							<xs:element name="observacoes" type="xs:string" minOccurs="0" />
+							<xs:element name="idUtilCriacao" type="xs:int" />
+							<xs:element name="dtCriacao" type="xs:dateTime" />
+							<xs:element name="idUtilAlteracao" type="xs:int" />
+							<xs:element name="dtAlteracao" type="xs:dateTime" />
+							<xs:element name="idEmpresaOld" type="xs:int" minOccurs="0" />
+							<xs:element name="Localidade" type="xs:string" minOccurs="0" />
+							<xs:element name="Pais" type="xs:string" minOccurs="0" />
+							<xs:element name="numClienteSAP" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DSRepEmpresaKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Contacto" />
+			<xs:field xpath="mstns:idContacto" />
+		</xs:unique>
+		<xs:unique name="DSRepEmpresaKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Empresa" />
+			<xs:field xpath="mstns:idEmpresa" />
+		</xs:unique>
+		<xs:keyref name="EmpresaContacto" refer="DSRepEmpresaKey1">
+			<xs:selector xpath=".//mstns:Contacto" />
+			<xs:field xpath="mstns:idEmpresa" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,1837 @@
+﻿using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using LabMetro.GERAL;
+using LabMetro.REPORTS;
+using System.Configuration;
+using System.Text;
+using System.IO;
+using System.Data.SqlTypes; 
+
+
+namespace LabMetro
+{
+    public partial class FormFacturaES : System.Web.UI.Page
+    {
+        private double dbValorSubTotal = 0;
+        private double dbValorDescontoTotal = 0;
+        private const string ID_PAG = "FACTURAS_1";//NOME DA PAGINA
+        private static string myApp = (string)ConfigurationManager.AppSettings["Application_Country"].ToUpper();
+
+        DataView DVOrigem;
+        DataTable DTOrigem;
+        DataTable DTDestino;
+        DataView DVDestino;
+
+        #region Web Form Designer generated code
+        override protected void OnInit(EventArgs e)
+        {
+            //
+            // CODEGEN: This call is required by the ASP.NET Web Form Designer.
+            //
+            InitializeComponent();
+
+            base.OnInit(e);
+        }
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+   
+            this.btnFicheiro.Click += new System.EventHandler(this.btnFicheiro_Click);
+            this.ddEmpresa.SelectedIndexChanged += new System.EventHandler(this.ddEmpresa_SelectedIndexChanged);
+            this.ddBRE.SelectedIndexChanged += new System.EventHandler(this.ddBRE_SelectedIndexChanged);
+            this.cbBRE.CheckedChanged += new System.EventHandler(this.cbBRE_CheckedChanged);
+            this.btnSubmitGrid.Click += new System.EventHandler(this.btnSubmitGrid_Click);
+            this.dgDestino.DeleteCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.dgDestino_DeleteCommand);
+            this.txtValorAjudasCustoDeslocacoes.TextChanged += new System.EventHandler(this.txtValorAjudasCustoDeslocacoes_TextChanged);
+            this.txtValorDespesasEnvio.TextChanged += new System.EventHandler(this.txtValorDespesasEnvio_TextChanged);
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnRequisicoes.Click += new System.EventHandler(this.btnRequisicoes_Click);
+            this.txtPesquisaEmpresa.TextChanged += new System.EventHandler(this.txtPesquisaEmpresa_TextChanged);
+            this.txtPesquisaNif.TextChanged += new System.EventHandler(this.txtPesquisaNif_TextChanged);
+            this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
+            this.btnVerFactura.Click += new System.EventHandler(this.btnVerFactura_Click);
+
+        }
+        #endregion
+
+        private void Page_Load(object sender, System.EventArgs e)
+        {
+            this.lblMessage.Text = "";
+            this.lblErroRequisicoes.Text = "";
+
+            Hashtable ht = (Hashtable)this.Session["HTPermissions"];
+            if (ht == null) //session expired
+            {
+                this.Server.Transfer("Default.aspx?err=2", false);
+            }
+            else
+            {
+                if (!ht.ContainsKey(ID_PAG))
+                {
+                    this.Server.Transfer("Default.aspx?err=1", false);
+                }
+                else
+                {
+                    int intAcesso = System.Convert.ToInt32(ht[ID_PAG]);
+
+                    if (intAcesso == 0)
+                    {
+                        this.btnSubmit.Enabled = false;
+                        this.btnReset.Enabled = false;
+                    }
+
+                    if (!this.Page.IsPostBack)
+                    {
+
+                        if (this.Request.QueryString["id"] != null)
+                        {
+                            this.btnSubmit.CommandArgument = "update";
+
+                            if (this.Request.QueryString["id"] != "")
+                            {
+                                this.ViewState["idFactura"] = this.Request.QueryString["id"].ToString();
+                                
+                                this.fillForm(this.ViewState["idFactura"].ToString());
+                                this.fillEmpresaContratanteDoBRE(); //isto ja foi chamado no filldata... nao sei pq está aqui de novo.
+
+
+                                //this.fillCodigoBloqueio(); a fazer: codigo bloqueio e condições pagamento da empresa
+                                
+                                this.fillEmpresaDevedora(); //prenche os dados devedores da empresa ou empresa contratante
+                            }
+                        }
+                        //form vazio
+                        else
+                        {
+                            this.ViewState["idFactura"] = null;
+
+                            this.btnSubmit.CommandArgument = "insert";
+
+                            this.fillEmpresas(); //preenche empresas
+                            this.fillBREs(); //preenche bre's
+                            
+                            this.fillEmpresaContratanteDoBRE(); //preenche empresas contratantes
+                           
+                            this.fillEmpresaDevedora(); //preenche se empresa ou emp.cont. é devedora
+
+                            this.setFacturaData(); //para inicializar alguns campos a 0
+                            this.btnFicheiro.Enabled = false; //factura n está inserida, n se pode criar ficheiro
+                            this.btnVerFactura.Enabled = false;
+                        }
+
+                        //para a ordenacao do datagrid de origem
+                        this.ViewState["sortField"] = "codTipoEquipamento";
+                        this.ViewState["sortDirection"] = "DESC";
+
+                        this.ViewState["sortFieldDestino"] = "codTipoEquipamento";
+                        this.ViewState["sortDirectionDestino"] = "DESC";
+
+                        this.ViewState["sortFieldReq"] = "idRequisicao";
+                        this.ViewState["sortDirectionReq"] = "DESC";
+                        //==============================================
+
+                        this.CreateDataSource();
+                        this.BindGridSource();
+                        try
+                        {
+                            this.CreateDataSourceDTDestino();
+                            this.BindGridDestino();
+                        }
+                        catch (Exception ex)
+                        {
+                            //this.Response.Write(ex.ToString()); 
+                            GERAL.clsWriteError.WriteLog(ex);
+                        }
+                    }
+                    //==================================================
+                }
+            }
+
+
+        }
+
+        //*************************************************************************************************
+        //FUNÇÕES ASSOCIADAS AOS DOIS DATAGRIDS PRINCIPAIS, ORIGEM E DESTINO.
+        //*************************************************************************************************
+
+
+        //=================================================================================================
+        //CRIA DATASOURCE DOS SERVIÇOS POR FACTURAR (DATAGRID ORIGEM) =====================================
+        //A DATATABLE DTOrigem é guardada em viewstate====================================================
+        //=================================================================================================
+        private void CreateDataSource()
+        {
+            DTOrigem = new DataTable();
+            DATA.FacturaData f = new LabMetro.DATA.FacturaData();
+            DTOrigem = f.DTGetServicosForFactura(this.ddBRE.SelectedValue);
+            //====================================================================
+            DataColumn[] dcPk = new DataColumn[1];
+            dcPk[0] = DTOrigem.Columns["idServico"];
+            DTOrigem.PrimaryKey = dcPk;
+            //====================================================================
+            this.ViewState["DTOrigem"] = DTOrigem;
+
+            f = null;
+        }
+
+        //=================================================================================================
+        //BIND GRID DO DATAGRID ORIGEM - SERVIÇOS POR FACTURAR ============================================
+        //=================================================================================================
+        private void BindGridSource()
+        {
+            DTOrigem = (DataTable)this.ViewState["DTOrigem"];
+
+            DVOrigem = new DataView(DTOrigem);
+            DVOrigem.Sort = this.ViewState["sortField"].ToString() + " " + this.ViewState["sortDirection"];
+
+            this.dgOrigem.DataSource = DVOrigem;
+            this.dgOrigem.DataBind();
+        }
+
+        //=================================================================================================
+        //SORT GRID ORIGEM ================================================================================
+        //=================================================================================================
+        protected void SortGridOrigem(Object s, DataGridSortCommandEventArgs e)
+        {
+            switch (this.ViewState["sortDirection"].ToString())
+            {
+                case "ASC":
+                    this.ViewState["sortDirection"] = "DESC";
+                    break;
+                case "DESC":
+                    this.ViewState["sortDirection"] = "ASC";
+                    break;
+            }
+            this.ViewState["sortField"] = e.SortExpression;
+            this.BindGridSource();
+        }
+
+        //========================================================================================
+        //itemdatabound do dgorigem (novo-17-01-2007. para poder trocar requisicoes)
+        //========================================================================================
+        public void dgOrigem_ItemDataBound(object sender, DataGridItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.EditItem)
+            {
+                DataRowView DRV = (DataRowView)e.Item.DataItem;
+
+                DropDownList ddRequisicao = (DropDownList)e.Item.FindControl("ddRequisicaoEdit");
+
+                //a requisicao está sempre associada à mesma empresa que os serviços, por isso tudo bem. 
+
+                DATA.RequisicaoBD requisicao = new LabMetro.DATA.RequisicaoBD();
+                SqlDataReader DR = requisicao.DRGetRequisicoesIncompletasByEmpresa(this.ddEmpresa.SelectedValue);
+                ddRequisicao.DataSource = DR;
+                ddRequisicao.DataBind();
+                ddRequisicao.Items.Insert(0, new ListItem("", ""));
+                DR.Close();
+
+                requisicao = null;
+
+                string idRequisicao = DRV["idRequisicao"].ToString();
+                try
+                {
+                    if (idRequisicao != "") ddRequisicao.SelectedValue = idRequisicao;
+                }
+                catch
+                { }
+            }
+        }
+
+        //=================================================================================================
+        //EDITA O GRID DO ORIGEM
+        //=================================================================================================
+        protected void editGridOrigem(Object sender, DataGridCommandEventArgs e)
+        {
+            this.dgOrigem.EditItemIndex = e.Item.ItemIndex;
+            this.BindGridSource();
+        }
+
+        //=================================================================================================
+        //CANCELA A EDIÇÃO DO GRID DE ORIGEM
+        //=================================================================================================
+        protected void cancelGridOrigem(Object sender, DataGridCommandEventArgs e)
+        {
+            this.dgOrigem.EditItemIndex = -1;
+            this.BindGridSource();
+        }
+
+        //=================================================================================================
+        //UPDATE AO GRID DE ORIGEM - permite alterar a ref.Req.(Unicamente)
+        //=================================================================================================
+        protected void updateGridOrigem(Object sender, DataGridCommandEventArgs e)
+        {
+            string idServico = this.dgOrigem.DataKeys[e.Item.ItemIndex].ToString();
+
+            DropDownList ddRequisicao = (DropDownList)e.Item.FindControl("ddRequisicaoEdit");
+
+            if (ddRequisicao.SelectedValue != "") //nao deve estar vazio
+            {
+
+                string strSQL = "UPDATE servico SET idRequisicao = " + ddRequisicao.SelectedValue + " WHERE idServico = " + idServico;
+                this.lblMessage.Text = GERAL.clsDataAccess.ExecuteNonQueryDB(strSQL);
+
+                this.dgOrigem.EditItemIndex = -1;
+                this.CreateDataSource();
+                this.BindGridSource();
+                this.CreateDataSourceDTDestino();
+                this.BindGridDestino();
+
+            }
+        }
+
+        //=================================================================================================
+        //CRIA DATASOURCE DO DATAGRID DESTINO -- SERVIÇOS QUE DE FACTO SÃO FACTURADOS======================
+        //OU VEM DA BD, NO CASO DE JÁ ESTAR PREENCHIDO, OU É UMA REPLICA DO DATAGRID ORIGEM (EM ESTRUTURA)
+        //A DATATABLE DTDestino é guardada em viewstate====================================================
+        //=================================================================================================
+        private void CreateDataSourceDTDestino()
+        {
+            if (!this.Page.IsPostBack)
+            {
+                if (this.Request.QueryString["id"] != null && this.Request.QueryString["id"] != "")
+                {
+                    DATA.FacturaData f = new LabMetro.DATA.FacturaData();
+                    DTDestino = f.DTGetServicoByFactura(this.ViewState["idFactura"].ToString());
+                    DataColumn[] dcPk = new DataColumn[1];
+                    dcPk[0] = DTDestino.Columns["idServico"];
+                    DTDestino.PrimaryKey = dcPk;
+
+                    f = null;
+                }
+                else
+                {
+                    DTDestino = new DataTable();
+                    DTOrigem = (DataTable)this.ViewState["DTOrigem"];
+                    DTDestino = DTOrigem.Clone();
+                }
+            }
+            else
+            {
+                DTDestino = new DataTable();
+                DTOrigem = (DataTable)this.ViewState["DTOrigem"];
+                DTDestino = DTOrigem.Clone();
+            }
+            this.ViewState["DTDestino"] = DTDestino;
+
+        }
+
+        //=================================================================================================
+        //BIND GRID DO DATAGRID DESTINO - SERVIÇOS FACTURADOS= ============================================
+        //=================================================================================================
+        private void BindGridDestino()
+        {
+            DTDestino = (DataTable)this.ViewState["DTDestino"];
+
+            DVDestino = new DataView(DTDestino);
+            DVDestino.Sort = this.ViewState["sortFieldDestino"].ToString() + " " + this.ViewState["sortDirectionDestino"];
+            this.dgDestino.DataSource = DVDestino;
+            this.dgDestino.DataBind();
+        }
+
+        //=================================================================================================
+        //SORT GRID DESTINO
+        //=================================================================================================
+        protected void SortGridDestino(Object s, DataGridSortCommandEventArgs e)
+        {
+            switch (this.ViewState["sortDirectionDestino"].ToString())
+            {
+                case "ASC":
+                    this.ViewState["sortDirectionDestino"] = "DESC";
+                    break;
+                case "DESC":
+                    this.ViewState["sortDirectionDestino"] = "ASC";
+                    break;
+            }
+
+            this.ViewState["sortFieldDestino"] = e.SortExpression;
+            this.BindGridDestino();
+        }
+
+        //*************************************************************************************************
+        //FIM GRIDS PRINCIPAIS
+        //*************************************************************************************************
+
+
+        //*************************************************************************************************
+        //INÍCIO REQUISIÇÕES
+        //*************************************************************************************************
+
+
+        //=================================================================================================
+        //BIND GRID DAS REQUISIÇÕES
+        //=================================================================================================
+        private void BindGridRequisicoes()
+        {
+            DATA.RequisicaoBD req = new LabMetro.DATA.RequisicaoBD();
+            DataTable DT = req.DTListaRequisicoes(this.ddEmpresa.SelectedValue, "", "", "", false, false);
+            DataView DV = new DataView(DT);
+            DV.Sort = this.ViewState["sortFieldReq"].ToString() + " " + this.ViewState["sortDirectionReq"];
+
+            this.dgRequisicoes.DataSource = DV;
+            this.dgRequisicoes.DataBind();
+
+            req = null;
+        }
+
+        //=================================================================================================
+        //PAGING DAS REQUISICOES
+        //=================================================================================================
+        public void DoPaging(Object s, DataGridPageChangedEventArgs e)
+        {
+            this.dgRequisicoes.CurrentPageIndex = e.NewPageIndex;
+            this.BindGridRequisicoes();
+
+        }
+
+        //=================================================================================================
+        //SORTGRID DAS REQUISICOES
+        //=================================================================================================
+        public void SortGrid(Object s, DataGridSortCommandEventArgs e)
+        {
+            switch (this.ViewState["sortDirectionReq"].ToString())
+            {
+                case "ASC":
+                    this.ViewState["sortDirectionReq"] = "DESC";
+                    break;
+                case "DESC":
+                    this.ViewState["sortDirectionReq"] = "ASC";
+                    break;
+            }
+
+            this.ViewState["sortFieldReq"] = e.SortExpression;
+
+            this.BindGridRequisicoes();
+
+        }
+
+        //marcar requisicoes como completas
+        //=================================================================================================
+        //=================================================================================================
+        protected void cb_SetComplete(object sender, EventArgs e)
+        {
+            //encontrar a dropdown
+            CheckBox cbSender = (CheckBox)sender;
+            DataGridItem dgi = (DataGridItem)cbSender.Parent.Parent;
+            int i = dgi.ItemIndex;
+            string idRequisicao = this.dgRequisicoes.DataKeys[i].ToString();
+            //this.Response.Write(idRequisicao); 
+            DATA.RequisicaoBD req = new LabMetro.DATA.RequisicaoBD();
+            req.UpdateRequisicaoCompleta(idRequisicao, cbSender.Checked.ToString(), User.Identity.Name.ToString());
+        }
+
+        //=================================================================================================
+        // Requisições - SHOW/HIDE
+        //=================================================================================================
+        private void btnRequisicoes_Click(object sender, System.EventArgs e)
+        {
+            this.dgRequisicoes.CurrentPageIndex = 0;
+            if (this.dgRequisicoes.Items.Count != 0)
+            {
+                this.dgRequisicoes.DataSource = null;
+                this.dgRequisicoes.DataBind();
+                this.dgRequisicoes.Controls.Clear();
+                this.dgRequisicoes.Visible = false;
+                this.btnRequisicoes.Text = "Ver Requisições";
+            }
+            else
+            {
+                this.BindGridRequisicoes();
+                if (this.dgRequisicoes.Items.Count == 0)
+                    this.dgRequisicoes.Visible = false;
+                else
+                {
+                    this.dgRequisicoes.Visible = true;
+                    this.btnRequisicoes.Text = "Ocultar Requisições";
+                }
+            }
+        }
+
+        //=================================================================================================
+        // DEVOLVE O CAMINHO PARA UM NOME DE FICHEIRO
+        //=================================================================================================
+        public string downloadpath(object filename)
+        {
+            if (filename != null && filename.ToString() != "")
+            {
+                string myPath = (string)ConfigurationManager.AppSettings["UPLOAD_REQ_URL"];
+
+                myPath = myPath + "/" + filename.ToString();
+                return myPath;
+            }
+            else
+            {
+                return "#";
+            }
+        }
+
+        //*************************************************************************************************
+        //FIM REQUISIÇÕES
+        //*************************************************************************************************
+
+        //*************************************************************************************************
+        //ACÇÕES DE BD
+        //*************************************************************************************************
+
+        //=================================================================================================
+        //INSERE OS DADOS DA FACTURA NA BD
+        //No insert da factura, a data da factura assume o valor da data actual (getdate()); 
+        //a data depois é actualizada apenas na criação das ordens de venda. 
+        //assume a data do proprio dia ou do dia seguinte, conforme a hora do dia em que a operação é				efectuada
+        //com a hipotese de poder forçar a data.... 
+        //=================================================================================================
+        private void InsertBD()
+        {
+
+            string idFactura;
+            string id;
+
+            DTDestino = (DataTable)this.ViewState["DTDestino"];
+
+            if (DTDestino.Rows.Count == 0) 
+            {
+                this.lblMessage.Text = "Tem de inserir pelo menos uma linha na factura.";
+            }
+            else
+            {
+                //if (!this.validaRegiaoVendas(DTDestino))
+                //{
+                //    this.lblMessage.Text = "Existem calibrações externa. Actualize a região de vendas da empresa.<br>e carregue no botão 'Actualizar Região' para gravar as alterações.";
+                //}
+                //else
+                //{
+                    this.calculaValorTotalFactura(); // só para garantir que o total está bem actualizado
+
+                    DATA.FacturaData factura = new LabMetro.DATA.FacturaData();
+
+                    idFactura = factura.InsertFacturaWithLinhas(this.ddBRE.SelectedValue.ToString(), this.ddEmpresa.SelectedValue.ToString(), this.txtValorDespesasEnvio.Text, this.txtValorAjudasCustoDeslocacoes.Text, this.txtValorTotalFactura.Text, this.txtObservacoes.Text, User.Identity.Name.ToString(), DTDestino, this.ddTipoDocumento.SelectedValue.ToString(), this.ddCanalDistribuicao.SelectedValue, this.ddEscritorioVendas.SelectedValue, this.ddCondPagamentoFactura.SelectedValue,null).ToString(); //Não juntar estas linhas
+                    //senao entra 2 vezes na mesma função. 
+                    id = idFactura;
+
+                    if (id == "0")
+                    {
+                        lblMessage.Text = GERAL.clsGeral.ErrorMessage.ERR_INSERT;
+                    }
+                    else
+                    {
+                        //this.Server.Transfer("FormFacturaSAP.aspx?btn=FAC&id=" + id,false);  //Deixar a false senao entra - nao sei porquê - novamente na função insertfacturawithlinha e dps dá erro.
+                        this.Response.Redirect("FormFacturaES.aspx?btn=FAC&id=" + idFactura, true);
+                        //deixar assim, sem server transfer
+                    }
+                    factura = null;
+                //}
+            }
+        }
+
+        //=================================================================================================
+        //ACTUALIZA OS DADOS DA FACTURA NA BD
+        //=================================================================================================
+        private void UpdateBD()
+        {
+            DTDestino = (DataTable)this.ViewState["DTDestino"];
+            DTOrigem = (DataTable)this.ViewState["DTOrigem"];
+
+            //if (DTDestino.Rows.Count == 0)
+            //{
+            //    this.lblMessage.Text = "Tem de inserir pelo menos uma linha na factura.";
+            //}
+            //else
+            //{
+
+                //if (!this.validaRegiaoVendas(DTDestino))
+                //{
+                //    this.lblMessage.Text = "Existem calibrações externa. Actualize a região de vendas da empresa.<br>e carregue no botão 'Actualizar Região' para gravar as alterações.";
+                //}
+                //else
+                //{
+                    DATA.FacturaData factura = new LabMetro.DATA.FacturaData();
+
+                    string idFactura = this.ViewState["idFactura"].ToString();
+
+                    int retvalue = factura.UpdateFacturaWithLinhas(this.ViewState["idFactura"].ToString(), this.txtValorDespesasEnvio.Text.ToString(), this.txtValorAjudasCustoDeslocacoes.Text.ToString(), this.txtValorTotalFactura.Text.ToString(), this.txtObservacoes.Text.ToString(), User.Identity.Name.ToString(), DTOrigem, DTDestino, this.ddTipoDocumento.SelectedValue, this.ddCanalDistribuicao.SelectedValue, this.ddEscritorioVendas.SelectedValue, this.ddCondPagamentoFactura.SelectedValue, this.ViewState["idModif"].ToString(), null);
+
+                    if (retvalue == 0)
+                    {
+                        lblMessage.Text = GERAL.clsGeral.ErrorMessage.ERR_UPDATE;
+                    }
+                    else
+                    {
+                        lblMessage.Text = GERAL.clsGeral.ErrorMessage.MSG_UPDATE_DB;
+                        //colocar a nova dtAlteração em viewstate
+                        try
+                        {
+                            string strSQL = "SELECT idUtilAlteracao FROM FACTURA where idFactura = " + this.ViewState["idFactura"].ToString();
+                            string id = Convert.ToString(GERAL.clsDataAccess.myExecuteScalar(strSQL));
+
+                            this.ViewState["idModif"] = id;
+                        }
+                        catch (Exception ex)
+                        {
+                            GERAL.clsWriteError.WriteLog(ex);
+                        }
+                    }
+
+                    factura = null;
+                //}
+            //}
+        }
+
+
+
+        //*************************************************************************************************
+        //FIM ACCÇÕES DE BD
+        //*************************************************************************************************
+
+        //*************************************************************************************************
+        //ACÇÕES SOBRE OS DATAGRIDS
+        //*************************************************************************************************
+
+        //=================================================================================================
+        //APAGA DO DESTINO E VOLTA A ADICIONAR À ORIGEM
+        //=================================================================================================
+
+
+        private void dgDestino_DeleteCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
+        {
+            DTDestino = (DataTable)this.ViewState["DTDestino"];
+
+            DVDestino = new DataView(DTDestino);
+            string strSort = this.ViewState["sortFieldDestino"].ToString() + " " + this.ViewState["sortDirectionDestino"];
+
+            DVDestino.Sort = strSort;
+
+            DTOrigem = (DataTable)this.ViewState["DTOrigem"];
+
+            DataRowView drv = DVDestino[e.Item.ItemIndex];
+            //this.Response.Write(e.Item.ItemIndex.ToString()); 
+
+            //ADICIONA À ORIGEM (aqui usa-se o add em vez do importrow)
+            DataRow DR;
+            DR = DTOrigem.NewRow();
+
+            DR["idServico"] = drv["idServico"].ToString();
+            DR["idBRE"] = drv["idBRE"].ToString();
+            DR["refBRE"] = drv["refBRE"].ToString();
+            DR["idRequisicao"] = drv["idRequisicao"].ToString();
+            DR["refRequisicao"] = drv["refRequisicao"].ToString();
+            DR["numIdentificacao"] = drv["numIdentificacao"].ToString();
+            DR["codTipoEquipamento"] = drv["codTipoEquipamento"].ToString();
+            DR["idEstadoServico"] = drv["idEstadoServico"].ToString();
+            DR["estadoServico"] = drv["estadoServico"].ToString();
+            DR["idLocalCalibracao"] = drv["idLocalCalibracao"].ToString();
+            DR["localCalibracao"] = drv["localCalibracao"].ToString();
+            DR["idTipoServico"] = drv["idTipoServico"].ToString();
+            DR["tipoServico"] = drv["tipoServico"].ToString();
+            DR["refServico"] = drv["refServico"].ToString();
+            if (drv["valor"].ToString() != "")
+            {
+                DR["valor"] = Decimal.Parse(drv["valor"].ToString()); //da bd vem um decimal   
+            }
+            else
+            {
+                DR["valor"] = "0"; //da bd vem um decimal   
+            }
+            if (drv["percDesconto"].ToString() != "")
+            {
+                DR["percDesconto"] = Decimal.Parse(drv["percDesconto"].ToString()); //da bd vem um decimal   
+            }
+            else
+            {
+                DR["percDesconto"] = "0"; //da bd vem um decimal   
+            }
+            if (drv["valorFinal"].ToString() != "")
+            {
+                DR["valorFinal"] = Decimal.Parse(drv["valorFinal"].ToString()); //da bd vem um decimal   
+            }
+            else
+            {
+                DR["valorFinal"] = "0"; //da bd vem um decimal   
+            }
+
+            DR["observacoes"] = drv["observacoes"].ToString();
+            DR["referenciaCliente"] = drv["referenciaCliente"].ToString();
+            DR["calibracaoExterna"] = drv["calibracaoExterna"].ToString();
+
+
+            DTOrigem.Rows.Add(DR);
+
+            //APAGA DO DESTINO 
+            string id = drv["idServico"].ToString();
+            DataRow dr = DTDestino.Rows.Find(id);
+            dr.Delete();
+            DTDestino.AcceptChanges();
+
+
+            this.ViewState["DTOrigem"] = DTOrigem;
+            this.ViewState["DTDestino"] = DTDestino;
+
+            this.BindGridDestino();
+            this.BindGridSource();
+
+            //os valores totais sao calculados no item databound, se eu nao tiver nada no datagrid
+            //ele nao entra nessa funcao.
+            //acontece quando eu removo o ultimo item da lista, o preço devia ficar a 0, mas ele nao 
+            //chama a funcao, por isso:
+
+            if (DTDestino.Rows.Count == 0)
+            {
+                this.txtValorAjudasCustoDeslocacoes.Text = "0";
+                this.txtValorDespesasEnvio.Text = "0";
+                this.txtValorSubTotal.Text = "0";
+                this.txtDescontoTotal.Text = "0";
+                this.txtValorTotalFactura.Text = "0";
+            }
+        }
+
+        //=================================================================================================
+        //ADICIONA LINHAS SELECCIONADAS DA ORIGEM AO DESTINO
+        //=================================================================================================
+        private void AddLinesToDestino()
+        {
+            //vai buscar a percentagem de desconto associada à empresa e passa para o datagrid de baixo quando os serviços passam para facturacao
+            DATA.FacturaData factura = new LabMetro.DATA.FacturaData();
+            string idEmpresa = this.ddEmpresa.SelectedValue;
+            if (this.ddEmpresaContratante.SelectedValue != "") idEmpresa = this.ddEmpresaContratante.SelectedValue;
+
+            string strPercDesconto = factura.strPercentagemDesconto(idEmpresa);
+
+            DTDestino = (DataTable)this.ViewState["DTDestino"];
+            DTOrigem = (DataTable)this.ViewState["DTOrigem"];
+
+            string strIds = "";
+
+            foreach (DataGridItem dgi in this.dgOrigem.Items)
+            {
+                CheckBox myCheckBox =
+                    (CheckBox)dgi.Cells[0].FindControl("checkbox");
+                if (myCheckBox.Checked == true)
+                {
+                    strIds += dgOrigem.DataKeys[dgi.ItemIndex].ToString();
+                    strIds += ",";
+                }
+            }
+
+            string delimStr = ",";
+            char[] delimiter = delimStr.ToCharArray();
+            strIds = strIds.TrimEnd(delimiter);
+
+            if (strIds != "")
+            {
+                string strSearch = "idServico IN (" + strIds + ")";
+
+                DataRow[] foundRows = DTOrigem.Select(strSearch);
+
+                foreach (DataRow dr in foundRows)
+                {
+                    if (!DTDestino.Rows.Contains(dr["idServico"]))
+                    {
+                        DataRow DR;
+                        DR = DTDestino.NewRow();
+
+                        DR["idServico"] = dr["idServico"].ToString();
+                        DR["idBRE"] = dr["idBRE"].ToString();
+                        DR["refBRE"] = dr["refBRE"].ToString();
+                        DR["idRequisicao"] = dr["idRequisicao"].ToString();
+                        DR["refRequisicao"] = dr["refRequisicao"].ToString();
+                        DR["numIdentificacao"] = dr["numIdentificacao"].ToString();
+                        DR["codTipoEquipamento"] = dr["codTipoEquipamento"].ToString();
+                        DR["idEstadoServico"] = dr["idEstadoServico"].ToString();
+                        DR["estadoServico"] = dr["estadoServico"].ToString();
+                        DR["idLocalCalibracao"] = dr["idLocalCalibracao"].ToString();
+                        DR["localCalibracao"] = dr["localCalibracao"].ToString();
+                        DR["idTipoServico"] = dr["idTipoServico"].ToString();
+                        DR["tipoServico"] = dr["tipoServico"].ToString();
+                        DR["refServico"] = dr["refServico"].ToString();
+                        DR["tipoEquipamento"] = dr["tipoEquipamento"].ToString();
+                        DR["referenciaCliente"] = dr["referenciaCliente"].ToString();
+                        DR["refRequisicao"] = dr["refRequisicao"].ToString();
+
+                        if (dr["valor"].ToString() != "") //foi calculado na pasta ensaio e vem da BD
+                        {
+                            DR["valor"] = Decimal.Parse(dr["valor"].ToString());
+
+                        }
+                        else //nao foi calculado na pasta de ensaio e tem de ser calculado aqui
+                        {
+                            double valor = 0;
+                            try
+                            {
+                                DATA.CalculaPrecos calc = new LabMetro.DATA.CalculaPrecos();
+                                valor = calc.calculaPreco(dr["idServico"].ToString());
+                                DR["valor"] = valor;
+                            }
+                            catch
+                            {
+                                //GERAL.clsWriteError.WriteLog("erro ao calcular preço, valor calculado = " + valor + " idServico = " + dr["idServico"].ToString() + "<br>"); 
+                            }
+                        }
+
+                        //a perc acima vem da tabela serviço e nao sei como vai para la parar em primeiro lugar. esta percentagem é a q está associada à empresa na tabela Empresa (nota DM); 
+                        DR["percDesconto"] = strPercDesconto;
+
+                        if (dr["valorFinal"].ToString() != "")
+                        {
+                            DR["valorFinal"] = Decimal.Parse(dr["valorFinal"].ToString());
+                        }
+                        else if (dr["valor"].ToString() != "")  //se o valor existe,calcula-se o valor final
+                        {
+                            DR["valorFinal"] = System.Math.Round(Double.Parse(dr["valor"].ToString()) * (100 - Double.Parse(strPercDesconto)) * 0.01, 2);
+                        }
+
+
+                        DR["observacoes"] = dr["observacoes"].ToString();
+                        DR["calibracaoExterna"] = dr["calibracaoExterna"].ToString();
+
+                        DTDestino.Rows.Add(DR);
+
+                        dr.Delete(); //apaga da origem
+
+                    }
+                }
+            }
+            this.ViewState["DTOrigem"] = DTOrigem;
+            this.ViewState["DTDestino"] = DTDestino;
+
+            this.validaRequisicoes(DTDestino); //a validacao é feita aqui, é apenas informativa. 
+
+            factura = null;
+        }
+
+        //=================================================================================================
+        //EDITA O GRID DO DESTINO
+        //=================================================================================================
+        protected void editGrid(Object sender, DataGridCommandEventArgs e)
+        {
+            this.dgDestino.EditItemIndex = e.Item.ItemIndex;
+            this.BindGridDestino();
+        }
+
+        //=================================================================================================
+        //CANCELA A EDIÇÃO DO GRID DE DESTINO
+        //=================================================================================================
+        protected void cancelGrid(Object sender, DataGridCommandEventArgs e)
+        {
+            this.dgDestino.EditItemIndex = -1;
+            this.BindGridDestino();
+        }
+
+        //=================================================================================================
+        //UPDATE AO GRID DE DESTINO
+        protected void updateGrid(Object sender, DataGridCommandEventArgs e)
+        {
+            string id = this.dgDestino.DataKeys[e.Item.ItemIndex].ToString();
+
+            TextBox txtValor = (TextBox)e.Item.FindControl("txtValorEdit");
+            TextBox txtPercDesconto = (TextBox)e.Item.FindControl("txtPercDescontoEdit");
+            TextBox txtValorFinal = (TextBox)e.Item.FindControl("txtValorFinalEdit");
+
+            DTDestino = (DataTable)this.ViewState["DTDestino"];
+            DVDestino = new DataView(DTDestino);
+
+            DVDestino.RowFilter = "idServico=" + id;
+
+            if (DVDestino.Count > 0)
+            {
+                if (txtValor.Text == "") txtValor.Text = "0";
+                DVDestino[0]["valor"] = Decimal.Parse(txtValor.Text);
+
+                if (txtPercDesconto.Text == "") txtPercDesconto.Text = "0";
+                DVDestino[0]["percDesconto"] = Decimal.Parse(txtPercDesconto.Text);
+
+                DVDestino[0]["valorFinal"] = System.Math.Round(Double.Parse(txtValor.Text) * (100 - Double.Parse(txtPercDesconto.Text)) * 0.01, 2);
+            }
+
+            DVDestino.RowFilter = "";
+            this.ViewState["DTDestino"] = DTDestino;
+
+            this.dgDestino.EditItemIndex = -1;
+            this.BindGridDestino();
+        }
+
+
+
+        //=================================================================================================
+        //ADICIONA LINHAS DA ORGIGEM AO DESTINO, BOTÃO "FACTURAR EQUIPAMENTOS"
+        //=================================================================================================
+        private void btnSubmitGrid_Click(object sender, System.EventArgs e)
+        {
+            AddLinesToDestino();
+            this.BindGridDestino();
+            this.BindGridSource(); //NOVO!!!!
+        }
+
+        //*************************************************************************************************
+        //FIM ACÇÕES SOBRE OS DATAGRIDS
+        //*************************************************************************************************
+
+
+        //*************************************************************************************************
+        //ACÇÕES SOBRE OS VALORES DA PAGINA
+        //*************************************************************************************************
+  
+        //=================================================================================================
+        //PREENCHIMENTO DA DROPDOWN EMPRESA ===============================================================
+        //=================================================================================================
+        private void fillEmpresas()
+        {
+            DATA.FacturaData f = new LabMetro.DATA.FacturaData();
+            DataTable DT = f.DTListaEmpresasForFactura(this.cbBRE.Checked.ToString(), this.txtPesquisaEmpresa.Text, this.txtPesquisaNif.Text, this.txtPesquisaNumClienteSAP.Text);
+            DataView DV = new DataView(DT);
+
+            this.ddEmpresa.DataSource = DV;
+            this.ddEmpresa.DataBind();
+
+            f = null;
+
+            this.fillEmpresaDevedora(); //da primeira vez
+           
+        }
+
+        //===========================================================================================
+        //PREENCHE OS DADOS RELATIVOS À EMPRESA e que tenham a ver com os DADOS DO SAP
+        //se a factura é para ser emitida em nome de outra empresa, vai buscar os dados SAP da outra empresa
+        //===========================================================================================
+        private void fillEmpresaData_SAP()
+        {
+            string strSQL;
+
+            string idEmpresa = this.ddEmpresa.SelectedValue;
+            if (this.ddEmpresaContratante.SelectedValue != "") idEmpresa = this.ddEmpresaContratante.SelectedValue;
+
+
+            if (idEmpresa != "")
+            {
+
+                //A REGIAO DE VENDAS É SEMPRE DA EMPRESA DO BRE, POIS SO SE APLICA EM CALIBRAÇÕES EXTERNAS E DIZ RESPEITO
+                //À REGIÃO DA PRESTAÇÃO DO SERVIÇO
+
+                strSQL = "SELECT E.observacoes, E.numClienteSAP, E.codigoBloqueioSap, E.idCondicoesPagamento, E.bPodeFacturarSemRequisicao FROM EMPRESA E  WHERE E.idEmpresa = " + idEmpresa;
+
+                SqlDataReader dr = GERAL.clsDataAccess.ExecuteDR(strSQL);
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        this.lblObsEmpresa.Text = dr["observacoes"].ToString();
+                        this.txtNumClienteSAP.Text = dr["numClienteSAP"].ToString();
+
+
+                        try
+                        {
+                            string idCondicoesPagamento = dr["idCondicoesPagamento"].ToString();
+                            this.ddCondPagamentoEmpresa.SelectedValue = idCondicoesPagamento;
+                            if (this.ViewState["idFactura"] == null)
+                            {
+                                if (idCondicoesPagamento != "")
+                                {
+                                    this.ddCondPagamentoFactura.SelectedValue = this.ddCondPagamentoEmpresa.SelectedValue;
+                                }
+                                else
+                                {
+                                    this.ddCondPagamentoFactura.SelectedValue = "2"; //30 dias, default value; 
+                                }
+                            }
+                        }
+                        catch
+                        { }
+
+
+                        try
+                        {
+                            this.ddCodigoBloqueioSAP.SelectedValue = dr["codigoBloqueioSap"].ToString();
+                        }
+                        catch
+                        { }
+
+
+                        if (GERAL.clsGeral.ConvertBStringToBoolean(dr["bPodeFacturarSemRequisicao"].ToString()) == true)
+                        {
+                            this.cbNPrecisaReqPFacturar.Checked = true;
+
+                        }
+                        else
+                        {
+                            this.cbNPrecisaReqPFacturar.Checked = false;
+                        }
+
+                    }
+                }
+            }
+
+
+            
+        }
+
+        //=================================================================================================
+        // Preencher os dados relativos à empresa (se é devedora ou não)
+        // isto futuramente pode ser merged com a forma como os dados da empresas são preenhcidos nas 
+        // funções anteriores, mas por enquanto, never change a running system. 
+        //=================================================================================================
+        private void fillEmpresaDevedora()
+        {
+            //DM 05-12-2007
+
+            this.lblEmpresaDevedora.Text = ""; //limpar a label
+
+            string idEmpresa = this.ddEmpresa.SelectedValue;
+            if (this.ddEmpresaContratante.SelectedValue != "")
+            {
+                idEmpresa = ddEmpresaContratante.SelectedValue;
+                this.lblEmpresaDevedora.Text = "Empresa contratante: "; //limpar a label
+
+            }
+            this.lblEmpresaDevedora.Text = ""; //limpar a label
+
+            LabMetro.DATA.EmpresasBD empresa = new LabMetro.DATA.EmpresasBD();
+            LabMetro.DATA.CompanyDetails detEmpresa = empresa.GetCompanyDetails(idEmpresa);
+            if (detEmpresa != null)
+            {
+                this.lblObsEmpresa.Text = detEmpresa.observacoes;    //meu
+
+                if (detEmpresa.pagamentoAtraso == "1")
+                {
+                    this.lblEmpresaDevedora.Text += "** PAGAMENTOS EM ATRASO **<br>";
+                }
+                if (this.ddEmpresaContratante.SelectedValue != "")
+                {
+
+                    this.trEmpresa.BgColor = "";
+                    switch (detEmpresa.nivelBloqueioLabmetro)
+                    {
+                        case "0":
+                            this.trEmpresaContratante.BgColor = "";
+                            break;
+                        case "1":
+                            this.trEmpresaContratante.BgColor = "Gold";
+                            break;
+                        case "2":
+                            this.trEmpresaContratante.BgColor = "DarkOrange";
+                            this.lblEmpresaDevedora.Text += "Venda à dinheiro ou Pagamento do Atrasado.<br>";
+                            break;
+                        case "3":
+                            this.trEmpresaContratante.BgColor = "Crimson";
+                            this.lblEmpresaDevedora.Text += "Venda à dinheiro.<br>";
+                            break;
+                    }
+                }
+                else
+                {
+                    this.trEmpresaContratante.BgColor = "";
+
+                    switch (detEmpresa.nivelBloqueioLabmetro)
+                    {
+                        case "0":
+                            this.trEmpresa.BgColor = "";
+                            break;
+                        case "1":
+                            this.trEmpresa.BgColor = "Gold";
+                            break;
+                        case "2":
+                            this.trEmpresa.BgColor = "DarkOrange";
+                            this.lblEmpresaDevedora.Text += "Venda à dinheiro ou Pagamento do Atrasado.<br>";
+                            break;
+                        case "3":
+                            this.trEmpresa.BgColor = "Crimson";
+                            this.lblEmpresaDevedora.Text += "Venda à dinheiro.<br>";
+                            break;
+                    }
+                }
+
+                if (detEmpresa.codigoBloqueioSAP != "00")
+                {
+                    this.btnFicheiro.Enabled = false; //se empresa bloquada, nao pode criar ordens de venda
+                    this.lblEmpresaDevedora.Text += "Criação de ordens de venda impossível.";
+                }
+
+                switch (detEmpresa.codigoBloqueioSAP)
+                {
+                    case "00":  //nada mas tem de estar tratado
+                        break;
+                    case "01":
+                        this.lblEmpresaDevedora.Text += "** EMPRESA FALIDA **";
+                        break;
+                    case "02":
+                        this.lblEmpresaDevedora.Text += "** EMPRESA EM CONTENCIOSO **";
+                        break;
+                    case "03":
+                        this.lblEmpresaDevedora.Text += "** Empresa com nºCliente SAP inactivo **";
+                        break;
+                    default: //todos os outros bloqueados
+                        this.lblEmpresaDevedora.Text += "** EMPRESA COM BLOQUEIO EM SAP **";
+                        break;
+                }
+            }
+            else//nada - limpar
+            {
+                this.lblEmpresaDevedora.Text = "";
+                this.trEmpresa.BgColor = "";
+                this.lblObsEmpresa.Text = "";
+
+            }
+            empresa = null;
+        }
+
+        
+        //=================================================================================================
+        //PREENCHIMENTO DA DROPDOWN BRES ==================================================================
+        //=================================================================================================
+        private void fillBREs()
+        {
+            if (this.ddEmpresa.SelectedIndex >= 0)
+            {
+                DATA.BreBD lista = new LabMetro.DATA.BreBD();
+                DataTable DT = lista.DTGetBrePorFacturarByIdEmpresa(this.ddEmpresa.SelectedValue, this.cbBRE.Checked.ToString());
+                this.ddBRE.DataSource = DT;
+                this.ddBRE.DataBind();
+                lista = null;
+            }
+            else
+            {
+                this.ddBRE.Items.Clear();
+            }
+        }
+
+
+        //=================================================================================================
+        //PREENCHIMENTO DA DROPDOWN BRES ==================================================================
+        //=================================================================================================
+        private void fillEmpresaContratanteDoBRE()
+        {
+
+            DATA.BreBD bre = new LabMetro.DATA.BreBD();
+
+            SqlDataReader DR = bre.DRGetIdEmpresaContratantePorBRE(this.ddBRE.SelectedValue);
+            ddEmpresaContratante.DataSource = DR;
+            ddEmpresaContratante.DataBind();
+
+            DR.Close();
+            bre = null;
+
+        }
+
+        //=========================================================================================
+        //Fillform - recebe o id da factura e vai buscar os dados da factura
+        //=========================================================================================
+        private void fillForm(string id)
+        {
+
+            LabMetro.DATA.FacturaData factura = new LabMetro.DATA.FacturaData(); //new LabMetro.DATA.FacturaData(); 
+
+            DataTable FacturaDT = factura.DTFacturaDetails(id);
+            if (FacturaDT.Rows.Count > 0)
+            {
+                string datatFactura = FacturaDT.Rows[0]["dtFactura"].ToString();
+                if (datatFactura != "") datatFactura = GERAL.clsGeral.ToShortDate(datatFactura);
+
+                this.txtDtFactura.Text = datatFactura;
+
+                this.txtObservacoes.Text = FacturaDT.Rows[0]["observacoes"].ToString();
+                this.txtRefFactura.Text = FacturaDT.Rows[0]["refFactura"].ToString();
+                this.txtFicheiro.Text = FacturaDT.Rows[0]["idFactura"].ToString();
+                this.txtValorAjudasCustoDeslocacoes.Text = FacturaDT.Rows[0]["valorAjudasCustoDeslocacoes"].ToString();
+                this.txtValorDespesasEnvio.Text = FacturaDT.Rows[0]["valorDespesasEnvio"].ToString();
+
+                string idEmpresa = FacturaDT.Rows[0]["idEmpresa"].ToString();
+                string nomeEmpresa = FacturaDT.Rows[0]["nomeEmpresa"].ToString();
+
+                //try
+                //{
+                //    this.ddEmpresa.SelectedValue = idEmpresa; 
+                //}
+                //catch
+                //{
+                this.ddEmpresa.Items.Insert(0, new ListItem(nomeEmpresa, idEmpresa));
+                this.ddEmpresa.SelectedValue = idEmpresa;
+                //}
+
+
+                //isto é preenhcido dps do fillform e dps de preenchida a empresa contratante!!!!
+               // this.fillEmpresaData_SAP(); //preenche os dados SAP da empresa ou empresa contratante
+               // this.fillEmpresaDevedora(); //preenche se empresa ou emp.cont. é devedora
+
+
+
+                this.ddEmpresa.Enabled = false;
+
+                string idBRE = FacturaDT.Rows[0]["idBRE"].ToString();
+                string refBRE = FacturaDT.Rows[0]["refBRE"].ToString();
+                //try
+                //{
+                //    this.ddBRE.SelectedValue = idBRE;
+                //}
+                //catch
+                //{
+                this.ddBRE.Items.Insert(0, new ListItem(refBRE, idBRE));
+                this.ddBRE.SelectedValue = idBRE;
+                //}
+
+                this.ddBRE.Enabled = false;
+
+               
+                string idTipoDocumento = FacturaDT.Rows[0]["idTipoDocumento"].ToString();
+                string chCanalDistribuicao = FacturaDT.Rows[0]["chCanalDistribuicao"].ToString();
+                string idEscritorioVendas = FacturaDT.Rows[0]["idEscritorioVendas"].ToString();
+                string idCondicoesPagamento = FacturaDT.Rows[0]["idCondicoesPagamento"].ToString();
+
+                string descCodigoTipoDocumento = FacturaDT.Rows[0]["descCodigoTipoDocumento"].ToString();
+                string descCodigoCondPagam = FacturaDT.Rows[0]["descCodigoCondPagam"].ToString();
+                string descCodigoEscritVendas = FacturaDT.Rows[0]["descCodigoEscritVendas"].ToString();
+
+                try
+                {
+                    this.ddTipoDocumento.SelectedValue = idTipoDocumento;
+                }
+                catch
+                {
+                    this.ddTipoDocumento.Items.Insert(0, new ListItem(descCodigoTipoDocumento, idTipoDocumento));
+                    this.ddTipoDocumento.SelectedValue = idTipoDocumento;
+                }
+
+                this.ddCanalDistribuicao.SelectedValue = chCanalDistribuicao;
+
+                try
+                {
+                    this.ddEscritorioVendas.SelectedValue = idEscritorioVendas;
+                }
+                catch
+                {
+                    this.ddEscritorioVendas.Items.Insert(0, new ListItem(descCodigoEscritVendas, idEscritorioVendas));
+                    this.ddEscritorioVendas.SelectedValue = idEscritorioVendas;
+                }
+
+                try
+                {
+                    this.ddCondPagamentoFactura.SelectedValue = idCondicoesPagamento;
+                }
+                catch
+                {
+                    this.ddCondPagamentoFactura.Items.Insert(0, new ListItem(descCodigoCondPagam, idCondicoesPagamento));
+                    this.ddCondPagamentoFactura.SelectedValue = idCondicoesPagamento;
+                }
+
+                this.ViewState["idModif"] = FacturaDT.Rows[0]["idUtilAlteracao"];
+
+                string intVersaoFicheiro = FacturaDT.Rows[0]["intVersaoFicheiro"].ToString();
+
+                this.txtVersao.Text = intVersaoFicheiro.ToString();
+
+                if (intVersaoFicheiro.ToString() == "0")
+                {
+                    this.txtFicheiro.Text = "";
+                }
+                else
+                {
+                    string nomeFicheiro = id + "_" + intVersaoFicheiro.ToString() + ".txt";
+                    this.txtFicheiro.Text = nomeFicheiro;
+                }
+            }
+        }
+
+        //=================================================================================================
+        //PREENCHE ALGUNS VALORES DA FACTURA
+        //=================================================================================================
+        private void setFacturaData()
+        {
+            this.txtValorAjudasCustoDeslocacoes.Text = "0";
+            this.txtValorDespesasEnvio.Text = "0";
+            this.txtValorSubTotal.Text = "0";
+            this.txtDescontoTotal.Text = "0";
+            this.txtValorTotalFactura.Text = "0";
+        }
+
+        //=================================================================================================
+        //RECARREGA TODOS OS CAMPOS COM VALORES INICIAIS
+        //=================================================================================================
+        private void refillAllData()
+        {
+           // this.fillDDsSAP(); //isto talvez nao seja preciso
+            this.fillBREs();
+           
+            this.fillEmpresaContratanteDoBRE();
+            this.fillEmpresaData_SAP();
+            this.fillEmpresaDevedora();
+
+            this.setFacturaData();
+            this.CreateDataSource();
+            this.BindGridSource();
+            this.CreateDataSourceDTDestino();
+            this.BindGridDestino();
+
+            this.dgRequisicoes.DataSource = null;
+            this.dgRequisicoes.DataBind();
+            this.dgRequisicoes.Controls.Clear();
+            this.dgRequisicoes.Visible = false;
+            this.btnRequisicoes.Text = "Ver Requisições";
+        }
+
+
+        //*************************************************************************************************
+        //FIM ACÇÕES SOBRE OS VALORES DA PAGINA
+        //*************************************************************************************************
+
+        //*************************************************************************************************
+        //ACÇÕES DE BOTÕES, SELECTEDINDEXCHANGED ETC.
+        //*************************************************************************************************
+
+        //=================================================================================================
+        //BOTÃO SUBMIT . INSERE OU ACTUALIZA OS DADOS DA FACTURA NA BD
+        //=================================================================================================
+        private void btnSubmit_Click(object sender, System.EventArgs e)
+        {
+
+            this.Page.Validate(); //N tirar DM, esta pagina por alguma razao precisa disto!!!
+
+            if (this.Page.IsValid)
+            {
+                if (this.btnSubmit.CommandArgument == "insert")
+                {
+                    InsertBD();
+                }
+                else if (this.btnSubmit.CommandArgument == "update")
+                {
+                    UpdateBD();
+                }
+            }
+        }
+
+        //=================================================================================================
+        //BUTTON RESET, REDIRECCIONAR PARA UM PAGINA NOVA
+        //=================================================================================================
+        private void btnReset_Click(object sender, System.EventArgs e)
+        {
+            //this.Server.Transfer("FormFacturaSAP.aspx?btn=FAC",false);            
+            this.Response.Redirect("FormFacturaES.aspx?btn=FAC", true);
+        }
+
+        //=================================================================================================
+        //BOTÃO PARA CRIAÇÃO DOS FICHEIROS PARA O SAP -- NOVO
+        //=================================================================================================
+        private void btnFicheiro_Click(object sender, System.EventArgs e)
+        {
+            if (this.txtNumClienteSAP.Text == "" && this.ddCondPagamentoFactura.SelectedValue != "1") //a rigor, para pronto pagamento n precisa 
+            //de ter numero de cliente sap.
+            {
+                this.lblMessage.Text = "Empresa sem Núm. Cliente SAP. Actualize a empresa antes de gerar a ordem de venda.";
+            }
+            else if (this.ddCondPagamentoFactura.SelectedValue == "1") //pronto pagamento
+            {
+                this.lblMessage.Text = "Não pode gerar ordens de venda para facturas com pronto pagamento.";
+            }
+
+            else
+            {
+                //retorna true ou false e faz o response redirect depois aqui, senao causa um erro:
+                //14:31:44.9049179- System.Threading.ThreadAbortException: Thread was being aborted.
+                if (writeAxaptaFile(this.ViewState["idFactura"].ToString()))
+                {
+                    this.Response.Redirect("FormFacturaES.aspx?btn=FAC&id=" + this.ViewState["idFactura"].ToString(), true);
+                }
+            }
+        }
+
+        //=================================================================================================
+        //QUANDO A EMPRESA MUDA, TODA A INFORMAÇÃO TEM DE SER RE-CARREGADA
+        //=================================================================================================
+        private void ddEmpresa_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            this.refillAllData();
+            this.fillEmpresaDevedora();
+
+        }
+
+        //=================================================================================================
+        //QUANDO O BRE MUDA, PARTE DA INFORMAÇÃO TEM DE SER RECARREGADA====================================
+        //=================================================================================================
+        private void ddBRE_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            this.setFacturaData();
+            this.CreateDataSource();
+            this.BindGridSource();
+            this.CreateDataSourceDTDestino();
+            this.BindGridDestino();
+            this.fillEmpresaContratanteDoBRE();
+            this.fillEmpresaDevedora();
+            this.fillEmpresaData_SAP();
+           
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private void txtValorAjudasCustoDeslocacoes_TextChanged(object sender, System.EventArgs e)
+        {
+
+            this.Page.Validate(); //N tirar DM, esta pagina por alguma razao precisa disto!!!
+            if (this.Page.IsValid) this.calculaValorTotalFactura();
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private void txtValorDespesasEnvio_TextChanged(object sender, System.EventArgs e)
+        {
+            this.Page.Validate(); //N tirar DM, esta pagina por alguma razao precisa disto!!!	
+            if (this.Page.IsValid) this.calculaValorTotalFactura();
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private void cbBRE_CheckedChanged(object sender, System.EventArgs e)
+        {
+            this.fillEmpresas();
+            this.refillAllData(); //faz fill dos bres e limpa outras coisas
+        }
+
+
+        //=================================================================================================
+        //=================================================================================================
+        private void btnVerFactura_Click(object sender, System.EventArgs e)
+        {
+            if (myApp == "ISQ_LABMETRO")
+            {
+                rptFactura report = new rptFactura();
+                clsReport cr = new clsReport();
+
+                string idFactura = this.ViewState["idFactura"].ToString();
+                string orderby = this.ViewState["sortFieldDestino"].ToString() + " " + this.ViewState["sortDirectionDestino"];
+
+                DATA.FacturaData f = new LabMetro.DATA.FacturaData();
+                int i = orderby.IndexOf("codTipoEquipamento");
+                if (i > -1)
+                {
+                    orderby = orderby.Replace("codTipoEquipamento", "codigo");  //nome da coluna na bd
+                }
+
+                //aqui vou passar os viewstate do datagrid destino
+                //esses viewstates
+                DataSet ds = f.DSFactura(idFactura, orderby);
+
+                report.SetDataSource(ds);
+                ds = null;
+                f = null;
+
+                cr.exportReportToPDF(report,"Factura");
+
+                
+            }
+            else if (myApp == "ANG_LABMETRO") //codigo nao optimizado, à pressa
+            {
+                REPORTS_ANG.rptFacturaANG report = new LabMetro.REPORTS_ANG.rptFacturaANG();
+                clsReport cr = new clsReport();
+
+                string idFactura = this.ViewState["idFactura"].ToString();
+                string orderby = this.ViewState["sortFieldDestino"].ToString() + " " + this.ViewState["sortDirectionDestino"];
+
+                DATA.FacturaData f = new LabMetro.DATA.FacturaData();
+                int i = orderby.IndexOf("codTipoEquipamento");
+                if (i > -1)
+                {
+                    orderby = orderby.Replace("codTipoEquipamento", "codigo");  //nome da coluna na bd
+                }
+
+                //aqui vou passar os viewstate do datagrid destino
+                //esses viewstates
+                DataSet ds = f.DSFactura(idFactura, orderby);
+
+                report.SetDataSource(ds);
+                ds = null;
+                f = null;
+
+                cr.exportReportToPDF(report, "Factura");
+              
+            
+            }
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private void txtPesquisaEmpresa_TextChanged(object sender, System.EventArgs e)
+        {
+            this.fillEmpresas();
+            this.refillAllData();
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private void txtPesquisaNif_TextChanged(object sender, System.EventArgs e)
+        {
+            this.fillEmpresas();
+            this.refillAllData();
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private void btnEmpresas_Click(object sender, System.EventArgs e)
+        {
+            this.fillEmpresas();
+            this.refillAllData();
+        }
+
+        //*************************************************************************************************
+        //FIM DE ACÇÕES DE BOTÕES, SELECTEDINDEXCHANGED ETC.
+        //*************************************************************************************************
+
+
+        //*************************************************************************************************
+        //******************************FUNÇÕES ACESSÓRIAS ************************************************
+        //*************************************************************************************************
+
+        //=================================================================================================
+        //=================================================================================================
+        private string replaceByZero(string str)
+        {
+            if (str == "") str = "0";
+            return str;
+        }
+
+
+
+        //=================================================================================================
+        //=================================================================================================
+        protected string ConverteEstado(bool b)
+        {
+            if (b == true) return "sim";
+            else return "não";
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private string strNumIdent(string s)
+        {
+            return " NºID: " + s;
+        }
+
+        //=================================================================================================
+        //=================================================================================================
+        private string strNumSerie(string s)
+        {
+            return " NS: " + s;
+        }
+
+
+
+
+        public void dgDestino_ItemDataBound(object sender, DataGridItemEventArgs e)
+        {
+            string strValor;
+            string strValorFinal;
+
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                //                DTDestino= (DataTable)this.ViewState["DTDestino"]; 
+                //                DVDestino = new DataView(DTDestino); 
+                DataRowView DRV = (DataRowView)e.Item.DataItem;
+
+                strValor = DRV["valor"].ToString();
+                strValorFinal = DRV["valorFinal"].ToString();
+
+                if (strValor != "")
+                {
+                    try
+                    {
+                        dbValorSubTotal += Double.Parse(strValor);
+                        dbValorDescontoTotal += Double.Parse(strValor) - Double.Parse(strValorFinal);
+
+                    }
+                    catch
+                    {
+                        //A value was null
+                    }
+                }
+
+                // actualizar as várias textbox
+                this.txtValorSubTotal.Text = dbValorSubTotal.ToString();
+
+                this.txtDescontoTotal.Text = GERAL.clsGeral.RoundString2(dbValorDescontoTotal.ToString());
+
+                // actualizar o total da factura
+
+                this.Page.Validate(); //N tirar DM, esta pagina por alguma razao precisa disto!!!
+                if (this.Page.IsValid) this.calculaValorTotalFactura();
+            }
+        }
+
+
+        //************************************************************
+        //*********** COISAS DO SAP **********************************
+        //************************************************************
+
+        private SqlDataReader drTipoDocumento()
+        {
+            string strSQL = "SELECT idCodigoTipoDocumento, codigoTipoDocumento,descCodigoTipoDocumento FROM sap_CodigoTipoDocumento WHERE activo = 1";
+            return GERAL.clsDataAccess.ExecuteDR(strSQL);
+        }
+
+
+        //===================================================================================================
+        //funcao muito útil que compara horas!
+        //===================================================================================================
+        private string dtFactura()
+        {
+            //<add key="HORA_LIMITE_FACTURACAO_MANHA" value="13:28 PM" />
+            //<add key="HORA_LIMITE_FACTURACAO_NOITE" value="21:58 PM " />
+            //00:00 --> 13:30 = data hoje //13:30 --> 22:00 --> data hoje+ 1dia / 22:00 --> 00:00 = data de hoje + 1dia
+
+            string dtFactura = "";
+
+            string hraLimiteManha = (string)ConfigurationManager.AppSettings["HORA_LIMITE_FACTURACAO_MANHA"];
+            string hraLimiteNoite = (string)ConfigurationManager.AppSettings["HORA_LIMITE_FACTURACAO_NOITE"];
+
+            string hraManha = DateTime.Parse(hraLimiteManha).ToString("t");
+            string hraNoite = DateTime.Parse(hraLimiteNoite).ToString("t");
+
+            string horaActual = DateTime.Now.ToString("t");
+
+            if (DateTime.Compare(DateTime.Parse(horaActual), DateTime.Parse(hraManha)) < 0)
+            {
+                //se antes das 13:00 data de hoje
+                dtFactura = System.DateTime.Now.ToShortDateString();
+            }
+            else
+            {
+                //se depois das 13:00 data de amanha
+                dtFactura = System.DateTime.Now.AddDays(1).ToShortDateString();
+            }
+            return dtFactura;
+        }
+
+        //criar ficheiro AXAPTA
+        private bool writeAxaptaFile(string idFactura)
+        {
+            //data da factura
+            //tem de ser actualizada antes do ficheiro ser criado
+            //uma transaccao aqui nao faz sentido, pois o ficheiro é lido e nao escrito...
+            //string dtFactura = this.dtFactura();
+            //if (this.cbForcarData.Checked)
+            //{
+            //    dtFactura = this.txtDataFacturaForcada.Text;
+            //}
+            //this.updateDataFacturainBD(idFactura, dtFactura);
+            //this.txtDtFactura.Text = this.txtDataFacturaForcada.Text; //como na ha redirect tenho de actualizar o campo à mao.
+
+            //versao do ficheiro
+            //actualizado depois da factura ter sido criada, mas declarado aqui porque é usado na criacao do ficheiro
+            int iVersao = 0;
+            try
+            {
+                iVersao = System.Convert.ToInt16(this.txtVersao.Text);
+            }
+            catch
+            { }
+
+            string pathFicheiro = (string)ConfigurationManager.AppSettings["FACTURACAO_PATH_REL"];
+            string nomeFicheiro = idFactura + "_" + (iVersao + 1).ToString() + ".txt";
+            string ficheiro = Server.MapPath("~/" + pathFicheiro + "/" + nomeFicheiro);
+
+            //**************			
+            string path = System.Web.HttpContext.Current.Server.MapPath("~/" + pathFicheiro);
+
+            DirectoryInfo dirInfo = new DirectoryInfo(path);
+            string strSearch = idFactura + "_*";
+            FileInfo[] files = dirInfo.GetFiles(strSearch);
+            foreach (FileInfo f in files)
+            {
+                f.Delete(); //apagar todos os ficheiros que já existem com o mesmo idFactura
+            }
+
+            StreamWriter sw = new StreamWriter(ficheiro, false, System.Text.Encoding.GetEncoding(1252));
+
+            try
+            {
+                DATA.FacturaData factura = new LabMetro.DATA.FacturaData();
+                DataTable dt = factura.dtServicosParaFicheiroAXAPTA(idFactura);
+
+                //string orderby = this.ViewState["sortFieldDestino"].ToString() + " " + this.ViewState["sortDirectionDestino"];
+
+                //int ind = orderby.IndexOf("codTipoEquipamento");
+                //if (ind > -1)
+                //{
+                //    orderby = orderby.Replace("codTipoEquipamento", "descServico"); // nome da coluna mais parecida na bd.	
+                //}
+
+                DataView dv = new DataView(dt);
+                //dv.Sort = orderby;
+
+                //tentar aplicar esta ordenação à datatable
+                //****************************************************************
+
+                //as ultimas 3 colunas são:
+                //descServico, identificacaoEquipamento (num ID + num Serie) , refServico, e vão para tres linhas T0
+                //por isso são excluídas daqui
+
+                //para juntar linhas:
+                //tenho de pôr um contador fora do loop,
+                //cada vez que escrevo uma linha normal, incremento, e mando como ultimo campo (ou onde eles o quiserem receber)
+                //nas deslocacoes so incremento da primeira vez e nao incremento mas e mando tb como ultimo campo. 
+
+                int iColCount = dt.Columns.Count;
+                int iRowNumber = 1;
+
+                foreach (DataRow dr in dt.Rows)
+                {
+
+                    for (int i = 0; i < iColCount; i++)
+                    {
+                        if (!Convert.IsDBNull(dr[i]))
+                        {
+                            sw.Write(dr[i]);
+                        }
+
+                        sw.Write(";");  //todos levam tab, porque no fim vou adicionar agora mais um item, o NUMITEM na posicao 22
+
+
+                    }
+                    sw.Write(sw.NewLine);//escreve tudo numa linha
+
+
+
+                    iRowNumber += 1; //incrementar o contador 
+                }
+
+                factura = null;
+                sw.Close();
+
+                this.updateVersaoFicheiroinBD(idFactura, iVersao);
+
+                this.lblMessage.Text = "Ficheiro creado.";
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                sw.Close();
+                this.lblMessage.Text = "Error en la creacion del fichero.";
+
+                GERAL.clsWriteError.WriteLog(ex);
+                return false;
+            }
+        }
+
+
+
+        //=================================================================================================
+        //faz um update ao campo data factura na factura
+        //isto tem de ser feito ANTES do ficheiro ser criado....
+
+        //=================================================================================================
+        private void updateDataFacturainBD(string idFactura, string dtFactura)
+        {
+            string strSQL = "UPDATE FACTURA SET dtFactura = CONVERT(DATETIME, '" + dtFactura + "' , 105)  WHERE idFactura = " + idFactura;
+            GERAL.clsDataAccess.ExecuteNonQueryDB(strSQL);
+        }
+
+
+        //=================================================================================================
+        //incrementa a versao do ficheiro craido em 1 (UM)
+        //tb faz um update à data da factura, com a data correspondente ao momento em que o ficheiro é gravado.
+        //isto tem de ser feito depois do ficheiro ser criado.
+        //=================================================================================================
+        private void updateVersaoFicheiroinBD(string idFactura, int iVersao)
+        {
+            string strSQL = "UPDATE FACTURA SET intVersaoFicheiro = " + (iVersao + 1) + " WHERE idFactura = " + idFactura;
+            GERAL.clsDataAccess.ExecuteNonQueryDB(strSQL);
+        }
+
+
+        //=================================================================================================
+        //CALCULA O VALOR TOTAL DA FACTURA
+        //=================================================================================================
+        private void calculaValorTotalFactura()
+        {
+            txtValorTotalFactura.Text = (Double.Parse(this.replaceByZero(txtValorSubTotal.Text)) - Double.Parse(this.replaceByZero(txtDescontoTotal.Text)) + Double.Parse(this.replaceByZero(txtValorAjudasCustoDeslocacoes.Text)) + Double.Parse(this.replaceByZero(txtValorDespesasEnvio.Text))).ToString();
+        }
+
+        
+
+
+       
+
+
+        
+        //=================================================================================================
+        //VALIDA quantas requisições existem associadas aos serviços a serem facturados.
+        //=================================================================================================
+        private void validaRequisicoes(DataTable dt)
+        {
+            Hashtable ht = new Hashtable();
+            DataView dv = new DataView(dt);
+            dv.RowStateFilter = DataViewRowState.CurrentRows;
+            foreach (DataRowView drv in dv)
+            {
+                if (drv["idRequisicao"].ToString() != "")
+                {
+                    try
+                    {
+                        ht.Add(drv["idRequisicao"], drv["referenciaCliente"]);
+                    }
+                    catch
+                    {
+                        //nada, ele aqui nao adiciona os items repetidos, que é o q se pretende.
+                    }
+                }
+            }
+
+            int i = ht.Count;
+            if (i == 0) //nao ha nenhuma requisicao
+            {
+                this.lblErroRequisicoes.Text = "Há linhas de Serviço sem Requisição.";
+                //return false; 
+            }
+            else if (i > 1)
+            {
+                this.lblErroRequisicoes.Text = "Há mais de uma Requisição nas linhas de Serviço.";
+                //return false; 
+            }
+            //return true; 
+        }
+
+        private bool ColumnEqual(object A, object B)
+        {
+
+            // Compares two values to see if they are equal. Also compares DBNULL.Value.
+            // Note: If your DataTable contains object fields, then you must extend this
+            // function to handle them in a meaningful way if you intend to group on them.
+
+            if (A == DBNull.Value && B == DBNull.Value) //  both are DBNull.Value
+                return true;
+            if (A == DBNull.Value || B == DBNull.Value) //  only one is DBNull.Value
+                return false;
+            return (A.Equals(B));  // value type standard comparison
+        }
+
+
+        private DataTable SelectDistinct(DataTable SourceTable, string FieldName)
+        {
+            DataTable DT = new DataTable();
+            DT.Columns.Add(FieldName, SourceTable.Columns[FieldName].DataType);
+
+            object LastValue = null;
+
+            foreach (DataRow dr in SourceTable.Select("", FieldName))
+            {
+                if (LastValue == null || !(ColumnEqual(LastValue, dr[FieldName])))
+                {
+                    LastValue = dr[FieldName];
+                    DT.Rows.Add(new object[] { LastValue });
+                }
+            }
+            //			if (ds != null) 
+            //				ds.Tables.Add(dt);
+            return DT;
+        }
+
+    }
+}

@@ -1,0 +1,273 @@
+﻿body
+{
+	/*background: #ffffff center;
+	margin-left:auto;
+	margin-right:auto;*/ 
+	
+	background-color:#FFFFFF;
+	/*background-image:url(images/splash-bg.png);
+	background-repeat:repeat-x;*/
+	padding-top: 2%; /* 0; quando tem logo /*alterado 12-2-2009*/
+	margin-top: 0px ;
+	color: #333;
+	height:100%;
+	/*width:1024px;
+	font-size:80%;*/
+	width:800px;
+	font-size:70%; 
+	font-family:Arial, Helvetica, Sans-Serif;
+	
+	letter-spacing:-0.95%;
+	line-height: 1.2em; /*o browser quanto set do medium text size = 16px
+	BODY {font-size:62.5%}This takes 16px down to 10px 
+	This takes 16px down to 10px which I’m using purely because it’s a nice round number for example purposes – 
+	10px text is too small for the real world. From now on it’s easy to think in pixels but still set sizes
+	in terms of ems: 1em is 10px, 0.8em is 8px, 1.6em is 16px, etc. If you are laying out your document using CSS 
+	(which you are, right?) then you have probably used a few divs to group together elements. Apply text-size to 
+	these divs and your job is almost done. Consider a two column layout with header and footer:
+	*/
+}
+
+p
+{
+	margin:12px 0;
+}
+
+select, option,input
+{
+	font-size:0.9em;	/*parece não ser aceite.*/
+	line-height:1.3em;
+	padding-bottom:1px;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+a:link 
+{ 
+	color:#CC3333; /*vermelho firebrick*/
+	text-decoration:none; 
+}
+
+a:visited
+{
+	color:#CC3333; /*vermelho firebrick*/
+}
+
+a:link:hover
+{
+	color:#CC3333; /*vermelho firebrick*/
+}
+
+a:focus
+{
+	outline:#CC3333; /*vermelho firebrick*/
+}
+
+        
+
+
+/*tabela principal que contem menu e body*/
+#tblMain
+{
+	background-color: #FFFFFF;
+
+}
+
+/*div que contém body*/	
+#divMain
+{
+	background-color: #FFFFFF;
+	padding-left:20px;
+}
+
+/*menu tem css própria*/
+
+/*header da pagina*/
+#divBarraHeader 
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border-bottom:6px solid #CC3333; /*vermelho firebrick*/
+	height:50px;
+	margin-bottom:12px;
+	/*min-width:1002px;*/
+	min-width:800px;
+	
+	width:auto;
+	/*float:none;
+	background-color:#808080 ;cinza relativamente escuro
+border-top:4px solid #EB4C07;
+height:30px;
+margin:0 0 10px 0;
+padding:10px 0 0;
+position:absolute;
+width:100%;*/
+
+}
+
+.tituloAplicacaoHeader
+{
+	color: #339933; /*verde isq apave*/
+	font-weight:bold;
+	font-size:14px;
+}
+
+h1
+{
+	font-family:Helvetica, Arial,serif;
+	font-size:1.4em;
+	font-weight:bold;
+	letter-spacing:-0.06em;
+	line-height:1.1em;
+	color:#0066CC;
+}
+
+h2
+{
+	font-family:Helvetica, Arial,serif;
+	font-size:1.26em;
+	font-weight:bold;
+	letter-spacing:-0.06em;
+	line-height:1.1em;
+	color:#0066CC;
+}
+
+h3
+{
+	font-family:Helvetica, Arial,serif;
+	font-size:1.2em;
+	font-weight:bold;
+	letter-spacing:-0.05em;
+	line-height:1em;
+	color:#5c7996;	
+}
+	
+.lblMessage
+{
+    
+    font-size:0.9em;
+    color: #cc0000 ; 
+}
+
+.button
+{
+
+	background-color:#919191; /*cinzento sarikal botao*/ 
+	background-position:center top;
+	background-repeat:repeat-x;
+	border-color:#97BEEB #24416D #24416D #97BEEB;
+	border-style:solid;
+	border-width:1px;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-family:Tahoma,sans-serif;
+	overflow:visible;
+	padding:1px 5px;
+	font-size:0.85em;
+}
+
+.button_red
+{
+
+	background-color:#CC0000; /*azul botao*/ 
+	background-position:center top;
+	background-repeat:repeat-x;
+	/*top right  bottom left*/
+	border-color:#CC0000 #24416D #24416D #CC0000;
+	border-style:solid;
+	border-width:1px;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-family:Tahoma,sans-serif;
+	overflow:visible;
+	padding:1px 5px;
+	font-size:0.85em;
+}
+
+.button_logout
+{
+	padding:2px 15px 3px 15px;
+	border-style:solid;
+	border-top-width:1px;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-right-width:1px;
+	border-top-color:#D9DFEA;
+	border-left-color:#D9DFEA;
+	border-bottom-color:#0e1f5b;
+	border-right-color:#0e1f5b;
+	background-color:#EB4C07;
+	color:#FFFFFF;
+	font-size:13px;
+	font-weight:bold;
+	font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
+	text-align:center;
+	
+	}
+
+.button_facebook
+
+{
+	padding:2px 15px 3px 15px;
+	border-style:solid;
+	border-top-width:1px;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-right-width:1px;
+	border-top-color:#D9DFEA;
+	border-left-color:#D9DFEA;
+	border-bottom-color:#0e1f5b;
+	border-right-color:#0e1f5b;
+	background-color:#3b5998;
+	color:#FFFFFF;
+	font-size:11px;
+	font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
+	text-align:center;
+
+	}
+
+.LoginHeader
+{
+	background-color:	#808080;
+	color:#FFFFFF; 
+	font-weight:bold;
+	font-size: 1.1em;
+	
+}
+
+		
+#tblLogin, #tblPwd /*corpo do ecran de login, tb usado p tabela de registo*/
+{
+    
+    
+    color: black;
+    font-weight: bold;
+    background-color: #A9A9A9;
+    vertical-align: middle;
+    position: absolute;
+    margin-top: 100;
+    margin-left: 250;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.button_confirm
+{
+	background-image: url(IMAGES/btn_confirm_130_45.jpg);
+	background-color: transparent;
+	width:130px;
+	height:45px;
+	border:0;
+	color:#52A821; /*verde letra botao*/ 
+	font-family:Arial, Helvetica, Sans-Serif;
+	font-size:1.3em;
+	font-weight:bold;
+	text-align:center;
+	
+
+}
+

@@ -1,0 +1,41 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7ABF3AA7-FF79-4BEE-82FC-768D56B08A96}"
+	ProjectSection(SolutionItems) = preProject
+		SequenciaEstadosNova.htm = SequenciaEstadosNova.htm
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabMetro", "LabMetro.csproj", "{844DC39B-B249-40BA-80D9-5694D745260F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Debug|x64.ActiveCfg = Debug|x64
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Debug|x64.Build.0 = Debug|x64
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Debug|x86.ActiveCfg = Debug|x86
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Debug|x86.Build.0 = Debug|x86
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Release|x64.ActiveCfg = Release|x64
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Release|x64.Build.0 = Release|x64
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Release|x86.ActiveCfg = Release|x86
+		{844DC39B-B249-40BA-80D9-5694D745260F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E86AB21-380C-4109-88EB-664E3B9239C9}
+	EndGlobalSection
+EndGlobal

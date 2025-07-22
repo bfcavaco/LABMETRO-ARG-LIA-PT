@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSOrcamentoFax" targetNamespace="http://tempuri.org/DSOrcamentoFax.xsd" xmlns:mstns="http://tempuri.org/DSOrcamentoFax.xsd" xmlns="http://tempuri.org/DSOrcamentoFax.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSOrcamentoFax" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSOrcamentoFax" msprop:Generator_DataSetName="DSOrcamentoFax">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vOrcamento" msprop:Generator_UserTableName="vOrcamento" msprop:Generator_RowDeletedName="vOrcamentoRowDeleted" msprop:Generator_TableClassName="vOrcamentoDataTable" msprop:Generator_RowChangedName="vOrcamentoRowChanged" msprop:Generator_RowClassName="vOrcamentoRow" msprop:Generator_RowChangingName="vOrcamentoRowChanging" msprop:Generator_RowEvArgName="vOrcamentoRowChangeEvent" msprop:Generator_RowEvHandlerName="vOrcamentoRowChangeEventHandler" msprop:Generator_TablePropName="vOrcamento" msprop:Generator_TableVarName="tablevOrcamento" msprop:Generator_RowDeletingName="vOrcamentoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idOrcamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="idOrcamento" msprop:Generator_ColumnPropNameInRow="idOrcamento" msprop:Generator_ColumnVarNameInTable="columnidOrcamento" msprop:Generator_ColumnPropNameInTable="idOrcamentoColumn" type="xs:int" />
+              <xs:element name="respTecnico" msprop:Generator_UserColumnName="respTecnico" msprop:Generator_ColumnPropNameInRow="respTecnico" msprop:Generator_ColumnVarNameInTable="columnrespTecnico" msprop:Generator_ColumnPropNameInTable="respTecnicoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="refOrcamento" msdata:ReadOnly="true" msprop:Generator_UserColumnName="refOrcamento" msprop:Generator_ColumnPropNameInRow="refOrcamento" msprop:Generator_ColumnVarNameInTable="columnrefOrcamento" msprop:Generator_ColumnPropNameInTable="refOrcamentoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="dtOrcamento" msprop:Generator_UserColumnName="dtOrcamento" msprop:Generator_ColumnPropNameInRow="dtOrcamento" msprop:Generator_ColumnVarNameInTable="columndtOrcamento" msprop:Generator_ColumnPropNameInTable="dtOrcamentoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="empresa" msprop:Generator_UserColumnName="empresa" msprop:Generator_ColumnPropNameInRow="empresa" msprop:Generator_ColumnVarNameInTable="columnempresa" msprop:Generator_ColumnPropNameInTable="empresaColumn" type="xs:string" />
+              <xs:element name="contacto" msdata:ReadOnly="true" msprop:Generator_UserColumnName="contacto" msprop:Generator_ColumnPropNameInRow="contacto" msprop:Generator_ColumnVarNameInTable="columncontacto" msprop:Generator_ColumnPropNameInTable="contactoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="departamento" msprop:Generator_UserColumnName="departamento" msprop:Generator_ColumnPropNameInRow="departamento" msprop:Generator_ColumnVarNameInTable="columndepartamento" msprop:Generator_ColumnPropNameInTable="departamentoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="faxEmpresa" msprop:Generator_UserColumnName="faxEmpresa" msprop:Generator_ColumnPropNameInRow="faxEmpresa" msprop:Generator_ColumnVarNameInTable="columnfaxEmpresa" msprop:Generator_ColumnPropNameInTable="faxEmpresaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="referenciaCliente" msprop:Generator_UserColumnName="referenciaCliente" msprop:Generator_ColumnPropNameInRow="referenciaCliente" msprop:Generator_ColumnVarNameInTable="columnreferenciaCliente" msprop:Generator_ColumnPropNameInTable="referenciaClienteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="mesesValidadeOrcamento" msprop:Generator_UserColumnName="mesesValidadeOrcamento" msprop:Generator_ColumnPropNameInRow="mesesValidadeOrcamento" msprop:Generator_ColumnVarNameInTable="columnmesesValidadeOrcamento" msprop:Generator_ColumnPropNameInTable="mesesValidadeOrcamentoColumn" type="xs:string" />
+              <xs:element name="percIVA" msprop:Generator_UserColumnName="percIVA" msprop:Generator_ColumnPropNameInRow="percIVA" msprop:Generator_ColumnVarNameInTable="columnpercIVA" msprop:Generator_ColumnPropNameInTable="percIVAColumn" type="xs:string" />
+              <xs:element name="obsLocalExecucao" msprop:Generator_UserColumnName="obsLocalExecucao" msprop:Generator_ColumnPropNameInRow="obsLocalExecucao" msprop:Generator_ColumnVarNameInTable="columnobsLocalExecucao" msprop:Generator_ColumnPropNameInTable="obsLocalExecucaoColumn" type="xs:string" />
+              <xs:element name="valorAjudasCustoDeslocacoes" msprop:Generator_UserColumnName="valorAjudasCustoDeslocacoes" msprop:Generator_ColumnPropNameInRow="valorAjudasCustoDeslocacoes" msprop:Generator_ColumnVarNameInTable="columnvalorAjudasCustoDeslocacoes" msprop:Generator_ColumnPropNameInTable="valorAjudasCustoDeslocacoesColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tempoExecucao" msprop:Generator_UserColumnName="tempoExecucao" msprop:Generator_ColumnPropNameInRow="tempoExecucao" msprop:Generator_ColumnVarNameInTable="columntempoExecucao" msprop:Generator_ColumnPropNameInTable="tempoExecucaoColumn" type="xs:string" />
+              <xs:element name="localidadeCalibracao" msprop:Generator_UserColumnName="localidadeCalibracao" msprop:Generator_ColumnPropNameInRow="localidadeCalibracao" msprop:Generator_ColumnVarNameInTable="columnlocalidadeCalibracao" msprop:Generator_ColumnPropNameInTable="localidadeCalibracaoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="bTotal" msprop:Generator_UserColumnName="bTotal" msprop:Generator_ColumnPropNameInRow="bTotal" msprop:Generator_ColumnVarNameInTable="columnbTotal" msprop:Generator_ColumnPropNameInTable="bTotalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="bDesconto" msprop:Generator_UserColumnName="bDesconto" msprop:Generator_ColumnPropNameInRow="bDesconto" msprop:Generator_ColumnVarNameInTable="columnbDesconto" msprop:Generator_ColumnPropNameInTable="bDescontoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="bDeslocacoes" msprop:Generator_UserColumnName="bDeslocacoes" msprop:Generator_ColumnPropNameInRow="bDeslocacoes" msprop:Generator_ColumnVarNameInTable="columnbDeslocacoes" msprop:Generator_ColumnPropNameInTable="bDeslocacoesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="idCondicoesPagamento" msprop:Generator_UserColumnName="idCondicoesPagamento" msprop:Generator_ColumnPropNameInRow="idCondicoesPagamento" msprop:Generator_ColumnVarNameInTable="columnidCondicoesPagamento" msprop:Generator_ColumnPropNameInTable="idCondicoesPagamentoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="condicoesPagamento" msprop:Generator_UserColumnName="condicoesPagamento" msprop:Generator_ColumnPropNameInRow="condicoesPagamento" msprop:Generator_ColumnVarNameInTable="columncondicoesPagamento" msprop:Generator_ColumnPropNameInTable="condicoesPagamentoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vOrcamentoLinha" msprop:Generator_UserTableName="vOrcamentoLinha" msprop:Generator_RowDeletedName="vOrcamentoLinhaRowDeleted" msprop:Generator_TableClassName="vOrcamentoLinhaDataTable" msprop:Generator_RowChangedName="vOrcamentoLinhaRowChanged" msprop:Generator_RowClassName="vOrcamentoLinhaRow" msprop:Generator_RowChangingName="vOrcamentoLinhaRowChanging" msprop:Generator_RowEvArgName="vOrcamentoLinhaRowChangeEvent" msprop:Generator_RowEvHandlerName="vOrcamentoLinhaRowChangeEventHandler" msprop:Generator_TablePropName="vOrcamentoLinha" msprop:Generator_TableVarName="tablevOrcamentoLinha" msprop:Generator_RowDeletingName="vOrcamentoLinhaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idOrcamentoLinha" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="idOrcamentoLinha" msprop:Generator_ColumnPropNameInRow="idOrcamentoLinha" msprop:Generator_ColumnVarNameInTable="columnidOrcamentoLinha" msprop:Generator_ColumnPropNameInTable="idOrcamentoLinhaColumn" type="xs:int" />
+              <xs:element name="quantidade" msprop:Generator_UserColumnName="quantidade" msprop:Generator_ColumnPropNameInRow="quantidade" msprop:Generator_ColumnVarNameInTable="columnquantidade" msprop:Generator_ColumnPropNameInTable="quantidadeColumn" type="xs:short" />
+              <xs:element name="valorLinha" msdata:ReadOnly="true" msprop:Generator_UserColumnName="valorLinha" msprop:Generator_ColumnPropNameInRow="valorLinha" msprop:Generator_ColumnVarNameInTable="columnvalorLinha" msprop:Generator_ColumnPropNameInTable="valorLinhaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valorUnitario" msprop:Generator_UserColumnName="valorUnitario" msprop:Generator_ColumnPropNameInRow="valorUnitario" msprop:Generator_ColumnVarNameInTable="columnvalorUnitario" msprop:Generator_ColumnPropNameInTable="valorUnitarioColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="idOrcamento" msprop:Generator_UserColumnName="idOrcamento" msprop:Generator_ColumnPropNameInRow="idOrcamento" msprop:Generator_ColumnVarNameInTable="columnidOrcamento" msprop:Generator_ColumnPropNameInTable="idOrcamentoColumn" type="xs:int" />
+              <xs:element name="asterisco" msprop:Generator_UserColumnName="asterisco" msprop:Generator_ColumnPropNameInRow="asterisco" msprop:Generator_ColumnVarNameInTable="columnasterisco" msprop:Generator_ColumnPropNameInTable="asteriscoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="descricaoEquipamento" msprop:Generator_UserColumnName="descricaoEquipamento" msprop:Generator_ColumnPropNameInRow="descricaoEquipamento" msprop:Generator_ColumnVarNameInTable="columndescricaoEquipamento" msprop:Generator_ColumnPropNameInTable="descricaoEquipamentoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="percDescontoLinha" msprop:Generator_UserColumnName="percDescontoLinha" msprop:Generator_ColumnPropNameInRow="percDescontoLinha" msprop:Generator_ColumnVarNameInTable="columnpercDescontoLinha" msprop:Generator_ColumnPropNameInTable="percDescontoLinhaColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrcamentoComentario" msprop:Generator_UserTableName="OrcamentoComentario" msprop:Generator_RowDeletedName="OrcamentoComentarioRowDeleted" msprop:Generator_TableClassName="OrcamentoComentarioDataTable" msprop:Generator_RowChangedName="OrcamentoComentarioRowChanged" msprop:Generator_RowClassName="OrcamentoComentarioRow" msprop:Generator_RowChangingName="OrcamentoComentarioRowChanging" msprop:Generator_RowEvArgName="OrcamentoComentarioRowChangeEvent" msprop:Generator_RowEvHandlerName="OrcamentoComentarioRowChangeEventHandler" msprop:Generator_TablePropName="OrcamentoComentario" msprop:Generator_TableVarName="tableOrcamentoComentario" msprop:Generator_RowDeletingName="OrcamentoComentarioRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idOrcamentoComentario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="idOrcamentoComentario" msprop:Generator_ColumnPropNameInRow="idOrcamentoComentario" msprop:Generator_ColumnVarNameInTable="columnidOrcamentoComentario" msprop:Generator_ColumnPropNameInTable="idOrcamentoComentarioColumn" type="xs:int" />
+              <xs:element name="idOrcamento" msprop:Generator_UserColumnName="idOrcamento" msprop:Generator_ColumnPropNameInRow="idOrcamento" msprop:Generator_ColumnVarNameInTable="columnidOrcamento" msprop:Generator_ColumnPropNameInTable="idOrcamentoColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" type="xs:string" />
+              <xs:element name="asterisco" msprop:Generator_UserColumnName="asterisco" msprop:Generator_ColumnPropNameInRow="asterisco" msprop:Generator_ColumnVarNameInTable="columnasterisco" msprop:Generator_ColumnPropNameInTable="asteriscoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="idUtilCriacao" msprop:Generator_UserColumnName="idUtilCriacao" msprop:Generator_ColumnPropNameInRow="idUtilCriacao" msprop:Generator_ColumnVarNameInTable="columnidUtilCriacao" msprop:Generator_ColumnPropNameInTable="idUtilCriacaoColumn" type="xs:int" />
+              <xs:element name="dtCriacao" msprop:Generator_UserColumnName="dtCriacao" msprop:Generator_ColumnPropNameInRow="dtCriacao" msprop:Generator_ColumnVarNameInTable="columndtCriacao" msprop:Generator_ColumnPropNameInTable="dtCriacaoColumn" type="xs:dateTime" />
+              <xs:element name="idUtilAlteracao" msprop:Generator_UserColumnName="idUtilAlteracao" msprop:Generator_ColumnPropNameInRow="idUtilAlteracao" msprop:Generator_ColumnVarNameInTable="columnidUtilAlteracao" msprop:Generator_ColumnPropNameInTable="idUtilAlteracaoColumn" type="xs:int" />
+              <xs:element name="dtAlteracao" msprop:Generator_UserColumnName="dtAlteracao" msprop:Generator_ColumnPropNameInRow="dtAlteracao" msprop:Generator_ColumnVarNameInTable="columndtAlteracao" msprop:Generator_ColumnPropNameInTable="dtAlteracaoColumn" type="xs:dateTime" />
+              <xs:element name="idOrcamentoComentarioOld" msprop:Generator_UserColumnName="idOrcamentoComentarioOld" msprop:Generator_ColumnPropNameInRow="idOrcamentoComentarioOld" msprop:Generator_ColumnVarNameInTable="columnidOrcamentoComentarioOld" msprop:Generator_ColumnPropNameInTable="idOrcamentoComentarioOldColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="DSOrcamentoFaxKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vOrcamentoLinha" />
+      <xs:field xpath="mstns:idOrcamentoLinha" />
+    </xs:unique>
+    <xs:unique name="DSOrcamentoFaxKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrcamentoComentario" />
+      <xs:field xpath="mstns:idOrcamentoComentario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

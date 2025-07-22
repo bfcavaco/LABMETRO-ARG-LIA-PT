@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DSDiasCalibracaoEstatistica" targetNamespace="http://tempuri.org/DSDiasCalibracaoEstatistica.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DSDiasCalibracaoEstatistica.xsd"
+	xmlns:mstns="http://tempuri.org/DSDiasCalibracaoEstatistica.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DSDiasCalibracaoEstatistica" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="dtTempTotaisDias">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idGrandeza" type="xs:string" />
+							<xs:element name="descGrandeza" type="xs:string" minOccurs="0" />
+							<xs:element name="totalServicos" type="xs:float" />
+							<xs:element name="parcialDias" type="xs:float" />
+							<xs:element name="percentagem" msdata:ReadOnly="true" type="xs:float" minOccurs="0" />
+							<xs:element name="calibracaoExterna" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="dtTempTotaisDiasIntExt">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idGrandeza" type="xs:string" minOccurs="0" />
+							<xs:element name="descGrandeza" type="xs:string" minOccurs="0" />
+							<xs:element name="totalServicosExternos" type="xs:int" minOccurs="0" />
+							<xs:element name="parcialDiasExternos" type="xs:float" minOccurs="0" />
+							<xs:element name="percentagemExterna" type="xs:float" minOccurs="0" />
+							<xs:element name="totalServicosInternos" type="xs:int" minOccurs="0" />
+							<xs:element name="parcialDiasInternos" type="xs:float" minOccurs="0" />
+							<xs:element name="percentagemInterna" type="xs:float" minOccurs="0" />
+							<xs:element name="totalServicos" type="xs:int" minOccurs="0" />
+							<xs:element name="parcialDias" type="xs:float" minOccurs="0" />
+							<xs:element name="percentagem" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

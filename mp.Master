@@ -1,0 +1,215 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mp.master.cs" Inherits="LabMetro.mp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>.:: <%= System.Configuration.ConfigurationManager.AppSettings["nomeAplicacao"] %> ::.</title>
+    <link href="labmetro.css" type="text/css" rel="stylesheet" />
+    <link href="menu.css" type="text/css" rel="stylesheet" />
+    <link href="form.css" type="text/css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.ui.datepicker-pt-BR.js" type="text/javascript"></script>
+
+    <link type="text/css" href="ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder runat="server" ID="scriptContent">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ 
+    <form id="Form1" method="post" runat="server">
+    <asp:ScriptManager runat="server" ID="ScriptManager1" OnAsyncPostBackError="ScriptManager1_AsyncPostBackError" EnablePartialRendering="true">
+    </asp:ScriptManager>
+    <!--img src="IMAGES/Labmetro_logo.png" style="margin:0 0 0 0;" alt="logo" /-->
+    <div id="divBarraHeader">
+            <div style="float:right; width:5%;">
+            
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <img src="IMAGES/progress.gif" alt="progress" />
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        </div>
+        <div class="tituloAplicacaoHeader">
+            <%= System.Configuration.ConfigurationManager.AppSettings["versaoAplicacao"]%>
+        </div>
+    
+        <asp:LoginName ID="LoginName1" runat="server" FormatString="User: {0}"/>  <img src="IMAGES/bluearrow.jpeg" alt="seta" style="padding-right:10px; float:none;"/> <asp:LoginStatus ID="LoginStatus1"
+            runat="server" LogoutText="<%$ Resources:Resource, TerminarSessao %>" OnLoggingOut="LoginStatus1_LoggingOut" OnLoggedOut="LoginStatus1_LoggedOut"  />
+     
+        <asp:ContentPlaceHolder ID="headerContent" runat="server">
+            <p>
+                &nbsp;</p>
+        </asp:ContentPlaceHolder>
+    </div>
+    
+            <table id="tblMain" runat="server">
+                <tr>
+                    <td valign="top" id="tdMenu" class="bgMenu">
+                        <!-- menu-->
+                        <asp:UpdatePanel runat="server" ID="updatePanelMenu">
+                            <ContentTemplate>
+                        <table id="navcontainer" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td id="Td1" style="border-top: #999999 1px solid; background-color: #FFFFFF;">
+                                    <p align="center">
+                                        <a href="Home.aspx" target="_self">Home</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnEmp" runat="server">
+                                    <asp:Button class="button" ID="btnEmpresa" runat="server" Text="<%$Resources:Resource, Empresa %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnEmpresa_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdEmp" runat="server">
+                                    <ul id="navlistEmpresas" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnEqu" runat="server">
+                                    <asp:Button class="button" ID="btnEquipamento" runat="server" Text="<%$Resources:Resource, Equipamento %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnEquipamento_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdEqu" runat="server">
+                                    <ul id="navlistEquipamentos" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnGes" runat="server">
+                                    <asp:Button class="button" ID="btnGestao" runat="server" Text="<%$Resources:Resource, Gestao %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnGestao_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdGes" runat="server">
+                                    <ul id="navlistGestao" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnOrc" runat="server">
+                                    <asp:Button class="button" ID="btnOrcamento" runat="server" Text="<%$Resources:Resource, Orcamentos %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnOrcamento_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdOrc" runat="server">
+                                    <ul id="navlistOrcamentos" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnLab" runat="server">
+                                    <asp:Button class="button" ID="btnLaboratorios" runat="server" Text="<%$Resources:Resource, Servicos %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnLaboratorios_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdLab" runat="server">
+                                    <ul id="navlistLaboratorios" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnDoc" runat="server">
+                                    <asp:Button class="button" ID="btnDocumentos" runat="server" Text="<%$Resources:Resource, Documentos %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnDocumentos_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdDoc" runat="server">
+                                    <ul id="navlistDocumentos" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnFac" runat="server">
+                                    <asp:Button class="button" ID="btnFacturacao" runat="server" Text="<%$Resources:Resource, Facturacao %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnFacturacao_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdFac" runat="server">
+                                    <ul id="navlistFacturacao" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnEst" runat="server">
+                                    <asp:Button class="button" ID="btnEstatisticas" runat="server" Text="<%$Resources:Resource, Estatisticas %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnEstatisticas_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdEst" runat="server">
+                                    <ul id="navlistEstatisticas" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnCer" runat="server">
+                                    <asp:Button class="button" ID="btnCertificado" runat="server" Text="<%$Resources:Resource, Certificacao %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnCertificado_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdCer" runat="server">
+                                    <ul id="navlistCertificados" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnCon" runat="server">
+                                    <asp:Button class="button" ID="btnConcessionarios" runat="server" Text="CTA" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnConcessionarios_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdCon" runat="server">
+                                    <ul id="navlistConcessionarios" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnMar" runat="server">
+                                    <asp:Button class="button" ID="btnMarcacoes" runat="server" Text="<%$Resources:Resource, Marcacoes %>" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnMarcacoes_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdMar" runat="server">
+                                    <ul id="navlistMarcacoes" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                               <tr>
+                                <td class="tdBtnMenu" id="tdBtnIga" runat="server">
+                                    <asp:Button class="button" ID="btnIgae" runat="server" Text="IGAE" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnIgae_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdIga" runat="server">
+                                    <ul id="navlistIgae" runat="server">
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdBtnMenu" id="tdBtnAdm" runat="server">
+                                    <asp:Button class="button" ID="btnBOAdmin" runat="server" Text="BO Admin" CssClass="btnMenu" BorderStyle="none" CausesValidation="false" OnClick="btnBOAdmin_Click"></asp:Button>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                </ContentTemplate> </asp:UpdatePanel>
+                        <!-- fim menu-->
+                    </td>
+                    <td valign="top">
+                        <div id="divMain">
+                            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+   
+    </form>
+</body>
+</html>

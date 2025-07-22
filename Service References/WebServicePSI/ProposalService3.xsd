@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices.Proposals" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices.Proposals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices" />
+  <xs:complexType name="ArrayOfPSIAccountOutputObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIAccountOutputObject" nillable="true" type="tns:PSIAccountOutputObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIAccountOutputObject" nillable="true" type="tns:ArrayOfPSIAccountOutputObject" />
+  <xs:complexType name="PSIAccountOutputObject">
+    <xs:sequence>
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Number_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIAccountOutputObject" nillable="true" type="tns:PSIAccountOutputObject" />
+  <xs:complexType name="ProposalStateChangedInputObject">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices" base="q1:BaseServiceInputObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewState" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProposalStateChangedInputObject" nillable="true" type="tns:ProposalStateChangedInputObject" />
+  <xs:complexType name="ProposalStateChangedOutputObject">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices" base="q2:BaseServiceOutputObject">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProposalStateChangedOutputObject" nillable="true" type="tns:ProposalStateChangedOutputObject" />
+</xs:schema>

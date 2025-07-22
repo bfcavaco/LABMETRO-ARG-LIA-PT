@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PSI.BL.BO.Proposals" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO.Proposals" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPSIIntegrationProposal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIIntegrationProposal" nillable="true" type="tns:PSIIntegrationProposal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIIntegrationProposal" nillable="true" type="tns:ArrayOfPSIIntegrationProposal" />
+  <xs:complexType name="PSIIntegrationProposal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IntegrationDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IntegrationStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsClientPotential" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManagerOrigin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalClientNIF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalCostCenter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProposalDepartment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalManagement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalManager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalOrigin" type="xs:int" />
+      <xs:element minOccurs="0" name="ProposalPrefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalStatus" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProposalTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalValue" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIIntegrationProposal" nillable="true" type="tns:PSIIntegrationProposal" />
+</xs:schema>

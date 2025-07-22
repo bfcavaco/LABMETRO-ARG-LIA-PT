@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://PSI.Internal.WCF/WCFServices/Proposal" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProposalService" targetNamespace="http://PSI.Internal.WCF/WCFServices/Proposal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://PSI.Internal.WCF/WCFServices/Proposal/Imports">
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd0" namespace="http://PSI.Internal.WCF/WCFServices/Proposal" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices.Proposals" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO.DocumentManagment" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO.Proposals" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProposalService_GetAllVendors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllVendors" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetAllVendors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllVendorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_NotifyProposalStateChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyProposalStateChanged" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_NotifyProposalStateChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyProposalStateChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_SendProposalDocumentsToManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendProposalDocumentsToManager" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_CloneProposalMasterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloneProposalMasterData" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_CloneProposalMasterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloneProposalMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_CloneProposalGeneralData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloneProposalGeneralData" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_CloneProposalGeneralData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloneProposalGeneralDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_ActivateProposal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateProposal" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_ActivateProposal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateProposalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetProposalsBySearchString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProposalsBySearchString" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetProposalsBySearchString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProposalsBySearchStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetForWorkspaceProposalsBySearchString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetForWorkspaceProposalsBySearchString" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetForWorkspaceProposalsBySearchString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetForWorkspaceProposalsBySearchStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetProposalsByCustomerNIF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProposalsByCustomerNIF" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetProposalsByCustomerNIF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProposalsByCustomerNIFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetAllProposalDocTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProposalDocTypes" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetAllProposalDocTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProposalDocTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetAllProposalDocTypesFiltered_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProposalDocTypesFiltered" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_GetAllProposalDocTypesFiltered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProposalDocTypesFilteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_IntegrateProposals_InputMessage">
+    <wsdl:part name="parameters" element="tns:IntegrateProposals" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_IntegrateProposals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IntegrateProposalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_IntegrateProposalsDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:IntegrateProposalsDB" />
+  </wsdl:message>
+  <wsdl:message name="IProposalService_IntegrateProposalsDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IntegrateProposalsDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProposalService">
+    <wsdl:operation name="GetAllVendors">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetAllVendors" message="tns:IProposalService_GetAllVendors_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetAllVendorsResponse" message="tns:IProposalService_GetAllVendors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyProposalStateChanged">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/NotifyProposalStateChanged" message="tns:IProposalService_NotifyProposalStateChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/NotifyProposalStateChangedResponse" message="tns:IProposalService_NotifyProposalStateChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendProposalDocumentsToManager">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/SendProposalDocumentsToManager" message="tns:IProposalService_SendProposalDocumentsToManager_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloneProposalMasterData">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/CloneProposalMasterData" message="tns:IProposalService_CloneProposalMasterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/CloneProposalMasterDataResponse" message="tns:IProposalService_CloneProposalMasterData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloneProposalGeneralData">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/CloneProposalGeneralData" message="tns:IProposalService_CloneProposalGeneralData_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/CloneProposalGeneralDataResponse" message="tns:IProposalService_CloneProposalGeneralData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateProposal">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/ActivateProposal" message="tns:IProposalService_ActivateProposal_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/ActivateProposalResponse" message="tns:IProposalService_ActivateProposal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalsBySearchString">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetProposalsBySearchString" message="tns:IProposalService_GetProposalsBySearchString_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetProposalsBySearchStringResponse" message="tns:IProposalService_GetProposalsBySearchString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForWorkspaceProposalsBySearchString">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetForWorkspaceProposalsBySearchString" message="tns:IProposalService_GetForWorkspaceProposalsBySearchString_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetForWorkspaceProposalsBySearchStringResponse" message="tns:IProposalService_GetForWorkspaceProposalsBySearchString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalsByCustomerNIF">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetProposalsByCustomerNIF" message="tns:IProposalService_GetProposalsByCustomerNIF_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetProposalsByCustomerNIFResponse" message="tns:IProposalService_GetProposalsByCustomerNIF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProposalDocTypes">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetAllProposalDocTypes" message="tns:IProposalService_GetAllProposalDocTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetAllProposalDocTypesResponse" message="tns:IProposalService_GetAllProposalDocTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProposalDocTypesFiltered">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetAllProposalDocTypesFiltered" message="tns:IProposalService_GetAllProposalDocTypesFiltered_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/GetAllProposalDocTypesFilteredResponse" message="tns:IProposalService_GetAllProposalDocTypesFiltered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IntegrateProposals">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/IntegrateProposals" message="tns:IProposalService_IntegrateProposals_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/IntegrateProposalsResponse" message="tns:IProposalService_IntegrateProposals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IntegrateProposalsDB">
+      <wsdl:input wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/IntegrateProposalsDB" message="tns:IProposalService_IntegrateProposalsDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://PSI.Internal.WCF/WCFServices/Proposal/IProposalService/IntegrateProposalsDBResponse" message="tns:IProposalService_IntegrateProposalsDB_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ProposalService">
+    <wsdl:port name="basicHttpBinding" binding="i0:basicHttpBinding">
+      <soap:address location="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

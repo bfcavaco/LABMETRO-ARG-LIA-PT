@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PSI.Internal.WCF.WCFServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO" />
+  <xs:complexType name="BaseServiceInputObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RecordId" type="ser:guid" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PSI.BL.BO" minOccurs="0" name="RecordType" type="q1:RecordType" />
+      <xs:element minOccurs="0" name="UserLogin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseServiceInputObject" nillable="true" type="tns:BaseServiceInputObject" />
+  <xs:complexType name="BaseServiceOutputObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseServiceOutputObject" nillable="true" type="tns:BaseServiceOutputObject" />
+</xs:schema>

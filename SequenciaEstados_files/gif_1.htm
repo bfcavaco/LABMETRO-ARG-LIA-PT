@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+Sequencia Estados
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 0;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.444423;
+	viewMgr.visBBoxRight = 10.507126;
+	viewMgr.visBBoxBottom = 0.700328;
+	viewMgr.visBBoxTop = 7.956683;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="Shows the location of the selected shape" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_1.gif" ALT="Page-1" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="Aguarda  Calib.Ext." origTitle="Aguarda  Calib.Ext." TITLE="Aguarda  Calib.Ext."  target="_top" COORDS=" 688,62 673,62 673,93 736,93 736,62 723,62 723,60 688,60 688,62" onmouseover="UpdateTooltip(this,0,34)" onfocus="UpdateTooltip(this,0,34)" onclick="return OnShapeClick(0,34);" onkeyup="OnShapeKey(0,34);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Anulado  No Exterior" origTitle="Anulado  No Exterior" TITLE="Anulado  No Exterior"  target="_top" COORDS=" 732,181 795,181 795,150 732,150 732,181" onmouseover="UpdateTooltip(this,0,33)" onfocus="UpdateTooltip(this,0,33)" onclick="return OnShapeClick(0,33);" onkeyup="OnShapeKey(0,33);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Aguarda Entrega" origTitle="Aguarda Entrega" TITLE="Aguarda Entrega"  target="_top" COORDS=" 250,388 312,388 312,356 250,356 250,388" onmouseover="UpdateTooltip(this,0,32)" onfocus="UpdateTooltip(this,0,32)" onclick="return OnShapeClick(0,32);" onkeyup="OnShapeKey(0,32);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Entregue  Com Certif." origTitle="Entregue  Com Certif." TITLE="Entregue  Com Certif."  target="_top" COORDS=" 505,447 491,447 491,478 554,478 554,447 543,447 543,446 505,446 505,447" onmouseover="UpdateTooltip(this,0,31)" onfocus="UpdateTooltip(this,0,31)" onclick="return OnShapeClick(0,31);" onkeyup="OnShapeKey(0,31);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Equipamento na Recepç." origTitle="Equipamento na Recepç." TITLE="Equipamento na Recepç."  target="_top" COORDS=" 250,334 312,334 312,303 250,303 250,334" onmouseover="UpdateTooltip(this,0,30)" onfocus="UpdateTooltip(this,0,30)" onclick="return OnShapeClick(0,30);" onkeyup="OnShapeKey(0,30);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Calibrado  Com Certif." origTitle="Calibrado  Com Certif." TITLE="Calibrado  Com Certif."  target="_top" COORDS=" 262,250 250,250 250,281 312,281 312,250 303,250 303,248 262,248 262,250" onmouseover="UpdateTooltip(this,0,29)" onfocus="UpdateTooltip(this,0,29)" onclick="return OnShapeClick(0,29);" onkeyup="OnShapeKey(0,29);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Calibrado c/ Certif. Ext." origTitle="Calibrado c/ Certif. Ext." TITLE="Calibrado c/ Certif. Ext."  target="_top" COORDS=" 607,275 670,275 670,244 607,244 607,275" onmouseover="UpdateTooltip(this,0,25)" onfocus="UpdateTooltip(this,0,25)" onclick="return OnShapeClick(0,25);" onkeyup="OnShapeKey(0,25);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Certificado entr. p/ Corr." origTitle="Certificado entr. p/ Corr." TITLE="Certificado entr. p/ Corr."  target="_top" COORDS=" 360,507 350,507 350,539 413,539 413,507 405,507 405,506 360,506 360,507" onmouseover="UpdateTooltip(this,0,23)" onfocus="UpdateTooltip(this,0,23)" onclick="return OnShapeClick(0,23);" onkeyup="OnShapeKey(0,23);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Certificado entr. p/ Recep" origTitle="Certificado entr. p/ Recep" TITLE="Certificado entr. p/ Recep"  target="_top" COORDS=" 457,507 447,507 447,539 510,539 510,507 502,507 502,506 457,506 457,507" onmouseover="UpdateTooltip(this,0,22)" onfocus="UpdateTooltip(this,0,22)" onclick="return OnShapeClick(0,22);" onkeyup="OnShapeKey(0,22);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Entregue Anulado" origTitle="Entregue Anulado" TITLE="Entregue Anulado"  target="_top" COORDS=" 38,441 24,441 24,472 87,472 87,441 76,441 76,439 38,439 38,441" onmouseover="UpdateTooltip(this,0,28)" onfocus="UpdateTooltip(this,0,28)" onclick="return OnShapeClick(0,28);" onkeyup="OnShapeKey(0,28);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Equip. Anulado na Recepção" origTitle="Equip. Anulado na Recepção" TITLE="Equip. Anulado na Recepção"  target="_top" COORDS=" 53,305 48,305 26,305 26,306 24,306 24,338 87,338 87,317 88,317 88,305 53,305" onmouseover="UpdateTooltip(this,0,26)" onfocus="UpdateTooltip(this,0,26)" onclick="return OnShapeClick(0,26);" onkeyup="OnShapeKey(0,26);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Entregue" origTitle="Entregue" TITLE="Entregue"  target="_top" COORDS=" 250,479 312,479 312,448 250,448 250,479" onmouseover="UpdateTooltip(this,0,24)" onfocus="UpdateTooltip(this,0,24)" onclick="return OnShapeClick(0,24);" onkeyup="OnShapeKey(0,24);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Subcontratação c/ Certif." origTitle="Subcontratação c/ Certif." TITLE="Subcontratação c/ Certif."  target="_top" COORDS=" 494,244 491,244 491,275 554,275 554,244 551,244 551,242 494,242 494,244" onmouseover="UpdateTooltip(this,0,19)" onfocus="UpdateTooltip(this,0,19)" onclick="return OnShapeClick(0,19);" onkeyup="OnShapeKey(0,19);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Subcontrataç. Calibrada" origTitle="Subcontrataç. Calibrada" TITLE="Subcontrataç. Calibrada"  target="_top" COORDS=" 547,151 495,151 495,153 491,153 491,184 554,184 554,153 552,153 552,151 547,151" onmouseover="UpdateTooltip(this,0,17)" onfocus="UpdateTooltip(this,0,17)" onclick="return OnShapeClick(0,17);" onkeyup="OnShapeKey(0,17);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Subcontr. em Calibração" origTitle="Subcontr. em Calibração" TITLE="Subcontr. em Calibração"  target="_top" COORDS=" 535,104 530,104 495,104 495,106 490,106 490,137 552,137 552,106 550,106 550,104 535,104" onmouseover="UpdateTooltip(this,0,16)" onfocus="UpdateTooltip(this,0,16)" onclick="return OnShapeClick(0,16);" onkeyup="OnShapeKey(0,16);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Suspenso" origTitle="Suspenso" TITLE="Suspenso"  target="_top" COORDS=" 359,184 422,184 422,153 359,153 359,184" onmouseover="UpdateTooltip(this,0,8)" onfocus="UpdateTooltip(this,0,8)" onclick="return OnShapeClick(0,8);" onkeyup="OnShapeKey(0,8);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Avariado" origTitle="Avariado" TITLE="Avariado"  target="_top" COORDS=" 140,184 203,184 203,152 140,152 140,184" onmouseover="UpdateTooltip(this,0,7)" onfocus="UpdateTooltip(this,0,7)" onclick="return OnShapeClick(0,7);" onkeyup="OnShapeKey(0,7);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Anulado" origTitle="Anulado" TITLE="Anulado"  target="_top" COORDS=" 24,184 87,184 87,152 24,152 24,184" onmouseover="UpdateTooltip(this,0,6)" onfocus="UpdateTooltip(this,0,6)" onclick="return OnShapeClick(0,6);" onkeyup="OnShapeKey(0,6);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Calibrado" origTitle="Calibrado" TITLE="Calibrado"  target="_top" COORDS=" 250,184 312,184 312,152 250,152 250,184" onmouseover="UpdateTooltip(this,0,5)" onfocus="UpdateTooltip(this,0,5)" onclick="return OnShapeClick(0,5);" onkeyup="OnShapeKey(0,5);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Aguarda Subcontrataç." origTitle="Aguarda Subcontrataç." TITLE="Aguarda Subcontrataç."  target="_top" COORDS=" 504,62 490,62 490,93 552,93 552,62 540,62 540,60 504,60 504,62" onmouseover="UpdateTooltip(this,0,3)" onfocus="UpdateTooltip(this,0,3)" onclick="return OnShapeClick(0,3);" onkeyup="OnShapeKey(0,3);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Aguarda Calibração" origTitle="Aguarda Calibração" TITLE="Aguarda Calibração"  target="_top" COORDS=" 39,62 24,62 24,93 87,93 87,62 75,62 75,60 39,60 39,62" onmouseover="UpdateTooltip(this,0,2)" onfocus="UpdateTooltip(this,0,2)" onclick="return OnShapeClick(0,2);" onkeyup="OnShapeKey(0,2);">
+  <AREA shape="POLYGON" tabindex="1" ALT="Recepcionado" origTitle="Recepcionado" TITLE="Recepcionado"  target="_top" COORDS=" 233,30 311,30 311,1 233,1 233,30" onmouseover="UpdateTooltip(this,0,1)" onfocus="UpdateTooltip(this,0,1)" onclick="return OnShapeClick(0,1);" onkeyup="OnShapeKey(0,1);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

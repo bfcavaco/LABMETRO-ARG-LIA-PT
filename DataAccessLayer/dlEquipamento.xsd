@@ -1,0 +1,1237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dlEquipamento" targetNamespace="http://tempuri.org/dlEquipamento.xsd" xmlns:mstns="http://tempuri.org/dlEquipamento.xsd" xmlns="http://tempuri.org/dlEquipamento.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ISQ_LabMetroConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ISQ_LabMetroConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ISQ_LabMetroConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="connstr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connstr (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.connstr.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EstadoRelacaoCalibracaoDDTableAdapter" GeneratorDataComponentClassName="EstadoRelacaoCalibracaoDDTableAdapter" Name="EstadoRelacaoCalibracaoDD" UserDataComponentName="EstadoRelacaoCalibracaoDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.EstadoRelacaoCalibracao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idEstadoRelacaoCalibracao, estadoRelacaoCalibracao AS descricao
+FROM         EstadoRelacaoCalibracao
+ORDER BY descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEstadoRelacaoCalibracao" DataSetColumn="idEstadoRelacaoCalibracao" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TipoIntervencaoDDTableAdapter" GeneratorDataComponentClassName="TipoIntervencaoDDTableAdapter" Name="TipoIntervencaoDD" UserDataComponentName="TipoIntervencaoDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.TipoIntervencao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idTipoIntervencao, tipoIntervencao AS descricao
+FROM         TipoIntervencao
+ORDER BY descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idTipoIntervencao" DataSetColumn="idTipoIntervencao" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EstadoUtilizacaoEquipamentoDDTableAdapter" GeneratorDataComponentClassName="EstadoUtilizacaoEquipamentoDDTableAdapter" Name="EstadoUtilizacaoEquipamentoDD" UserDataComponentName="EstadoUtilizacaoEquipamentoDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.EstadoUtilizacaoEquipamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idEstadoUtilizacao, estadoUtilizacao AS descricao
+FROM         EstadoUtilizacaoEquipamento
+ORDER BY descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEstadoUtilizacao" DataSetColumn="idEstadoUtilizacao" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TipoEquipamentoDDTableAdapter" GeneratorDataComponentClassName="TipoEquipamentoDDTableAdapter" Name="TipoEquipamentoDD" UserDataComponentName="TipoEquipamentoDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.TipoEquipamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [tipoEquipamento] WHERE (([idTipoEquipamento] = @Original_idTipoEquipamento))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idTipoEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idTipoEquipamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select idTipoEquipamento, descricao from tipoEquipamento order by descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [tipoEquipamento] SET [descricao] = @descricao WHERE (([idTipoEquipamento] = @Original_idTipoEquipamento))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@descricao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="descricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idTipoEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idTipoEquipamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idTipoEquipamento" DataSetColumn="idTipoEquipamento" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.TipoEquipamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetActivos" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetActivos" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetActivos" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select idTipoEquipamento, descricao from tipoEquipamento  where activo = 1 order by descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.TipoEquipamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetByIdGrandeza" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetByIdGrandeza" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetByIdGrandeza" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     TipoEquipamento.idTipoEquipamento, TipoEquipamento.descricao
+FROM         TipoEquipamento INNER JOIN
+                      Familia ON TipoEquipamento.idFamilia = Familia.idFamilia
+WHERE     (Familia.idGrandeza = @idGrandeza)
+ORDER BY TipoEquipamento.descricao</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="idGrandeza" ColumnName="idGrandeza" DataSourceName="ISQ_LabMetro.dbo.Familia" DataTypeServer="char(3)" DbType="AnsiString" Direction="Input" ParameterName="@idGrandeza" Precision="0" ProviderType="Char" Scale="0" Size="3" SourceColumn="idGrandeza" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UnidadeAlcanceDDTableAdapter" GeneratorDataComponentClassName="UnidadeAlcanceDDTableAdapter" Name="UnidadeAlcanceDD" UserDataComponentName="UnidadeAlcanceDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.UnidadeAlcance" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idUnidadeAlcance, descricao
+FROM         UnidadeAlcance order by descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idUnidadeAlcance" DataSetColumn="idUnidadeAlcance" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.UnidadeAlcance" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetActivos" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetActivos" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetActivos" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT descricao, idUnidadeAlcance FROM UnidadeAlcance WHERE (activo = 1) ORDER BY descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClasseDDTableAdapter" GeneratorDataComponentClassName="ClasseDDTableAdapter" Name="ClasseDD" UserDataComponentName="ClasseDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.Classe" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idClasse, descricao
+FROM         Classe order by descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idClasse" DataSetColumn="idClasse" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="ISQ_LabMetro.dbo.Classe" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetActivos" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetActivos" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetActivos" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT descricao, idClasse FROM Classe WHERE (activo = 1) ORDER BY descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MarcaDDTableAdapter" GeneratorDataComponentClassName="MarcaDDTableAdapter" Name="MarcaDD" UserDataComponentName="MarcaDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.Marca" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idMarca, descricao
+FROM         Marca
+ORDER BY descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idMarca" DataSetColumn="idMarca" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ModeloDDTableAdapter" GeneratorDataComponentClassName="ModeloDDTableAdapter" Name="ModeloDD" UserDataComponentName="ModeloDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.Modelo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataByIdMarca" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetDataByIdMarca" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataByIdMarca" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idModelo, descricao
+FROM         Modelo
+WHERE     (idMarca = @idMarca)
+ORDER BY descricao</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="idMarca" ColumnName="idMarca" DataSourceName="ISQ_LabMetro.dbo.Modelo" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idMarca" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="idMarca" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idModelo" DataSetColumn="idModelo" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EstadoEquipamentoDDTableAdapter" GeneratorDataComponentClassName="EstadoEquipamentoDDTableAdapter" Name="EstadoEquipamentoDD" UserDataComponentName="EstadoEquipamentoDDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.EstadoEquipamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idEstadoEquipamento, estadoEquipamento AS descricao
+FROM         EstadoEquipamento
+ORDER BY descricao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEstadoEquipamento" DataSetColumn="idEstadoEquipamento" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DMMTableAdapter" GeneratorDataComponentClassName="DMMTableAdapter" Name="DMM" UserDataComponentName="DMMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.stpGetListDMM" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.stpGetListDMM</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEquipamento" DataSetColumn="idEquipamento" />
+              <Mapping SourceColumn="idEmpresa" DataSetColumn="idEmpresa" />
+              <Mapping SourceColumn="idTipoEquipamento" DataSetColumn="idTipoEquipamento" />
+              <Mapping SourceColumn="TipoEquipamento" DataSetColumn="TipoEquipamento" />
+              <Mapping SourceColumn="Familia" DataSetColumn="Familia" />
+              <Mapping SourceColumn="idGrandeza" DataSetColumn="idGrandeza" />
+              <Mapping SourceColumn="grandeza" DataSetColumn="grandeza" />
+              <Mapping SourceColumn="numSerie" DataSetColumn="numSerie" />
+              <Mapping SourceColumn="numIdentificacao" DataSetColumn="numIdentificacao" />
+              <Mapping SourceColumn="alcanceInf" DataSetColumn="alcanceInf" />
+              <Mapping SourceColumn="alcanceSup" DataSetColumn="alcanceSup" />
+              <Mapping SourceColumn="idUnidadeAlcance" DataSetColumn="idUnidadeAlcance" />
+              <Mapping SourceColumn="sAlcance" DataSetColumn="sAlcance" />
+              <Mapping SourceColumn="alcance" DataSetColumn="alcance" />
+              <Mapping SourceColumn="resolucao" DataSetColumn="resolucao" />
+              <Mapping SourceColumn="idClasse" DataSetColumn="idClasse" />
+              <Mapping SourceColumn="classe" DataSetColumn="classe" />
+              <Mapping SourceColumn="sClasse" DataSetColumn="sClasse" />
+              <Mapping SourceColumn="forma" DataSetColumn="forma" />
+              <Mapping SourceColumn="fabricante" DataSetColumn="fabricante" />
+              <Mapping SourceColumn="refUltimaCalibracao" DataSetColumn="refUltimaCalibracao" />
+              <Mapping SourceColumn="dtUltimaCalibracao" DataSetColumn="dtUltimaCalibracao" />
+              <Mapping SourceColumn="periodicidadeCalibracao" DataSetColumn="periodicidadeCalibracao" />
+              <Mapping SourceColumn="activo" DataSetColumn="activo" />
+              <Mapping SourceColumn="observacoes" DataSetColumn="observacoes" />
+              <Mapping SourceColumn="dtCriacao" DataSetColumn="dtCriacao" />
+              <Mapping SourceColumn="idUtilCriacao" DataSetColumn="idUtilCriacao" />
+              <Mapping SourceColumn="dtAlteracao" DataSetColumn="dtAlteracao" />
+              <Mapping SourceColumn="idUtilAlteracao" DataSetColumn="idUtilAlteracao" />
+              <Mapping SourceColumn="calibInt" DataSetColumn="calibInt" />
+              <Mapping SourceColumn="bCertConclusivo" DataSetColumn="bCertConclusivo" />
+              <Mapping SourceColumn="campo1" DataSetColumn="campo1" />
+              <Mapping SourceColumn="campo2" DataSetColumn="campo2" />
+              <Mapping SourceColumn="idMarca" DataSetColumn="idMarca" />
+              <Mapping SourceColumn="idModelo" DataSetColumn="idModelo" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="idEmpresaManutCTA" DataSetColumn="idEmpresaManutCTA" />
+              <Mapping SourceColumn="modelo" DataSetColumn="modelo" />
+              <Mapping SourceColumn="entidadeUltimaCalibracao" DataSetColumn="entidadeUltimaCalibracao" />
+              <Mapping SourceColumn="dtEntradaServico" DataSetColumn="dtEntradaServico" />
+              <Mapping SourceColumn="fornecedor" DataSetColumn="fornecedor" />
+              <Mapping SourceColumn="responsavelEquipamento" DataSetColumn="responsavelEquipamento" />
+              <Mapping SourceColumn="precoClienteEuros" DataSetColumn="precoClienteEuros" />
+              <Mapping SourceColumn="custoClienteEuros" DataSetColumn="custoClienteEuros" />
+              <Mapping SourceColumn="localizacao" DataSetColumn="localizacao" />
+              <Mapping SourceColumn="criterios" DataSetColumn="criterios" />
+              <Mapping SourceColumn="pontosCalibracao" DataSetColumn="pontosCalibracao" />
+              <Mapping SourceColumn="texto" DataSetColumn="texto" />
+              <Mapping SourceColumn="idEstadoRelacaoCalibracao" DataSetColumn="idEstadoRelacaoCalibracao" />
+              <Mapping SourceColumn="estadoRelacaoCalibracao" DataSetColumn="estadoRelacaoCalibracao" />
+              <Mapping SourceColumn="idTipoIntervencao" DataSetColumn="idTipoIntervencao" />
+              <Mapping SourceColumn="tipoIntervencao" DataSetColumn="tipoIntervencao" />
+              <Mapping SourceColumn="idEstadoUtilizacao" DataSetColumn="idEstadoUtilizacao" />
+              <Mapping SourceColumn="estadoUtilizacao" DataSetColumn="estadoUtilizacao" />
+              <Mapping SourceColumn="idEstadoEquipamento" DataSetColumn="idEstadoEquipamento" />
+              <Mapping SourceColumn="estadoEquipamento" DataSetColumn="estadoEquipamento" />
+              <Mapping SourceColumn="idUtilCriacaoCliente" DataSetColumn="idUtilCriacaoCliente" />
+              <Mapping SourceColumn="idUtilAlteracaoCliente" DataSetColumn="idUtilAlteracaoCliente" />
+              <Mapping SourceColumn="dtCriacaoCliente" DataSetColumn="dtCriacaoCliente" />
+              <Mapping SourceColumn="dtAlteracaoCliente" DataSetColumn="dtAlteracaoCliente" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.stpGetListDMMByIdEmpresa" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdEmpresa" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByIdEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdEmpresa" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="true">
+                    <CommandText>dbo.stpGetListDMMByIdEmpresa</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEmpresa" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.stpGetListDMMByIdEquipamento" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIdEquipamento" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataByIdEquipamento" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIdEquipamento" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="true">
+                    <CommandText>dbo.stpGetListDMMByIdEquipamento</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEquipamento" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.stpInsertDMM" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="stpInsertDMM" Modifier="Public" Name="stpInsertDMM" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="stpInsertDMM">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.stpInsertDMM</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEmpresa" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idTipoEquipamento" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@numSerie" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@numIdentificacao" Precision="0" ProviderType="VarChar" Scale="0" Size="150" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@alcanceInf" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@alcanceSup" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idUnidadeAlcance" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@alcance" Precision="0" ProviderType="VarChar" Scale="0" Size="60" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@resolucao" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idClasse" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@classe" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@forma" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@fabricante" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@refUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@dtUltimaCalibracao" Precision="16" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@periodicidadeCalibracao" Precision="5" ProviderType="SmallInt" Scale="0" Size="2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@activo" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@observacoes" Precision="0" ProviderType="VarChar" Scale="0" Size="250" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@calibInt" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@bCertConclusivo" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@campo1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@campo2" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idMarca" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idModelo" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@entidadeUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEstadoUtilizacao" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEstadoEquipamento" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@dtEntradaServico" Precision="16" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@fornecedor" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@responsavelEquipamento" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@precoClienteEuros" Precision="19" ProviderType="Money" Scale="4" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@custoClienteEuros" Precision="19" ProviderType="Money" Scale="4" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@localizacao" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@criterios" Precision="0" ProviderType="VarChar" Scale="0" Size="250" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@pontosCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@texto" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEstadoRelacaoCalibracao" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idTipoIntervencao" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idUtilizador" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.stpUpdateDMM" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="stpUpdateDMM" Modifier="Public" Name="stpUpdateDMM" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="stpUpdateDMM">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.stpUpdateDMM</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEmpresa" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idTipoEquipamento" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@numSerie" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@numIdentificacao" Precision="0" ProviderType="VarChar" Scale="0" Size="150" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@alcanceInf" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@alcanceSup" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idUnidadeAlcance" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@alcance" Precision="0" ProviderType="VarChar" Scale="0" Size="60" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@resolucao" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idClasse" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@classe" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@forma" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@fabricante" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@refUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@dtUltimaCalibracao" Precision="16" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@periodicidadeCalibracao" Precision="5" ProviderType="SmallInt" Scale="0" Size="2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@activo" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@observacoes" Precision="0" ProviderType="VarChar" Scale="0" Size="250" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idUtilizador" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@calibInt" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@bCertConclusivo" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@campo1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@campo2" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idMarca" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idModelo" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@entidadeUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEstadoUtilizacao" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEstadoEquipamento" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@dtEntradaServico" Precision="16" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@fornecedor" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@responsavelEquipamento" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@precoClienteEuros" Precision="19" ProviderType="Money" Scale="4" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@custoClienteEuros" Precision="19" ProviderType="Money" Scale="4" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@localizacao" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@criterios" Precision="0" ProviderType="VarChar" Scale="0" Size="250" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@pontosCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@texto" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEstadoRelacaoCalibracao" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idTipoIntervencao" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_idEquipamento" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EquipamentoTableAdapter" GeneratorDataComponentClassName="EquipamentoTableAdapter" Name="Equipamento" UserDataComponentName="EquipamentoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="ISQ_LabMetro.dbo.Equipamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Equipamento] WHERE (([idEquipamento] = @Original_idEquipamento))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEquipamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Equipamento] ([idEmpresa], [idTipoEquipamento], [numSerie], [numIdentificacao], [alcanceInf], [alcanceSup], [idUnidadeAlcance], [alcance], [resolucao], [modelo], [marca], [idClasse], [classe], [forma], [fabricante], [refUltimaCalibracao], [dtUltimaCalibracao], [periodicidadeCalibracao], [activo], [observacoes], [dtCriacao], [idUtilCriacao], [dtAlteracao], [idUtilAlteracao], [calibInt], [bCertConclusivo], [campo1], [campo2], [idMarca], [idModelo], [entidadeUltimaCalibracao], [idEstadoUtilizacao], [idEstadoEquipamento], [dtEntradaServico], [fornecedor], [responsavelEquipamento], [precoClienteEuros], [custoClienteEuros], [localizacao], [criterios], [pontosCalibracao], [texto], [idEstadoRelacaoCalibracao], [idTipoIntervencao], [idUtilCriacaoCliente], [idUtilAlteracaoCliente], [dtCriacaoCliente], [dtAlteracaoCliente]) VALUES (@idEmpresa, @idTipoEquipamento, @numSerie, @numIdentificacao, @alcanceInf, @alcanceSup, @idUnidadeAlcance, @alcance, @resolucao, @modelo, @marca, @idClasse, @classe, @forma, @fabricante, @refUltimaCalibracao, @dtUltimaCalibracao, @periodicidadeCalibracao, @activo, @observacoes, @dtCriacao, @idUtilCriacao, @dtAlteracao, @idUtilAlteracao, @calibInt, @bCertConclusivo, @campo1, @campo2, @idMarca, @idModelo, @entidadeUltimaCalibracao, @idEstadoUtilizacao, @idEstadoEquipamento, @dtEntradaServico, @fornecedor, @responsavelEquipamento, @precoClienteEuros, @custoClienteEuros, @localizacao, @criterios, @pontosCalibracao, @texto, @idEstadoRelacaoCalibracao, @idTipoIntervencao, @idUtilCriacaoCliente, @idUtilAlteracaoCliente, @dtCriacaoCliente, @dtAlteracaoCliente)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idTipoEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idTipoEquipamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@numSerie" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numSerie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@numIdentificacao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numIdentificacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@alcanceInf" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="alcanceInf" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@alcanceSup" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="alcanceSup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idUnidadeAlcance" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idUnidadeAlcance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@alcance" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alcance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@resolucao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="resolucao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@modelo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modelo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@marca" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="marca" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idClasse" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idClasse" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@classe" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="classe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@forma" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="forma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@fabricante" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fabricante" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@refUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="refUltimaCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtUltimaCalibracao" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="dtUltimaCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@periodicidadeCalibracao" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="periodicidadeCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@activo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@observacoes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="observacoes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtCriacao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtCriacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idUtilCriacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idUtilCriacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idUtilAlteracao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idUtilAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@calibInt" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="calibInt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@bCertConclusivo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="bCertConclusivo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@campo1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="campo1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@campo2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="campo2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idMarca" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idMarca" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idModelo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idModelo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@entidadeUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="entidadeUltimaCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEstadoUtilizacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEstadoUtilizacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEstadoEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEstadoEquipamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtEntradaServico" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="dtEntradaServico" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@fornecedor" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fornecedor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@responsavelEquipamento" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="responsavelEquipamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@precoClienteEuros" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="precoClienteEuros" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@custoClienteEuros" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="custoClienteEuros" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@localizacao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="localizacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@criterios" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="criterios" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@pontosCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pontosCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@texto" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="texto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEstadoRelacaoCalibracao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEstadoRelacaoCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idTipoIntervencao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idTipoIntervencao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@idUtilCriacaoCliente" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="idUtilCriacaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@idUtilAlteracaoCliente" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="idUtilAlteracaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtCriacaoCliente" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtCriacaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtAlteracaoCliente" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtAlteracaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  top 10   idEquipamento, idEmpresa, idTipoEquipamento, numSerie, numIdentificacao, alcanceInf, alcanceSup, idUnidadeAlcance, alcance, resolucao, modelo, 
+                      marca, idClasse, classe, forma, fabricante, refUltimaCalibracao, dtUltimaCalibracao, periodicidadeCalibracao, activo, observacoes, dtCriacao, 
+                      idUtilCriacao, dtAlteracao, idUtilAlteracao, calibInt, bCertConclusivo, campo1, campo2, idMarca, idModelo, entidadeUltimaCalibracao, 
+                      idEstadoUtilizacao, idEstadoEquipamento, dtEntradaServico, fornecedor, responsavelEquipamento, precoClienteEuros, custoClienteEuros, localizacao,
+                       criterios, pontosCalibracao, texto, idEstadoRelacaoCalibracao, idTipoIntervencao, idUtilCriacaoCliente, idUtilAlteracaoCliente, dtCriacaoCliente, 
+                      dtAlteracaoCliente
+FROM         Equipamento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Equipamento] SET [idEmpresa] = @idEmpresa, [idTipoEquipamento] = @idTipoEquipamento, [numSerie] = @numSerie, [numIdentificacao] = @numIdentificacao, [alcanceInf] = @alcanceInf, [alcanceSup] = @alcanceSup, [idUnidadeAlcance] = @idUnidadeAlcance, [alcance] = @alcance, [resolucao] = @resolucao, [modelo] = @modelo, [marca] = @marca, [idClasse] = @idClasse, [classe] = @classe, [forma] = @forma, [fabricante] = @fabricante, [refUltimaCalibracao] = @refUltimaCalibracao, [dtUltimaCalibracao] = @dtUltimaCalibracao, [periodicidadeCalibracao] = @periodicidadeCalibracao, [activo] = @activo, [observacoes] = @observacoes, [dtCriacao] = @dtCriacao, [idUtilCriacao] = @idUtilCriacao, [dtAlteracao] = @dtAlteracao, [idUtilAlteracao] = @idUtilAlteracao, [calibInt] = @calibInt, [bCertConclusivo] = @bCertConclusivo, [campo1] = @campo1, [campo2] = @campo2, [idMarca] = @idMarca, [idModelo] = @idModelo, [entidadeUltimaCalibracao] = @entidadeUltimaCalibracao, [idEstadoUtilizacao] = @idEstadoUtilizacao, [idEstadoEquipamento] = @idEstadoEquipamento, [dtEntradaServico] = @dtEntradaServico, [fornecedor] = @fornecedor, [responsavelEquipamento] = @responsavelEquipamento, [precoClienteEuros] = @precoClienteEuros, [custoClienteEuros] = @custoClienteEuros, [localizacao] = @localizacao, [criterios] = @criterios, [pontosCalibracao] = @pontosCalibracao, [texto] = @texto, [idEstadoRelacaoCalibracao] = @idEstadoRelacaoCalibracao, [idTipoIntervencao] = @idTipoIntervencao, [idUtilCriacaoCliente] = @idUtilCriacaoCliente, [idUtilAlteracaoCliente] = @idUtilAlteracaoCliente, [dtCriacaoCliente] = @dtCriacaoCliente, [dtAlteracaoCliente] = @dtAlteracaoCliente WHERE (([idEquipamento] = @Original_idEquipamento))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idTipoEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idTipoEquipamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@numSerie" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numSerie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@numIdentificacao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="numIdentificacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@alcanceInf" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="alcanceInf" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@alcanceSup" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="alcanceSup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idUnidadeAlcance" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idUnidadeAlcance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@alcance" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alcance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@resolucao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="resolucao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@modelo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modelo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@marca" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="marca" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idClasse" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idClasse" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@classe" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="classe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@forma" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="forma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@fabricante" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fabricante" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@refUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="refUltimaCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtUltimaCalibracao" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="dtUltimaCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@periodicidadeCalibracao" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="periodicidadeCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@activo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@observacoes" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="observacoes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtCriacao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtCriacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idUtilCriacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idUtilCriacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtAlteracao" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idUtilAlteracao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idUtilAlteracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@calibInt" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="calibInt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@bCertConclusivo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="bCertConclusivo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@campo1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="campo1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@campo2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="campo2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idMarca" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idMarca" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idModelo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idModelo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@entidadeUltimaCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="entidadeUltimaCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEstadoUtilizacao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEstadoUtilizacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEstadoEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEstadoEquipamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtEntradaServico" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="dtEntradaServico" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@fornecedor" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fornecedor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@responsavelEquipamento" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="responsavelEquipamento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@precoClienteEuros" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="precoClienteEuros" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@custoClienteEuros" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="custoClienteEuros" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@localizacao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="localizacao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@criterios" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="criterios" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@pontosCalibracao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pontosCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@texto" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="texto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEstadoRelacaoCalibracao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEstadoRelacaoCalibracao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idTipoIntervencao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idTipoIntervencao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@idUtilCriacaoCliente" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="idUtilCriacaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@idUtilAlteracaoCliente" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="idUtilAlteracaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtCriacaoCliente" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtCriacaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dtAlteracaoCliente" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dtAlteracaoCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEquipamento" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEquipamento" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEquipamento" DataSetColumn="idEquipamento" />
+              <Mapping SourceColumn="idEmpresa" DataSetColumn="idEmpresa" />
+              <Mapping SourceColumn="idTipoEquipamento" DataSetColumn="idTipoEquipamento" />
+              <Mapping SourceColumn="numSerie" DataSetColumn="numSerie" />
+              <Mapping SourceColumn="numIdentificacao" DataSetColumn="numIdentificacao" />
+              <Mapping SourceColumn="alcanceInf" DataSetColumn="alcanceInf" />
+              <Mapping SourceColumn="alcanceSup" DataSetColumn="alcanceSup" />
+              <Mapping SourceColumn="idUnidadeAlcance" DataSetColumn="idUnidadeAlcance" />
+              <Mapping SourceColumn="alcance" DataSetColumn="alcance" />
+              <Mapping SourceColumn="resolucao" DataSetColumn="resolucao" />
+              <Mapping SourceColumn="modelo" DataSetColumn="modelo" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="idClasse" DataSetColumn="idClasse" />
+              <Mapping SourceColumn="classe" DataSetColumn="classe" />
+              <Mapping SourceColumn="forma" DataSetColumn="forma" />
+              <Mapping SourceColumn="fabricante" DataSetColumn="fabricante" />
+              <Mapping SourceColumn="refUltimaCalibracao" DataSetColumn="refUltimaCalibracao" />
+              <Mapping SourceColumn="dtUltimaCalibracao" DataSetColumn="dtUltimaCalibracao" />
+              <Mapping SourceColumn="periodicidadeCalibracao" DataSetColumn="periodicidadeCalibracao" />
+              <Mapping SourceColumn="activo" DataSetColumn="activo" />
+              <Mapping SourceColumn="observacoes" DataSetColumn="observacoes" />
+              <Mapping SourceColumn="dtCriacao" DataSetColumn="dtCriacao" />
+              <Mapping SourceColumn="idUtilCriacao" DataSetColumn="idUtilCriacao" />
+              <Mapping SourceColumn="dtAlteracao" DataSetColumn="dtAlteracao" />
+              <Mapping SourceColumn="idUtilAlteracao" DataSetColumn="idUtilAlteracao" />
+              <Mapping SourceColumn="calibInt" DataSetColumn="calibInt" />
+              <Mapping SourceColumn="bCertConclusivo" DataSetColumn="bCertConclusivo" />
+              <Mapping SourceColumn="campo1" DataSetColumn="campo1" />
+              <Mapping SourceColumn="campo2" DataSetColumn="campo2" />
+              <Mapping SourceColumn="idMarca" DataSetColumn="idMarca" />
+              <Mapping SourceColumn="idModelo" DataSetColumn="idModelo" />
+              <Mapping SourceColumn="entidadeUltimaCalibracao" DataSetColumn="entidadeUltimaCalibracao" />
+              <Mapping SourceColumn="idEstadoUtilizacao" DataSetColumn="idEstadoUtilizacao" />
+              <Mapping SourceColumn="idEstadoEquipamento" DataSetColumn="idEstadoEquipamento" />
+              <Mapping SourceColumn="dtEntradaServico" DataSetColumn="dtEntradaServico" />
+              <Mapping SourceColumn="fornecedor" DataSetColumn="fornecedor" />
+              <Mapping SourceColumn="responsavelEquipamento" DataSetColumn="responsavelEquipamento" />
+              <Mapping SourceColumn="precoClienteEuros" DataSetColumn="precoClienteEuros" />
+              <Mapping SourceColumn="custoClienteEuros" DataSetColumn="custoClienteEuros" />
+              <Mapping SourceColumn="localizacao" DataSetColumn="localizacao" />
+              <Mapping SourceColumn="criterios" DataSetColumn="criterios" />
+              <Mapping SourceColumn="pontosCalibracao" DataSetColumn="pontosCalibracao" />
+              <Mapping SourceColumn="texto" DataSetColumn="texto" />
+              <Mapping SourceColumn="idEstadoRelacaoCalibracao" DataSetColumn="idEstadoRelacaoCalibracao" />
+              <Mapping SourceColumn="idTipoIntervencao" DataSetColumn="idTipoIntervencao" />
+              <Mapping SourceColumn="idUtilCriacaoCliente" DataSetColumn="idUtilCriacaoCliente" />
+              <Mapping SourceColumn="idUtilAlteracaoCliente" DataSetColumn="idUtilAlteracaoCliente" />
+              <Mapping SourceColumn="dtCriacaoCliente" DataSetColumn="dtCriacaoCliente" />
+              <Mapping SourceColumn="dtAlteracaoCliente" DataSetColumn="dtAlteracaoCliente" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dlEquipamento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dlEquipamento" msprop:Generator_DataSetName="dlEquipamento" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EstadoRelacaoCalibracaoDD" msprop:Generator_UserTableName="EstadoRelacaoCalibracaoDD" msprop:Generator_RowDeletedName="EstadoRelacaoCalibracaoDDRowDeleted" msprop:Generator_RowChangedName="EstadoRelacaoCalibracaoDDRowChanged" msprop:Generator_RowClassName="EstadoRelacaoCalibracaoDDRow" msprop:Generator_RowChangingName="EstadoRelacaoCalibracaoDDRowChanging" msprop:Generator_RowEvArgName="EstadoRelacaoCalibracaoDDRowChangeEvent" msprop:Generator_RowEvHandlerName="EstadoRelacaoCalibracaoDDRowChangeEventHandler" msprop:Generator_TableClassName="EstadoRelacaoCalibracaoDDDataTable" msprop:Generator_TableVarName="tableEstadoRelacaoCalibracaoDD" msprop:Generator_RowDeletingName="EstadoRelacaoCalibracaoDDRowDeleting" msprop:Generator_TablePropName="EstadoRelacaoCalibracaoDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEstadoRelacaoCalibracao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idEstadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInRow="idEstadoRelacaoCalibracao" msprop:Generator_ColumnVarNameInTable="columnidEstadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInTable="idEstadoRelacaoCalibracaoColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoIntervencaoDD" msprop:Generator_UserTableName="TipoIntervencaoDD" msprop:Generator_RowDeletedName="TipoIntervencaoDDRowDeleted" msprop:Generator_RowChangedName="TipoIntervencaoDDRowChanged" msprop:Generator_RowClassName="TipoIntervencaoDDRow" msprop:Generator_RowChangingName="TipoIntervencaoDDRowChanging" msprop:Generator_RowEvArgName="TipoIntervencaoDDRowChangeEvent" msprop:Generator_RowEvHandlerName="TipoIntervencaoDDRowChangeEventHandler" msprop:Generator_TableClassName="TipoIntervencaoDDDataTable" msprop:Generator_TableVarName="tableTipoIntervencaoDD" msprop:Generator_RowDeletingName="TipoIntervencaoDDRowDeleting" msprop:Generator_TablePropName="TipoIntervencaoDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idTipoIntervencao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idTipoIntervencao" msprop:Generator_ColumnPropNameInRow="idTipoIntervencao" msprop:Generator_ColumnVarNameInTable="columnidTipoIntervencao" msprop:Generator_ColumnPropNameInTable="idTipoIntervencaoColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EstadoUtilizacaoEquipamentoDD" msprop:Generator_UserTableName="EstadoUtilizacaoEquipamentoDD" msprop:Generator_RowDeletedName="EstadoUtilizacaoEquipamentoDDRowDeleted" msprop:Generator_RowChangedName="EstadoUtilizacaoEquipamentoDDRowChanged" msprop:Generator_RowClassName="EstadoUtilizacaoEquipamentoDDRow" msprop:Generator_RowChangingName="EstadoUtilizacaoEquipamentoDDRowChanging" msprop:Generator_RowEvArgName="EstadoUtilizacaoEquipamentoDDRowChangeEvent" msprop:Generator_RowEvHandlerName="EstadoUtilizacaoEquipamentoDDRowChangeEventHandler" msprop:Generator_TableClassName="EstadoUtilizacaoEquipamentoDDDataTable" msprop:Generator_TableVarName="tableEstadoUtilizacaoEquipamentoDD" msprop:Generator_RowDeletingName="EstadoUtilizacaoEquipamentoDDRowDeleting" msprop:Generator_TablePropName="EstadoUtilizacaoEquipamentoDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEstadoUtilizacao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idEstadoUtilizacao" msprop:Generator_ColumnPropNameInRow="idEstadoUtilizacao" msprop:Generator_ColumnVarNameInTable="columnidEstadoUtilizacao" msprop:Generator_ColumnPropNameInTable="idEstadoUtilizacaoColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoEquipamentoDD" msprop:Generator_UserTableName="TipoEquipamentoDD" msprop:Generator_RowDeletedName="TipoEquipamentoDDRowDeleted" msprop:Generator_RowChangedName="TipoEquipamentoDDRowChanged" msprop:Generator_RowClassName="TipoEquipamentoDDRow" msprop:Generator_RowChangingName="TipoEquipamentoDDRowChanging" msprop:Generator_RowEvArgName="TipoEquipamentoDDRowChangeEvent" msprop:Generator_RowEvHandlerName="TipoEquipamentoDDRowChangeEventHandler" msprop:Generator_TableClassName="TipoEquipamentoDDDataTable" msprop:Generator_TableVarName="tableTipoEquipamentoDD" msprop:Generator_RowDeletingName="TipoEquipamentoDDRowDeleting" msprop:Generator_TablePropName="TipoEquipamentoDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idTipoEquipamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idTipoEquipamento" msprop:Generator_ColumnPropNameInRow="idTipoEquipamento" msprop:Generator_ColumnVarNameInTable="columnidTipoEquipamento" msprop:Generator_ColumnPropNameInTable="idTipoEquipamentoColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UnidadeAlcanceDD" msprop:Generator_UserTableName="UnidadeAlcanceDD" msprop:Generator_RowDeletedName="UnidadeAlcanceDDRowDeleted" msprop:Generator_RowChangedName="UnidadeAlcanceDDRowChanged" msprop:Generator_RowClassName="UnidadeAlcanceDDRow" msprop:Generator_RowChangingName="UnidadeAlcanceDDRowChanging" msprop:Generator_RowEvArgName="UnidadeAlcanceDDRowChangeEvent" msprop:Generator_RowEvHandlerName="UnidadeAlcanceDDRowChangeEventHandler" msprop:Generator_TableClassName="UnidadeAlcanceDDDataTable" msprop:Generator_TableVarName="tableUnidadeAlcanceDD" msprop:Generator_RowDeletingName="UnidadeAlcanceDDRowDeleting" msprop:Generator_TablePropName="UnidadeAlcanceDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idUnidadeAlcance" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idUnidadeAlcance" msprop:Generator_ColumnPropNameInRow="idUnidadeAlcance" msprop:Generator_ColumnVarNameInTable="columnidUnidadeAlcance" msprop:Generator_ColumnPropNameInTable="idUnidadeAlcanceColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClasseDD" msprop:Generator_UserTableName="ClasseDD" msprop:Generator_RowDeletedName="ClasseDDRowDeleted" msprop:Generator_RowChangedName="ClasseDDRowChanged" msprop:Generator_RowClassName="ClasseDDRow" msprop:Generator_RowChangingName="ClasseDDRowChanging" msprop:Generator_RowEvArgName="ClasseDDRowChangeEvent" msprop:Generator_RowEvHandlerName="ClasseDDRowChangeEventHandler" msprop:Generator_TableClassName="ClasseDDDataTable" msprop:Generator_TableVarName="tableClasseDD" msprop:Generator_RowDeletingName="ClasseDDRowDeleting" msprop:Generator_TablePropName="ClasseDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idClasse" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idClasse" msprop:Generator_ColumnPropNameInRow="idClasse" msprop:Generator_ColumnVarNameInTable="columnidClasse" msprop:Generator_ColumnPropNameInTable="idClasseColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EstadoEquipamentoDD" msprop:Generator_UserTableName="EstadoEquipamentoDD" msprop:Generator_RowDeletedName="EstadoEquipamentoDDRowDeleted" msprop:Generator_RowChangedName="EstadoEquipamentoDDRowChanged" msprop:Generator_RowClassName="EstadoEquipamentoDDRow" msprop:Generator_RowChangingName="EstadoEquipamentoDDRowChanging" msprop:Generator_RowEvArgName="EstadoEquipamentoDDRowChangeEvent" msprop:Generator_RowEvHandlerName="EstadoEquipamentoDDRowChangeEventHandler" msprop:Generator_TableClassName="EstadoEquipamentoDDDataTable" msprop:Generator_TableVarName="tableEstadoEquipamentoDD" msprop:Generator_RowDeletingName="EstadoEquipamentoDDRowDeleting" msprop:Generator_TablePropName="EstadoEquipamentoDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEstadoEquipamento" msprop:Generator_UserColumnName="idEstadoEquipamento" msprop:Generator_ColumnPropNameInRow="idEstadoEquipamento" msprop:Generator_ColumnVarNameInTable="columnidEstadoEquipamento" msprop:Generator_ColumnPropNameInTable="idEstadoEquipamentoColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ModeloDD" msprop:Generator_UserTableName="ModeloDD" msprop:Generator_RowDeletedName="ModeloDDRowDeleted" msprop:Generator_RowChangedName="ModeloDDRowChanged" msprop:Generator_RowClassName="ModeloDDRow" msprop:Generator_RowChangingName="ModeloDDRowChanging" msprop:Generator_RowEvArgName="ModeloDDRowChangeEvent" msprop:Generator_RowEvHandlerName="ModeloDDRowChangeEventHandler" msprop:Generator_TableClassName="ModeloDDDataTable" msprop:Generator_TableVarName="tableModeloDD" msprop:Generator_RowDeletingName="ModeloDDRowDeleting" msprop:Generator_TablePropName="ModeloDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idModelo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idModelo" msprop:Generator_ColumnPropNameInRow="idModelo" msprop:Generator_ColumnVarNameInTable="columnidModelo" msprop:Generator_ColumnPropNameInTable="idModeloColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MarcaDD" msprop:Generator_UserTableName="MarcaDD" msprop:Generator_RowDeletedName="MarcaDDRowDeleted" msprop:Generator_RowChangedName="MarcaDDRowChanged" msprop:Generator_RowClassName="MarcaDDRow" msprop:Generator_RowChangingName="MarcaDDRowChanging" msprop:Generator_RowEvArgName="MarcaDDRowChangeEvent" msprop:Generator_RowEvHandlerName="MarcaDDRowChangeEventHandler" msprop:Generator_TableClassName="MarcaDDDataTable" msprop:Generator_TableVarName="tableMarcaDD" msprop:Generator_RowDeletingName="MarcaDDRowDeleting" msprop:Generator_TablePropName="MarcaDD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idMarca" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idMarca" msprop:Generator_ColumnPropNameInRow="idMarca" msprop:Generator_ColumnVarNameInTable="columnidMarca" msprop:Generator_ColumnPropNameInTable="idMarcaColumn" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_UserColumnName="descricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DMM" msprop:Generator_UserTableName="DMM" msprop:Generator_RowDeletedName="DMMRowDeleted" msprop:Generator_RowChangedName="DMMRowChanged" msprop:Generator_RowClassName="DMMRow" msprop:Generator_RowChangingName="DMMRowChanging" msprop:Generator_RowEvArgName="DMMRowChangeEvent" msprop:Generator_RowEvHandlerName="DMMRowChangeEventHandler" msprop:Generator_TableClassName="DMMDataTable" msprop:Generator_TableVarName="tableDMM" msprop:Generator_RowDeletingName="DMMRowDeleting" msprop:Generator_TablePropName="DMM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEquipamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idEquipamento" msprop:Generator_ColumnVarNameInTable="columnidEquipamento" msprop:Generator_ColumnPropNameInRow="idEquipamento" msprop:Generator_ColumnPropNameInTable="idEquipamentoColumn" type="xs:int" />
+              <xs:element name="idEmpresa" msprop:Generator_UserColumnName="idEmpresa" msprop:Generator_ColumnVarNameInTable="columnidEmpresa" msprop:Generator_ColumnPropNameInRow="idEmpresa" msprop:Generator_ColumnPropNameInTable="idEmpresaColumn" type="xs:int" />
+              <xs:element name="idTipoEquipamento" msprop:Generator_UserColumnName="idTipoEquipamento" msprop:Generator_ColumnVarNameInTable="columnidTipoEquipamento" msprop:Generator_ColumnPropNameInRow="idTipoEquipamento" msprop:Generator_ColumnPropNameInTable="idTipoEquipamentoColumn" type="xs:int" />
+              <xs:element name="TipoEquipamento" msprop:Generator_UserColumnName="TipoEquipamento" msprop:Generator_ColumnVarNameInTable="columnTipoEquipamento" msprop:Generator_ColumnPropNameInRow="TipoEquipamento" msprop:Generator_ColumnPropNameInTable="TipoEquipamentoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Familia" msprop:Generator_UserColumnName="Familia" msprop:Generator_ColumnVarNameInTable="columnFamilia" msprop:Generator_ColumnPropNameInRow="Familia" msprop:Generator_ColumnPropNameInTable="FamiliaColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idGrandeza" msprop:Generator_UserColumnName="idGrandeza" msprop:Generator_ColumnVarNameInTable="columnidGrandeza" msprop:Generator_ColumnPropNameInRow="idGrandeza" msprop:Generator_ColumnPropNameInTable="idGrandezaColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="grandeza" msprop:Generator_UserColumnName="grandeza" msprop:Generator_ColumnVarNameInTable="columngrandeza" msprop:Generator_ColumnPropNameInRow="grandeza" msprop:Generator_ColumnPropNameInTable="grandezaColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numSerie" msprop:Generator_UserColumnName="numSerie" msprop:Generator_ColumnVarNameInTable="columnnumSerie" msprop:Generator_ColumnPropNameInRow="numSerie" msprop:Generator_ColumnPropNameInTable="numSerieColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numIdentificacao" msprop:Generator_UserColumnName="numIdentificacao" msprop:Generator_ColumnVarNameInTable="columnnumIdentificacao" msprop:Generator_ColumnPropNameInRow="numIdentificacao" msprop:Generator_ColumnPropNameInTable="numIdentificacaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alcanceInf" msprop:Generator_UserColumnName="alcanceInf" msprop:Generator_ColumnVarNameInTable="columnalcanceInf" msprop:Generator_ColumnPropNameInRow="alcanceInf" msprop:Generator_ColumnPropNameInTable="alcanceInfColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="alcanceSup" msprop:Generator_UserColumnName="alcanceSup" msprop:Generator_ColumnVarNameInTable="columnalcanceSup" msprop:Generator_ColumnPropNameInRow="alcanceSup" msprop:Generator_ColumnPropNameInTable="alcanceSupColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="idUnidadeAlcance" msprop:Generator_UserColumnName="idUnidadeAlcance" msprop:Generator_ColumnVarNameInTable="columnidUnidadeAlcance" msprop:Generator_ColumnPropNameInRow="idUnidadeAlcance" msprop:Generator_ColumnPropNameInTable="idUnidadeAlcanceColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="sAlcance" msprop:Generator_UserColumnName="sAlcance" msprop:Generator_ColumnVarNameInTable="columnsAlcance" msprop:Generator_ColumnPropNameInRow="sAlcance" msprop:Generator_ColumnPropNameInTable="sAlcanceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alcance" msprop:Generator_UserColumnName="alcance" msprop:Generator_ColumnVarNameInTable="columnalcance" msprop:Generator_ColumnPropNameInRow="alcance" msprop:Generator_ColumnPropNameInTable="alcanceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="resolucao" msprop:Generator_UserColumnName="resolucao" msprop:Generator_ColumnVarNameInTable="columnresolucao" msprop:Generator_ColumnPropNameInRow="resolucao" msprop:Generator_ColumnPropNameInTable="resolucaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idClasse" msprop:Generator_UserColumnName="idClasse" msprop:Generator_ColumnVarNameInTable="columnidClasse" msprop:Generator_ColumnPropNameInRow="idClasse" msprop:Generator_ColumnPropNameInTable="idClasseColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="classe" msprop:Generator_UserColumnName="classe" msprop:Generator_ColumnVarNameInTable="columnclasse" msprop:Generator_ColumnPropNameInRow="classe" msprop:Generator_ColumnPropNameInTable="classeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sClasse" msprop:Generator_UserColumnName="sClasse" msprop:Generator_ColumnVarNameInTable="columnsClasse" msprop:Generator_ColumnPropNameInRow="sClasse" msprop:Generator_ColumnPropNameInTable="sClasseColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="forma" msprop:Generator_UserColumnName="forma" msprop:Generator_ColumnVarNameInTable="columnforma" msprop:Generator_ColumnPropNameInRow="forma" msprop:Generator_ColumnPropNameInTable="formaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fabricante" msprop:Generator_UserColumnName="fabricante" msprop:Generator_ColumnVarNameInTable="columnfabricante" msprop:Generator_ColumnPropNameInRow="fabricante" msprop:Generator_ColumnPropNameInTable="fabricanteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="refUltimaCalibracao" msprop:Generator_UserColumnName="refUltimaCalibracao" msprop:Generator_ColumnVarNameInTable="columnrefUltimaCalibracao" msprop:Generator_ColumnPropNameInRow="refUltimaCalibracao" msprop:Generator_ColumnPropNameInTable="refUltimaCalibracaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtUltimaCalibracao" msprop:Generator_UserColumnName="dtUltimaCalibracao" msprop:Generator_ColumnVarNameInTable="columndtUltimaCalibracao" msprop:Generator_ColumnPropNameInRow="dtUltimaCalibracao" msprop:Generator_ColumnPropNameInTable="dtUltimaCalibracaoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="periodicidadeCalibracao" msprop:Generator_UserColumnName="periodicidadeCalibracao" msprop:Generator_ColumnVarNameInTable="columnperiodicidadeCalibracao" msprop:Generator_ColumnPropNameInRow="periodicidadeCalibracao" msprop:Generator_ColumnPropNameInTable="periodicidadeCalibracaoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" type="xs:boolean" />
+              <xs:element name="observacoes" msprop:Generator_UserColumnName="observacoes" msprop:Generator_ColumnVarNameInTable="columnobservacoes" msprop:Generator_ColumnPropNameInRow="observacoes" msprop:Generator_ColumnPropNameInTable="observacoesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtCriacao" msprop:Generator_UserColumnName="dtCriacao" msprop:Generator_ColumnVarNameInTable="columndtCriacao" msprop:Generator_ColumnPropNameInRow="dtCriacao" msprop:Generator_ColumnPropNameInTable="dtCriacaoColumn" type="xs:dateTime" />
+              <xs:element name="idUtilCriacao" msprop:Generator_UserColumnName="idUtilCriacao" msprop:Generator_ColumnVarNameInTable="columnidUtilCriacao" msprop:Generator_ColumnPropNameInRow="idUtilCriacao" msprop:Generator_ColumnPropNameInTable="idUtilCriacaoColumn" type="xs:int" />
+              <xs:element name="dtAlteracao" msprop:Generator_UserColumnName="dtAlteracao" msprop:Generator_ColumnVarNameInTable="columndtAlteracao" msprop:Generator_ColumnPropNameInRow="dtAlteracao" msprop:Generator_ColumnPropNameInTable="dtAlteracaoColumn" type="xs:dateTime" />
+              <xs:element name="idUtilAlteracao" msprop:Generator_UserColumnName="idUtilAlteracao" msprop:Generator_ColumnVarNameInTable="columnidUtilAlteracao" msprop:Generator_ColumnPropNameInRow="idUtilAlteracao" msprop:Generator_ColumnPropNameInTable="idUtilAlteracaoColumn" type="xs:int" />
+              <xs:element name="calibInt" msprop:Generator_UserColumnName="calibInt" msprop:Generator_ColumnVarNameInTable="columncalibInt" msprop:Generator_ColumnPropNameInRow="calibInt" msprop:Generator_ColumnPropNameInTable="calibIntColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bCertConclusivo" msprop:Generator_UserColumnName="bCertConclusivo" msprop:Generator_ColumnVarNameInTable="columnbCertConclusivo" msprop:Generator_ColumnPropNameInRow="bCertConclusivo" msprop:Generator_ColumnPropNameInTable="bCertConclusivoColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="campo1" msprop:Generator_UserColumnName="campo1" msprop:Generator_ColumnVarNameInTable="columncampo1" msprop:Generator_ColumnPropNameInRow="campo1" msprop:Generator_ColumnPropNameInTable="campo1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="campo2" msprop:Generator_UserColumnName="campo2" msprop:Generator_ColumnVarNameInTable="columncampo2" msprop:Generator_ColumnPropNameInRow="campo2" msprop:Generator_ColumnPropNameInTable="campo2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idMarca" msprop:Generator_UserColumnName="idMarca" msprop:Generator_ColumnVarNameInTable="columnidMarca" msprop:Generator_ColumnPropNameInRow="idMarca" msprop:Generator_ColumnPropNameInTable="idMarcaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="idModelo" msprop:Generator_UserColumnName="idModelo" msprop:Generator_ColumnVarNameInTable="columnidModelo" msprop:Generator_ColumnPropNameInRow="idModelo" msprop:Generator_ColumnPropNameInTable="idModeloColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="marca" msprop:Generator_UserColumnName="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEmpresaManutCTA" msprop:Generator_UserColumnName="idEmpresaManutCTA" msprop:Generator_ColumnVarNameInTable="columnidEmpresaManutCTA" msprop:Generator_ColumnPropNameInRow="idEmpresaManutCTA" msprop:Generator_ColumnPropNameInTable="idEmpresaManutCTAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="modelo" msprop:Generator_UserColumnName="modelo" msprop:Generator_ColumnVarNameInTable="columnmodelo" msprop:Generator_ColumnPropNameInRow="modelo" msprop:Generator_ColumnPropNameInTable="modeloColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="entidadeUltimaCalibracao" msprop:Generator_UserColumnName="entidadeUltimaCalibracao" msprop:Generator_ColumnVarNameInTable="columnentidadeUltimaCalibracao" msprop:Generator_ColumnPropNameInRow="entidadeUltimaCalibracao" msprop:Generator_ColumnPropNameInTable="entidadeUltimaCalibracaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtEntradaServico" msprop:Generator_UserColumnName="dtEntradaServico" msprop:Generator_ColumnVarNameInTable="columndtEntradaServico" msprop:Generator_ColumnPropNameInRow="dtEntradaServico" msprop:Generator_ColumnPropNameInTable="dtEntradaServicoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fornecedor" msprop:Generator_UserColumnName="fornecedor" msprop:Generator_ColumnVarNameInTable="columnfornecedor" msprop:Generator_ColumnPropNameInRow="fornecedor" msprop:Generator_ColumnPropNameInTable="fornecedorColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="responsavelEquipamento" msprop:Generator_UserColumnName="responsavelEquipamento" msprop:Generator_ColumnVarNameInTable="columnresponsavelEquipamento" msprop:Generator_ColumnPropNameInRow="responsavelEquipamento" msprop:Generator_ColumnPropNameInTable="responsavelEquipamentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precoClienteEuros" msprop:Generator_UserColumnName="precoClienteEuros" msprop:Generator_ColumnVarNameInTable="columnprecoClienteEuros" msprop:Generator_ColumnPropNameInRow="precoClienteEuros" msprop:Generator_ColumnPropNameInTable="precoClienteEurosColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="custoClienteEuros" msprop:Generator_UserColumnName="custoClienteEuros" msprop:Generator_ColumnVarNameInTable="columncustoClienteEuros" msprop:Generator_ColumnPropNameInRow="custoClienteEuros" msprop:Generator_ColumnPropNameInTable="custoClienteEurosColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="localizacao" msprop:Generator_UserColumnName="localizacao" msprop:Generator_ColumnVarNameInTable="columnlocalizacao" msprop:Generator_ColumnPropNameInRow="localizacao" msprop:Generator_ColumnPropNameInTable="localizacaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="criterios" msprop:Generator_UserColumnName="criterios" msprop:Generator_ColumnVarNameInTable="columncriterios" msprop:Generator_ColumnPropNameInRow="criterios" msprop:Generator_ColumnPropNameInTable="criteriosColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pontosCalibracao" msprop:Generator_UserColumnName="pontosCalibracao" msprop:Generator_ColumnVarNameInTable="columnpontosCalibracao" msprop:Generator_ColumnPropNameInRow="pontosCalibracao" msprop:Generator_ColumnPropNameInTable="pontosCalibracaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="texto" msprop:Generator_UserColumnName="texto" msprop:Generator_ColumnVarNameInTable="columntexto" msprop:Generator_ColumnPropNameInRow="texto" msprop:Generator_ColumnPropNameInTable="textoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEstadoRelacaoCalibracao" msprop:Generator_UserColumnName="idEstadoRelacaoCalibracao" msprop:Generator_ColumnVarNameInTable="columnidEstadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInRow="idEstadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInTable="idEstadoRelacaoCalibracaoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="estadoRelacaoCalibracao" msprop:Generator_UserColumnName="estadoRelacaoCalibracao" msprop:Generator_ColumnVarNameInTable="columnestadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInRow="estadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInTable="estadoRelacaoCalibracaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idTipoIntervencao" msprop:Generator_UserColumnName="idTipoIntervencao" msprop:Generator_ColumnVarNameInTable="columnidTipoIntervencao" msprop:Generator_ColumnPropNameInRow="idTipoIntervencao" msprop:Generator_ColumnPropNameInTable="idTipoIntervencaoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="tipoIntervencao" msprop:Generator_UserColumnName="tipoIntervencao" msprop:Generator_ColumnVarNameInTable="columntipoIntervencao" msprop:Generator_ColumnPropNameInRow="tipoIntervencao" msprop:Generator_ColumnPropNameInTable="tipoIntervencaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEstadoUtilizacao" msprop:Generator_UserColumnName="idEstadoUtilizacao" msprop:Generator_ColumnVarNameInTable="columnidEstadoUtilizacao" msprop:Generator_ColumnPropNameInRow="idEstadoUtilizacao" msprop:Generator_ColumnPropNameInTable="idEstadoUtilizacaoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="estadoUtilizacao" msprop:Generator_UserColumnName="estadoUtilizacao" msprop:Generator_ColumnVarNameInTable="columnestadoUtilizacao" msprop:Generator_ColumnPropNameInRow="estadoUtilizacao" msprop:Generator_ColumnPropNameInTable="estadoUtilizacaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEstadoEquipamento" msprop:Generator_UserColumnName="idEstadoEquipamento" msprop:Generator_ColumnVarNameInTable="columnidEstadoEquipamento" msprop:Generator_ColumnPropNameInRow="idEstadoEquipamento" msprop:Generator_ColumnPropNameInTable="idEstadoEquipamentoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="estadoEquipamento" msprop:Generator_UserColumnName="estadoEquipamento" msprop:Generator_ColumnVarNameInTable="columnestadoEquipamento" msprop:Generator_ColumnPropNameInRow="estadoEquipamento" msprop:Generator_ColumnPropNameInTable="estadoEquipamentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idUtilCriacaoCliente" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="idUtilCriacaoCliente" msprop:Generator_ColumnVarNameInTable="columnidUtilCriacaoCliente" msprop:Generator_ColumnPropNameInRow="idUtilCriacaoCliente" msprop:Generator_ColumnPropNameInTable="idUtilCriacaoClienteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="idUtilAlteracaoCliente" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="idUtilAlteracaoCliente" msprop:Generator_ColumnVarNameInTable="columnidUtilAlteracaoCliente" msprop:Generator_ColumnPropNameInRow="idUtilAlteracaoCliente" msprop:Generator_ColumnPropNameInTable="idUtilAlteracaoClienteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="dtCriacaoCliente" msprop:Generator_UserColumnName="dtCriacaoCliente" msprop:Generator_ColumnVarNameInTable="columndtCriacaoCliente" msprop:Generator_ColumnPropNameInRow="dtCriacaoCliente" msprop:Generator_ColumnPropNameInTable="dtCriacaoClienteColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dtAlteracaoCliente" msprop:Generator_UserColumnName="dtAlteracaoCliente" msprop:Generator_ColumnVarNameInTable="columndtAlteracaoCliente" msprop:Generator_ColumnPropNameInRow="dtAlteracaoCliente" msprop:Generator_ColumnPropNameInTable="dtAlteracaoClienteColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Equipamento" msprop:Generator_UserTableName="Equipamento" msprop:Generator_RowDeletedName="EquipamentoRowDeleted" msprop:Generator_RowChangedName="EquipamentoRowChanged" msprop:Generator_RowClassName="EquipamentoRow" msprop:Generator_RowChangingName="EquipamentoRowChanging" msprop:Generator_RowEvArgName="EquipamentoRowChangeEvent" msprop:Generator_RowEvHandlerName="EquipamentoRowChangeEventHandler" msprop:Generator_TableClassName="EquipamentoDataTable" msprop:Generator_TableVarName="tableEquipamento" msprop:Generator_RowDeletingName="EquipamentoRowDeleting" msprop:Generator_TablePropName="Equipamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEquipamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idEquipamento" msprop:Generator_ColumnVarNameInTable="columnidEquipamento" msprop:Generator_ColumnPropNameInRow="idEquipamento" msprop:Generator_ColumnPropNameInTable="idEquipamentoColumn" type="xs:int" />
+              <xs:element name="idEmpresa" msprop:Generator_UserColumnName="idEmpresa" msprop:Generator_ColumnVarNameInTable="columnidEmpresa" msprop:Generator_ColumnPropNameInRow="idEmpresa" msprop:Generator_ColumnPropNameInTable="idEmpresaColumn" type="xs:int" />
+              <xs:element name="idTipoEquipamento" msprop:Generator_UserColumnName="idTipoEquipamento" msprop:Generator_ColumnVarNameInTable="columnidTipoEquipamento" msprop:Generator_ColumnPropNameInRow="idTipoEquipamento" msprop:Generator_ColumnPropNameInTable="idTipoEquipamentoColumn" type="xs:int" />
+              <xs:element name="numSerie" msprop:Generator_UserColumnName="numSerie" msprop:Generator_ColumnVarNameInTable="columnnumSerie" msprop:Generator_ColumnPropNameInRow="numSerie" msprop:Generator_ColumnPropNameInTable="numSerieColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numIdentificacao" msprop:Generator_UserColumnName="numIdentificacao" msprop:Generator_ColumnVarNameInTable="columnnumIdentificacao" msprop:Generator_ColumnPropNameInRow="numIdentificacao" msprop:Generator_ColumnPropNameInTable="numIdentificacaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alcanceInf" msprop:Generator_UserColumnName="alcanceInf" msprop:Generator_ColumnVarNameInTable="columnalcanceInf" msprop:Generator_ColumnPropNameInRow="alcanceInf" msprop:Generator_ColumnPropNameInTable="alcanceInfColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="alcanceSup" msprop:Generator_UserColumnName="alcanceSup" msprop:Generator_ColumnVarNameInTable="columnalcanceSup" msprop:Generator_ColumnPropNameInRow="alcanceSup" msprop:Generator_ColumnPropNameInTable="alcanceSupColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="idUnidadeAlcance" msprop:Generator_UserColumnName="idUnidadeAlcance" msprop:Generator_ColumnVarNameInTable="columnidUnidadeAlcance" msprop:Generator_ColumnPropNameInRow="idUnidadeAlcance" msprop:Generator_ColumnPropNameInTable="idUnidadeAlcanceColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="alcance" msprop:Generator_UserColumnName="alcance" msprop:Generator_ColumnVarNameInTable="columnalcance" msprop:Generator_ColumnPropNameInRow="alcance" msprop:Generator_ColumnPropNameInTable="alcanceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="resolucao" msprop:Generator_UserColumnName="resolucao" msprop:Generator_ColumnVarNameInTable="columnresolucao" msprop:Generator_ColumnPropNameInRow="resolucao" msprop:Generator_ColumnPropNameInTable="resolucaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="modelo" msprop:Generator_UserColumnName="modelo" msprop:Generator_ColumnVarNameInTable="columnmodelo" msprop:Generator_ColumnPropNameInRow="modelo" msprop:Generator_ColumnPropNameInTable="modeloColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_UserColumnName="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idClasse" msprop:Generator_UserColumnName="idClasse" msprop:Generator_ColumnVarNameInTable="columnidClasse" msprop:Generator_ColumnPropNameInRow="idClasse" msprop:Generator_ColumnPropNameInTable="idClasseColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="classe" msprop:Generator_UserColumnName="classe" msprop:Generator_ColumnVarNameInTable="columnclasse" msprop:Generator_ColumnPropNameInRow="classe" msprop:Generator_ColumnPropNameInTable="classeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="forma" msprop:Generator_UserColumnName="forma" msprop:Generator_ColumnVarNameInTable="columnforma" msprop:Generator_ColumnPropNameInRow="forma" msprop:Generator_ColumnPropNameInTable="formaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fabricante" msprop:Generator_UserColumnName="fabricante" msprop:Generator_ColumnVarNameInTable="columnfabricante" msprop:Generator_ColumnPropNameInRow="fabricante" msprop:Generator_ColumnPropNameInTable="fabricanteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="refUltimaCalibracao" msprop:Generator_UserColumnName="refUltimaCalibracao" msprop:Generator_ColumnVarNameInTable="columnrefUltimaCalibracao" msprop:Generator_ColumnPropNameInRow="refUltimaCalibracao" msprop:Generator_ColumnPropNameInTable="refUltimaCalibracaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtUltimaCalibracao" msprop:Generator_UserColumnName="dtUltimaCalibracao" msprop:Generator_ColumnVarNameInTable="columndtUltimaCalibracao" msprop:Generator_ColumnPropNameInRow="dtUltimaCalibracao" msprop:Generator_ColumnPropNameInTable="dtUltimaCalibracaoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="periodicidadeCalibracao" msprop:Generator_UserColumnName="periodicidadeCalibracao" msprop:Generator_ColumnVarNameInTable="columnperiodicidadeCalibracao" msprop:Generator_ColumnPropNameInRow="periodicidadeCalibracao" msprop:Generator_ColumnPropNameInTable="periodicidadeCalibracaoColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" type="xs:boolean" />
+              <xs:element name="observacoes" msprop:Generator_UserColumnName="observacoes" msprop:Generator_ColumnVarNameInTable="columnobservacoes" msprop:Generator_ColumnPropNameInRow="observacoes" msprop:Generator_ColumnPropNameInTable="observacoesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtCriacao" msprop:Generator_UserColumnName="dtCriacao" msprop:Generator_ColumnVarNameInTable="columndtCriacao" msprop:Generator_ColumnPropNameInRow="dtCriacao" msprop:Generator_ColumnPropNameInTable="dtCriacaoColumn" type="xs:dateTime" />
+              <xs:element name="idUtilCriacao" msprop:Generator_UserColumnName="idUtilCriacao" msprop:Generator_ColumnVarNameInTable="columnidUtilCriacao" msprop:Generator_ColumnPropNameInRow="idUtilCriacao" msprop:Generator_ColumnPropNameInTable="idUtilCriacaoColumn" type="xs:int" />
+              <xs:element name="dtAlteracao" msprop:Generator_UserColumnName="dtAlteracao" msprop:Generator_ColumnVarNameInTable="columndtAlteracao" msprop:Generator_ColumnPropNameInRow="dtAlteracao" msprop:Generator_ColumnPropNameInTable="dtAlteracaoColumn" type="xs:dateTime" />
+              <xs:element name="idUtilAlteracao" msprop:Generator_UserColumnName="idUtilAlteracao" msprop:Generator_ColumnVarNameInTable="columnidUtilAlteracao" msprop:Generator_ColumnPropNameInRow="idUtilAlteracao" msprop:Generator_ColumnPropNameInTable="idUtilAlteracaoColumn" type="xs:int" />
+              <xs:element name="calibInt" msprop:Generator_UserColumnName="calibInt" msprop:Generator_ColumnVarNameInTable="columncalibInt" msprop:Generator_ColumnPropNameInRow="calibInt" msprop:Generator_ColumnPropNameInTable="calibIntColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bCertConclusivo" msprop:Generator_UserColumnName="bCertConclusivo" msprop:Generator_ColumnVarNameInTable="columnbCertConclusivo" msprop:Generator_ColumnPropNameInRow="bCertConclusivo" msprop:Generator_ColumnPropNameInTable="bCertConclusivoColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="campo1" msprop:Generator_UserColumnName="campo1" msprop:Generator_ColumnVarNameInTable="columncampo1" msprop:Generator_ColumnPropNameInRow="campo1" msprop:Generator_ColumnPropNameInTable="campo1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="campo2" msprop:Generator_UserColumnName="campo2" msprop:Generator_ColumnVarNameInTable="columncampo2" msprop:Generator_ColumnPropNameInRow="campo2" msprop:Generator_ColumnPropNameInTable="campo2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idMarca" msprop:Generator_UserColumnName="idMarca" msprop:Generator_ColumnVarNameInTable="columnidMarca" msprop:Generator_ColumnPropNameInRow="idMarca" msprop:Generator_ColumnPropNameInTable="idMarcaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="idModelo" msprop:Generator_UserColumnName="idModelo" msprop:Generator_ColumnVarNameInTable="columnidModelo" msprop:Generator_ColumnPropNameInRow="idModelo" msprop:Generator_ColumnPropNameInTable="idModeloColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="entidadeUltimaCalibracao" msprop:Generator_UserColumnName="entidadeUltimaCalibracao" msprop:Generator_ColumnVarNameInTable="columnentidadeUltimaCalibracao" msprop:Generator_ColumnPropNameInRow="entidadeUltimaCalibracao" msprop:Generator_ColumnPropNameInTable="entidadeUltimaCalibracaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEstadoUtilizacao" msprop:Generator_UserColumnName="idEstadoUtilizacao" msprop:Generator_ColumnVarNameInTable="columnidEstadoUtilizacao" msprop:Generator_ColumnPropNameInRow="idEstadoUtilizacao" msprop:Generator_ColumnPropNameInTable="idEstadoUtilizacaoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="idEstadoEquipamento" msprop:Generator_UserColumnName="idEstadoEquipamento" msprop:Generator_ColumnVarNameInTable="columnidEstadoEquipamento" msprop:Generator_ColumnPropNameInRow="idEstadoEquipamento" msprop:Generator_ColumnPropNameInTable="idEstadoEquipamentoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="dtEntradaServico" msprop:Generator_UserColumnName="dtEntradaServico" msprop:Generator_ColumnVarNameInTable="columndtEntradaServico" msprop:Generator_ColumnPropNameInRow="dtEntradaServico" msprop:Generator_ColumnPropNameInTable="dtEntradaServicoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fornecedor" msprop:Generator_UserColumnName="fornecedor" msprop:Generator_ColumnVarNameInTable="columnfornecedor" msprop:Generator_ColumnPropNameInRow="fornecedor" msprop:Generator_ColumnPropNameInTable="fornecedorColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="responsavelEquipamento" msprop:Generator_UserColumnName="responsavelEquipamento" msprop:Generator_ColumnVarNameInTable="columnresponsavelEquipamento" msprop:Generator_ColumnPropNameInRow="responsavelEquipamento" msprop:Generator_ColumnPropNameInTable="responsavelEquipamentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precoClienteEuros" msprop:Generator_UserColumnName="precoClienteEuros" msprop:Generator_ColumnVarNameInTable="columnprecoClienteEuros" msprop:Generator_ColumnPropNameInRow="precoClienteEuros" msprop:Generator_ColumnPropNameInTable="precoClienteEurosColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="custoClienteEuros" msprop:Generator_UserColumnName="custoClienteEuros" msprop:Generator_ColumnVarNameInTable="columncustoClienteEuros" msprop:Generator_ColumnPropNameInRow="custoClienteEuros" msprop:Generator_ColumnPropNameInTable="custoClienteEurosColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="localizacao" msprop:Generator_UserColumnName="localizacao" msprop:Generator_ColumnVarNameInTable="columnlocalizacao" msprop:Generator_ColumnPropNameInRow="localizacao" msprop:Generator_ColumnPropNameInTable="localizacaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="criterios" msprop:Generator_UserColumnName="criterios" msprop:Generator_ColumnVarNameInTable="columncriterios" msprop:Generator_ColumnPropNameInRow="criterios" msprop:Generator_ColumnPropNameInTable="criteriosColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pontosCalibracao" msprop:Generator_UserColumnName="pontosCalibracao" msprop:Generator_ColumnVarNameInTable="columnpontosCalibracao" msprop:Generator_ColumnPropNameInRow="pontosCalibracao" msprop:Generator_ColumnPropNameInTable="pontosCalibracaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="texto" msprop:Generator_UserColumnName="texto" msprop:Generator_ColumnVarNameInTable="columntexto" msprop:Generator_ColumnPropNameInRow="texto" msprop:Generator_ColumnPropNameInTable="textoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEstadoRelacaoCalibracao" msprop:Generator_UserColumnName="idEstadoRelacaoCalibracao" msprop:Generator_ColumnVarNameInTable="columnidEstadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInRow="idEstadoRelacaoCalibracao" msprop:Generator_ColumnPropNameInTable="idEstadoRelacaoCalibracaoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="idTipoIntervencao" msprop:Generator_UserColumnName="idTipoIntervencao" msprop:Generator_ColumnVarNameInTable="columnidTipoIntervencao" msprop:Generator_ColumnPropNameInRow="idTipoIntervencao" msprop:Generator_ColumnPropNameInTable="idTipoIntervencaoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="idUtilCriacaoCliente" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="idUtilCriacaoCliente" msprop:Generator_ColumnVarNameInTable="columnidUtilCriacaoCliente" msprop:Generator_ColumnPropNameInRow="idUtilCriacaoCliente" msprop:Generator_ColumnPropNameInTable="idUtilCriacaoClienteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="idUtilAlteracaoCliente" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="idUtilAlteracaoCliente" msprop:Generator_ColumnVarNameInTable="columnidUtilAlteracaoCliente" msprop:Generator_ColumnPropNameInRow="idUtilAlteracaoCliente" msprop:Generator_ColumnPropNameInTable="idUtilAlteracaoClienteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="dtCriacaoCliente" msprop:Generator_UserColumnName="dtCriacaoCliente" msprop:Generator_ColumnVarNameInTable="columndtCriacaoCliente" msprop:Generator_ColumnPropNameInRow="dtCriacaoCliente" msprop:Generator_ColumnPropNameInTable="dtCriacaoClienteColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dtAlteracaoCliente" msprop:Generator_UserColumnName="dtAlteracaoCliente" msprop:Generator_ColumnVarNameInTable="columndtAlteracaoCliente" msprop:Generator_ColumnPropNameInRow="dtAlteracaoCliente" msprop:Generator_ColumnPropNameInTable="dtAlteracaoClienteColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EstadoRelacaoCalibracaoDD" />
+      <xs:field xpath="mstns:idEstadoRelacaoCalibracao" />
+    </xs:unique>
+    <xs:unique name="TipoIntervencaoDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TipoIntervencaoDD" />
+      <xs:field xpath="mstns:idTipoIntervencao" />
+    </xs:unique>
+    <xs:unique name="EstadoUtilizacaoEquipamentoDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EstadoUtilizacaoEquipamentoDD" />
+      <xs:field xpath="mstns:idEstadoUtilizacao" />
+    </xs:unique>
+    <xs:unique name="TipoEquipamentoDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TipoEquipamentoDD" />
+      <xs:field xpath="mstns:idTipoEquipamento" />
+    </xs:unique>
+    <xs:unique name="UnidadeAlcanceDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UnidadeAlcanceDD" />
+      <xs:field xpath="mstns:idUnidadeAlcance" />
+    </xs:unique>
+    <xs:unique name="ClasseDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ClasseDD" />
+      <xs:field xpath="mstns:idClasse" />
+    </xs:unique>
+    <xs:unique name="EstadoEquipamentoDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EstadoEquipamentoDD" />
+      <xs:field xpath="mstns:idEstadoEquipamento" />
+    </xs:unique>
+    <xs:unique name="ModeloDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ModeloDD" />
+      <xs:field xpath="mstns:idModelo" />
+    </xs:unique>
+    <xs:unique name="MarcaDD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MarcaDD" />
+      <xs:field xpath="mstns:idMarca" />
+    </xs:unique>
+    <xs:unique name="DMM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DMM" />
+      <xs:field xpath="mstns:idEquipamento" />
+    </xs:unique>
+    <xs:unique name="Equipamento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Equipamento" />
+      <xs:field xpath="mstns:idEquipamento" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Equipamento_EstadoEquipamento" msdata:parent="EstadoEquipamentoDD" msdata:child="Equipamento" msdata:parentkey="idEstadoEquipamento" msdata:childkey="idEstadoEquipamento" msprop:Generator_UserRelationName="FK_Equipamento_EstadoEquipamento" msprop:Generator_RelationVarName="relationFK_Equipamento_EstadoEquipamento" msprop:Generator_UserChildTable="Equipamento" msprop:Generator_UserParentTable="EstadoEquipamentoDD" msprop:Generator_ParentPropName="EstadoEquipamentoDDRow" msprop:Generator_ChildPropName="GetEquipamentoRows" />
+      <msdata:Relationship name="FK_Equipamento_Marca" msdata:parent="MarcaDD" msdata:child="Equipamento" msdata:parentkey="idMarca" msdata:childkey="idMarca" msprop:Generator_UserRelationName="FK_Equipamento_Marca" msprop:Generator_RelationVarName="relationFK_Equipamento_Marca" msprop:Generator_UserChildTable="Equipamento" msprop:Generator_UserParentTable="MarcaDD" msprop:Generator_ParentPropName="MarcaDDRow" msprop:Generator_ChildPropName="GetEquipamentoRows" />
+      <msdata:Relationship name="FK_Equipamento_Modelo" msdata:parent="ModeloDD" msdata:child="Equipamento" msdata:parentkey="idModelo" msdata:childkey="idModelo" msprop:Generator_UserRelationName="FK_Equipamento_Modelo" msprop:Generator_RelationVarName="relationFK_Equipamento_Modelo" msprop:Generator_UserChildTable="Equipamento" msprop:Generator_UserParentTable="ModeloDD" msprop:Generator_ParentPropName="ModeloDDRow" msprop:Generator_ChildPropName="GetEquipamentoRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

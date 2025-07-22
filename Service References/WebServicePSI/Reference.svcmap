@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2b5390c8-324c-47df-8821-3795f718a34b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.92.150.84:55553/PSI.Internal.WCF/wCFServices/Proposals/ProposalService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProposalService.xsd" MetadataType="Schema" ID="1ac7fc9a-5052-45ee-a073-eb04f44e6bcc" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProposalService1.xsd" MetadataType="Schema" ID="c4ab6629-d602-496b-a2d7-67b51294f0bb" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd8" />
+    <MetadataFile FileName="ProposalService.wsdl" MetadataType="Wsdl" ID="c6d63f21-766d-4620-b4c0-834b2684821f" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProposalService.disco" MetadataType="Disco" ID="8fd9ef10-e9f9-4062-a95d-e91357d71c74" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?disco" />
+    <MetadataFile FileName="ProposalService1.wsdl" MetadataType="Wsdl" ID="d5f46202-c4c0-4015-8289-ebf1fba510fe" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?wsdl" />
+    <MetadataFile FileName="ProposalService2.xsd" MetadataType="Schema" ID="8764b7d0-ac2a-4d1d-a378-e5d1acedb232" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProposalService3.xsd" MetadataType="Schema" ID="08938241-3528-4aed-a524-9e0de2d1af1a" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProposalService4.xsd" MetadataType="Schema" ID="bb0afc27-a341-4c3e-bf11-8a7ed601daf3" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProposalService5.xsd" MetadataType="Schema" ID="2eb2ac2c-aa9e-4ba6-9fd2-3f7e109927a7" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProposalService6.xsd" MetadataType="Schema" ID="86704621-deea-4678-95ee-09d6c501da58" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd7" />
+    <MetadataFile FileName="ProposalService7.xsd" MetadataType="Schema" ID="af240a23-70f4-4909-b0af-d4345134861c" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ProposalService8.xsd" MetadataType="Schema" ID="463d617c-46bb-4f4e-ad07-acba0afb7db5" SourceId="1" SourceUrl="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

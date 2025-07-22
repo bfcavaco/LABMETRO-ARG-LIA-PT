@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisioDocument>
+	<DocumentProperties>
+		<Title></Title>
+		<HyperlinkBase href=""></HyperlinkBase>
+	</DocumentProperties>
+	<Pages>
+		<Page ID="0" Name="Page-1" NameU="Page-1">
+			<Layer IX="0">
+				<Name>Flowchart</Name>
+				<NameUniv>Flowchart</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Layer IX="1">
+				<Name>Connector</Name>
+				<NameUniv>Connector</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Shapes>
+				<Shape ID="1" UniqueID="{8A3790F4-A89E-4C1C-AAE3-F3B41A4205EF}" Name="External interactor" NameU="External interactor" Master="0">
+					<Text>Recepcionado
+</Text>
+					<XForm>
+						<PinX Unit="MM">3.858267716535433</PinX>
+						<PinY Unit="MM">7.759596456692912</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="2" UniqueID="{A1F7DA24-7641-4F28-B7A5-B00C2B24B7A7}" Name="External interactor.2" NameU="External interactor.2" Master="0">
+					<Text>Aguarda Calibração
+</Text>
+					<XForm>
+						<PinX Unit="MM">1.141732283464572</PinX>
+						<PinY Unit="MM">6.979576771653542</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="3" UniqueID="{C9F29F1E-79A4-452E-8B18-9876B4D6FEA7}" Name="External interactor.3" NameU="External interactor.3" Master="0">
+					<Text>Aguarda Subcontrataç.
+</Text>
+					<XForm>
+						<PinX Unit="MM">6.988188976377955</PinX>
+						<PinY Unit="MM">6.979576771653542</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="5" UniqueID="{D622123A-BD15-4D5B-B621-55D23692ACC5}" Name="External interactor.5" NameU="External interactor.5" Master="0">
+					<Text>Calibrado
+</Text>
+					<XForm>
+						<PinX Unit="MM">3.976377952755910</PinX>
+						<PinY Unit="MM">5.845226377952755</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="6" UniqueID="{CCF0EB10-BD1C-4B8C-AA7F-5E4BC3C627CB}" Name="External interactor.6" NameU="External interactor.6" Master="0">
+					<Text>Anulado
+</Text>
+					<XForm>
+						<PinX Unit="MM">1.141732283464572</PinX>
+						<PinY Unit="MM">5.845226377952755</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="7" UniqueID="{700C69E0-29E8-4A1F-B39A-10B723EC13B8}" Name="External interactor.7" NameU="External interactor.7" Master="0">
+					<Text>Avariado
+</Text>
+					<XForm>
+						<PinX Unit="MM">2.598425196850398</PinX>
+						<PinY Unit="MM">5.845226377952753</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="8" UniqueID="{54B44337-F87D-4F60-B6E4-6BE0C511AF81}" Name="External interactor.8" NameU="External interactor.8" Master="0">
+					<Text>Suspenso
+</Text>
+					<XForm>
+						<PinX Unit="MM">5.354330708661412</PinX>
+						<PinY Unit="MM">5.837844488188975</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="4" UniqueID="{A7621B81-43D5-4FBD-BE42-FEE7BFC6A1F2}" Name="Dynamic connector" NameU="Dynamic connector" Master="2">
+					<XForm>
+						<PinX Unit="MM">2.253937007874018</PinX>
+						<PinY Unit="MM">7.468011811023620</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="10" UniqueID="{09A98756-1597-4A1A-BF1E-B255226C58F5}" Name="Dynamic connector.10" NameU="Dynamic connector.10" Master="2">
+					<XForm>
+						<PinX Unit="MM">4.064960629921263</PinX>
+						<PinY Unit="MM">6.979576771653541</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="12" UniqueID="{8AEBDCFD-DF16-4E7B-9F08-E604514908F5}" Name="Dynamic connector.12" NameU="Dynamic connector.12" Master="2">
+					<XForm>
+						<PinX Unit="MM">1.141732283464572</PinX>
+						<PinY Unit="MM">6.412401574803148</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="9" UniqueID="{B7193587-7954-4957-BD93-C067337EF821}" Name="Dynamic connector.9" NameU="Dynamic connector.9" Master="2">
+					<XForm>
+						<PinX Unit="MM">5.669291338582678</PinX>
+						<PinY Unit="MM">7.468011811023620</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="16" UniqueID="{332043CF-8F7B-4FDD-9596-573DD233617D}" Name="External interactor.16" NameU="External interactor.16" Master="0">
+					<Text>Subcontr. em Calibração
+</Text>
+					<XForm>
+						<PinX Unit="MM">6.988188976377955</PinX>
+						<PinY Unit="MM">6.428395669291336</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="17" UniqueID="{4BF69798-1D34-41C6-82A8-3DDE6F89F4B0}" Name="External interactor.17" NameU="External interactor.17" Master="0">
+					<Text>Subcontrataç. Calibrada
+</Text>
+					<XForm>
+						<PinX Unit="MM">7.007874015748027</PinX>
+						<PinY Unit="MM">5.837844488188975</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="18" UniqueID="{EAA0FC38-6B7A-451D-9833-6F653F68073F}" Name="Dynamic connector.18" NameU="Dynamic connector.18" Master="2">
+					<XForm>
+						<PinX Unit="MM">6.998031496062991</PinX>
+						<PinY Unit="MM">6.133120078740157</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="19" UniqueID="{771A6466-A2BB-45C6-83AE-B8332B8BC62F}" Name="External interactor.19" NameU="External interactor.19" Master="0">
+					<Text>Subcontratação c/ Certif.
+</Text>
+					<XForm>
+						<PinX Unit="MM">7.007874015748026</PinX>
+						<PinY Unit="MM">4.696112204724408</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="21" UniqueID="{D57B24A7-B0FB-443E-9983-2A82B94FDD02}" Name="Dynamic connector.21" NameU="Dynamic connector.21" Master="2">
+					<XForm>
+						<PinX Unit="MM">6.988188976377955</PinX>
+						<PinY Unit="MM">6.703986220472439</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="24" UniqueID="{8B3D8270-53AF-4286-9ADC-BBF9FEE3B280}" Name="External interactor.24" NameU="External interactor.24" Master="0">
+					<Text>Entregue
+</Text>
+					<XForm>
+						<PinX Unit="MM">3.976377952755900</PinX>
+						<PinY Unit="MM">2.129675196850391</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="26" UniqueID="{4CCEAA9F-9297-4B9B-BD1D-C36F1E990356}" Name="External interactor.26" NameU="External interactor.26" Master="0">
+					<Text>Equip. Anulado na Recepção
+</Text>
+					<XForm>
+						<PinX Unit="MM">1.141732283464572</PinX>
+						<PinY Unit="MM">3.908710629921258</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="28" UniqueID="{57DE78DE-2BDC-4F8F-B99C-8964D036A7EC}" Name="External interactor.28" NameU="External interactor.28" Master="0">
+					<Text>Entregue Anulado
+</Text>
+					<XForm>
+						<PinX Unit="MM">1.141732283464572</PinX>
+						<PinY Unit="MM">2.215797244094486</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="22" UniqueID="{77E64928-9C72-4C1D-A183-DC1A12621599}" Name="External interactor.22" NameU="External interactor.22" Master="0">
+					<Text>Certificado entr. p/ Recep
+</Text>
+					<XForm>
+						<PinX Unit="MM">6.456692913385831</PinX>
+						<PinY Unit="MM">1.377952755905512</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="23" UniqueID="{D13119A6-E252-43F2-847C-9826EF176442}" Name="External interactor.23" NameU="External interactor.23" Master="0">
+					<Text>Certificado entr. p/ Corr.
+</Text>
+					<XForm>
+						<PinX Unit="MM">5.236220472440934</PinX>
+						<PinY Unit="MM">1.377952755905512</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="25" UniqueID="{3CDC6110-6AC1-488F-A08E-DD3293EACD72}" Name="External interactor.25" NameU="External interactor.25" Master="0">
+					<Text>Calibrado c/ Certif. Ext.</Text>
+					<XForm>
+						<PinX Unit="MM">8.464566929133852</PinX>
+						<PinY Unit="MM">4.696112204724408</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="29" UniqueID="{46DCFE36-8B33-407B-AF58-CE5E276BB2AB}" Name="External interactor.29" NameU="External interactor.29" Master="0">
+					<Text>Calibrado 
+Com Certif.
+</Text>
+					<XForm>
+						<PinX Unit="MM">3.976377952755900</PinX>
+						<PinY Unit="MM">4.617372047244094</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="30" UniqueID="{7DEF5FC5-29EB-478E-910C-8951E06CB9BF}" Name="External interactor.30" NameU="External interactor.30" Master="0">
+					<Text>Equipamento na Recepç.</Text>
+					<XForm>
+						<PinX Unit="MM">3.976377952755900</PinX>
+						<PinY Unit="MM">3.948080708661415</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="31" UniqueID="{1307ADB4-E72C-4CBB-B05F-C9754266DE98}" Name="External interactor.31" NameU="External interactor.31" Master="0">
+					<Text>Entregue 
+Com Certif.
+</Text>
+					<XForm>
+						<PinX Unit="MM">7.007874015748036</PinX>
+						<PinY Unit="MM">2.137057086614171</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="32" UniqueID="{86DFF6DE-9412-4A8F-844D-CCDC539624B1}" Name="External interactor.32" NameU="External interactor.32" Master="0">
+					<Text>Aguarda Entrega</Text>
+					<XForm>
+						<PinX Unit="MM">3.976377952755900</PinX>
+						<PinY Unit="MM">3.278789370078738</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="33" UniqueID="{C125DC77-588B-45C9-A03B-07CEB0E4CE32}" Name="External interactor.33" NameU="External interactor.33" Master="0">
+					<Text>Anulado 
+No Exterior</Text>
+					<XForm>
+						<PinX Unit="MM">10.039370078740156</PinX>
+						<PinY Unit="MM">5.877214566929132</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="34" UniqueID="{2072DA9C-A864-45C2-A6D9-E9EB019D25A7}" Name="External interactor.34" NameU="External interactor.34" Master="0">
+					<Text>Aguarda 
+Calib.Ext.
+</Text>
+					<XForm>
+						<PinX Unit="MM">9.291338582677161</PinX>
+						<PinY Unit="MM">6.979576771653542</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+					<Prop ID="1" Name="Cost" NameU="Cost">
+						<Value></Value>
+						<Label>Cost</Label>
+					</Prop>
+					<Prop ID="2" Name="Duration" NameU="Duration">
+						<Value></Value>
+						<Label>Duration</Label>
+					</Prop>
+					<Prop ID="3" Name="Resources" NameU="Resources">
+						<Value></Value>
+						<Label>Resources</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="27" UniqueID="{B16AFE7A-DCAA-478A-B690-370E6B656E8B}" Name="Dynamic connector.27" NameU="Dynamic connector.27" Master="2">
+					<XForm>
+						<PinX Unit="MM">8.681102362204717</PinX>
+						<PinY Unit="MM">5.936269685039368</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="35" UniqueID="{877B394D-780D-4596-A2E6-4FDF7FA9456D}" Name="Dynamic connector.35" NameU="Dynamic connector.35" Master="2">
+					<XForm>
+						<PinX Unit="MM">9.862204724409448</PinX>
+						<PinY Unit="MM">6.526820866141730</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="40" UniqueID="{DF05C779-58BC-4787-8490-257AE0C0AA7F}" Name="Dynamic connector.40" NameU="Dynamic connector.40" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.976377952755905</PinX>
+						<PinY Unit="MM">3.987450787401573</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="42" UniqueID="{F586ACFD-C99D-484C-AE2A-3D85B6A6E09F}" Name="Dynamic connector.42" NameU="Dynamic connector.42" Master="2">
+					<XForm>
+						<PinX Unit="MM">1.870078740157485</PinX>
+						<PinY Unit="MM">6.034694881889761</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="44" UniqueID="{951BAA38-E900-4AE1-B1D9-48B92E04DA60}" Name="Dynamic connector.44" NameU="Dynamic connector.44" Master="2">
+					<XForm>
+						<PinX Unit="MM">1.889763779527564</PinX>
+						<PinY Unit="MM">5.648375984251966</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="45" UniqueID="{795641B4-64DD-4C3D-99F4-4A9BE941F2CF}" Name="Dynamic connector.45" NameU="Dynamic connector.45" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.287401574803154</PinX>
+						<PinY Unit="MM">6.034694881889763</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="47" UniqueID="{B1ACA8E1-AD5B-4933-9205-EE0A91FD36A5}" Name="Dynamic connector.47" NameU="Dynamic connector.47" Master="2">
+					<XForm>
+						<PinX Unit="MM">4.665354330708661</PinX>
+						<PinY Unit="MM">6.034694881889761</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="52" UniqueID="{B0D82899-D0BC-4FAB-A451-C7246EAC3F78}" Name="Dynamic connector.52" NameU="Dynamic connector.52" Master="2">
+					<XForm>
+						<PinX Unit="MM">7.834645669291341</PinX>
+						<PinY Unit="MM">3.318159448818896</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="57" UniqueID="{730EF5E5-5555-48D4-9B3D-B8446C5F26DD}" Name="Dynamic connector.57" NameU="Dynamic connector.57" Master="2">
+					<XForm>
+						<PinX Unit="MM">4.606299212598425</PinX>
+						<PinY Unit="MM">1.751968503937008</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="62" UniqueID="{62D27DBE-4EC3-49D6-9325-F10B79C4C77A}" Name="Dynamic connector.62" NameU="Dynamic connector.62" Master="2">
+					<XForm>
+						<PinX Unit="MM">1.141732283464572</PinX>
+						<PinY Unit="MM">3.062253937007872</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="63" UniqueID="{34558670-AC85-4B72-B42B-AC9324407316}" Name="Dynamic connector.63" NameU="Dynamic connector.63" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.976377952755900</PinX>
+						<PinY Unit="MM">4.282726377952754</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="43" UniqueID="{F30A152B-A1B9-49A8-BDE9-AAE50E89AFB3}" Name="Dynamic connector.43" NameU="Dynamic connector.43" Master="2">
+					<XForm>
+						<PinX Unit="MM">1.141732283464572</PinX>
+						<PinY Unit="MM">4.876968503937006</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="11" UniqueID="{7EAC2E77-ED46-4285-8AF0-98B655D004A8}" Name="Dynamic connector.11" NameU="Dynamic connector.11" Master="2">
+					<XForm>
+						<PinX Unit="MM">2.755905511811031</PinX>
+						<PinY Unit="MM">6.510826771653542</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="13" UniqueID="{485276FC-DC37-44E6-AEEB-EC34F0227A7C}" Name="Dynamic connector.13" NameU="Dynamic connector.13" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.976377952755900</PinX>
+						<PinY Unit="MM">3.613435039370077</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="15" UniqueID="{F68EF685-E8F2-4F9F-B1D9-B1A1D5A6D5F0}" Name="Dynamic connector.15" NameU="Dynamic connector.15" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.976377952755905</PinX>
+						<PinY Unit="MM">5.231299212598424</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="14" UniqueID="{3D82F79D-078B-41C5-B65C-45D2E938E2DE}" Name="Dynamic connector.14" NameU="Dynamic connector.14" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.976377952755900</PinX>
+						<PinY Unit="MM">2.704232283464565</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="36" UniqueID="{1513EC78-EA02-47E5-8A20-23ACE586ACD7}" Name="Dynamic connector.36" NameU="Dynamic connector.36" Master="2">
+					<XForm>
+						<PinX Unit="MM">1.870078740157485</PinX>
+						<PinY Unit="MM">6.412401574803146</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="37" UniqueID="{4D59024F-5DE8-4E1A-9EBB-A67DE17C383D}" Name="Dynamic connector.37" NameU="Dynamic connector.37" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.464566929133856</PinX>
+						<PinY Unit="MM">6.408710629921258</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="38" UniqueID="{A6F4CEF3-DDB5-4722-B2BF-C878A902874D}" Name="Dynamic connector.38" NameU="Dynamic connector.38" Master="2">
+					<XForm>
+						<PinX Unit="MM">7.391732283464570</PinX>
+						<PinY Unit="MM">5.562253937007872</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="39" UniqueID="{C75D9479-A822-408C-B82D-DE4F3E283A13}" Name="Dynamic connector.39" NameU="Dynamic connector.39" Master="2">
+					<XForm>
+						<PinX Unit="MM">4.685039370078745</PinX>
+						<PinY Unit="MM">5.648375984251966</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="41" UniqueID="{01F7FEE9-8F71-44B4-8F25-F74118245D18}" Name="Dynamic connector.41" NameU="Dynamic connector.41" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.267716535433070</PinX>
+						<PinY Unit="MM">5.648375984251966</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="46" UniqueID="{70219CCB-366B-468F-93A4-FC357B696264}" Name="Dynamic connector.46" NameU="Dynamic connector.46" Master="2">
+					<XForm>
+						<PinX Unit="MM">2.559055118110236</PinX>
+						<PinY Unit="MM">5.648375984251967</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="48" UniqueID="{4F1B1402-5332-45FB-8AE7-1D53ABEA7587}" Name="Dynamic connector.48" NameU="Dynamic connector.48" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.070866141732281</PinX>
+						<PinY Unit="MM">5.644685039370077</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="49" UniqueID="{5F8CE3D0-BFB6-416A-BA82-8712042213F5}" Name="Dynamic connector.49" NameU="Dynamic connector.49" Master="2">
+					<XForm>
+						<PinX Unit="MM">2.618110236220472</PinX>
+						<PinY Unit="MM">5.648375984251967</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="50" UniqueID="{5947EA22-1285-43FE-9544-7224CB3B2CD2}" Name="Dynamic connector.50" NameU="Dynamic connector.50" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.851706036745407</PinX>
+						<PinY Unit="MM">6.032644356955379</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="51" UniqueID="{5F74A9A8-2D32-443E-812E-34740E18E254}" Name="Dynamic connector.51" NameU="Dynamic connector.51" Master="2">
+					<XForm>
+						<PinX Unit="MM">3.248031496062992</PinX>
+						<PinY Unit="MM">5.841535433070865</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="53" UniqueID="{E7685146-C890-4547-8CB3-CAE26B22E299}" Name="Dynamic connector.53" NameU="Dynamic connector.53" Master="2">
+					<XForm>
+						<PinX Unit="MM">5.492125984251964</PinX>
+						<PinY Unit="MM">4.082185039370076</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="54" UniqueID="{AE4C8683-7E46-426B-B0D1-C91F516DA37A}" Name="Dynamic connector.54" NameU="Dynamic connector.54" Master="2">
+					<XForm>
+						<PinX Unit="MM">7.657480314960631</PinX>
+						<PinY Unit="MM">2.938607283464566</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="55" UniqueID="{3D5CCD52-B5B6-435A-85B7-C780A46A9761}" Name="Dynamic connector.55" NameU="Dynamic connector.55" Master="2">
+					<XForm>
+						<PinX Unit="MM">6.948818897637789</PinX>
+						<PinY Unit="MM">2.840182086614172</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="56" UniqueID="{8C522272-291D-4FD0-B740-74AE6BE80ED8}" Name="Dynamic connector.56" NameU="Dynamic connector.56" Master="2">
+					<XForm>
+						<PinX Unit="MM">5.413385826771656</PinX>
+						<PinY Unit="MM">1.852239173228345</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="20" UniqueID="{03F435BC-61FD-48F6-ADEF-41E152D17327}" Name="Dynamic connector.20" NameU="Dynamic connector.20" Master="2">
+					<XForm>
+						<PinX Unit="MM">7.007874015748026</PinX>
+						<PinY Unit="MM">5.266978346456691</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="58" UniqueID="{047CAD95-2CA5-42B7-BDC2-A46824B3F75C}" Name="Dynamic connector.58" NameU="Dynamic connector.58" Master="2">
+					<XForm>
+						<PinX Unit="MM">7.007874015748032</PinX>
+						<PinY Unit="MM">3.416584645669289</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="59" UniqueID="{082A0A74-E92F-48C2-8F11-F29BC163E48C}" Name="Dynamic connector.59" NameU="Dynamic connector.59" Master="2">
+					<XForm>
+						<PinX Unit="MM">5.570866141732283</PinX>
+						<PinY Unit="MM">2.806348425196848</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>1</LayerMember>
+					</LayerMem>
+				</Shape>
+			</Shapes>
+		</Page>
+	</Pages>
+</VisioDocument>

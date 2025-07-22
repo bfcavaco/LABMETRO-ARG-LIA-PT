@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DSEmpresaNew" targetNamespace="http://tempuri.org/DSEmpresaNew.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DSEmpresaNew.xsd" xmlns:mstns="http://tempuri.org/DSEmpresaNew.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DSEmpresaNew" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Empresa">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idEmpresa" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="idEmpresaPai" type="xs:int" minOccurs="0" />
+							<xs:element name="idLocalidade" type="xs:int" minOccurs="0" />
+							<xs:element name="idTipoEmpresa" type="xs:int" minOccurs="0" />
+							<xs:element name="idPais" type="xs:int" minOccurs="0" />
+							<xs:element name="idEstadoEmpresa" type="xs:int" />
+							<xs:element name="nome" type="xs:string" />
+							<xs:element name="nomeAbreviado" type="xs:string" minOccurs="0" />
+							<xs:element name="nif" type="xs:string" minOccurs="0" />
+							<xs:element name="morada" type="xs:string" minOccurs="0" />
+							<xs:element name="codigoPostal" type="xs:string" minOccurs="0" />
+							<xs:element name="telefone" type="xs:string" minOccurs="0" />
+							<xs:element name="telefone2" type="xs:string" minOccurs="0" />
+							<xs:element name="fax" type="xs:string" minOccurs="0" />
+							<xs:element name="email" type="xs:string" minOccurs="0" />
+							<xs:element name="sede" type="xs:boolean" />
+							<xs:element name="concessionario" type="xs:boolean" minOccurs="0" />
+							<xs:element name="pagamentoAtraso" type="xs:boolean" />
+							<xs:element name="percDesconto" type="xs:decimal" minOccurs="0" />
+							<xs:element name="dtEstado" type="xs:dateTime" />
+							<xs:element name="observacoes" type="xs:string" minOccurs="0" />
+							<xs:element name="idUtilCriacao" type="xs:int" />
+							<xs:element name="dtCriacao" type="xs:dateTime" />
+							<xs:element name="idUtilAlteracao" type="xs:int" />
+							<xs:element name="dtAlteracao" type="xs:dateTime" />
+							<xs:element name="codigoBloqueioSAP" type="xs:string" minOccurs="0" />
+							<xs:element name="nivelBloqueioLabmetro" type="xs:int" minOccurs="0" />
+							<xs:element name="idCondicoesPagamento" type="xs:int" minOccurs="0" />
+							<xs:element name="idCodigoRegiaoVendas" type="xs:int" minOccurs="0" />
+							<xs:element name="numClienteSAP" type="xs:string" minOccurs="0" />
+							<xs:element name="bProjecto" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bRetalho" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bRequisicaoAtraso" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bContrato" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bMostraCertSemReq" type="xs:boolean" />
+							<xs:element name="bCTA" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bConcessionario" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bCentroB" type="xs:boolean" minOccurs="0" />
+							<xs:element name="intTipoContrato" type="xs:int" minOccurs="0" />
+							<xs:element name="dtUltimaVisita" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="bSistemaPesagem" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bAGE" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DSEmpresaNewKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Empresa" />
+			<xs:field xpath="mstns:idEmpresa" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

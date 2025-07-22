@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSVerificacoes" targetNamespace="http://tempuri.org/DSVerificacoes.xsd" xmlns:mstns="http://tempuri.org/DSVerificacoes.xsd" xmlns="http://tempuri.org/DSVerificacoes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="connstr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connstr (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.connstr.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSVerificacoes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSVerificacoes" msprop:Generator_DataSetName="DSVerificacoes" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Verificacoes" msprop:Generator_UserTableName="Verificacoes" msprop:Generator_RowDeletedName="VerificacoesRowDeleted" msprop:Generator_RowChangedName="VerificacoesRowChanged" msprop:Generator_RowClassName="VerificacoesRow" msprop:Generator_RowChangingName="VerificacoesRowChanging" msprop:Generator_RowEvArgName="VerificacoesRowChangeEvent" msprop:Generator_RowEvHandlerName="VerificacoesRowChangeEventHandler" msprop:Generator_TableClassName="VerificacoesDataTable" msprop:Generator_TableVarName="tableVerificacoes" msprop:Generator_RowDeletingName="VerificacoesRowDeleting" msprop:Generator_TablePropName="Verificacoes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipamento" msprop:Generator_UserColumnName="Equipamento" msprop:Generator_ColumnPropNameInRow="Equipamento" msprop:Generator_ColumnVarNameInTable="columnEquipamento" msprop:Generator_ColumnPropNameInTable="EquipamentoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="concelho" msprop:Generator_UserColumnName="concelho" msprop:Generator_ColumnVarNameInTable="columnconcelho" msprop:Generator_ColumnPropNameInRow="concelho" msprop:Generator_ColumnPropNameInTable="concelhoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="empresa" msprop:Generator_UserColumnName="empresa" msprop:Generator_ColumnVarNameInTable="columnempresa" msprop:Generator_ColumnPropNameInRow="empresa" msprop:Generator_ColumnPropNameInTable="empresaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="conformidade" msdata:ReadOnly="true" msprop:Generator_UserColumnName="conformidade" msprop:Generator_ColumnPropNameInRow="conformidade" msprop:Generator_ColumnVarNameInTable="columnconformidade" msprop:Generator_ColumnPropNameInTable="conformidadeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtUltimaCalibracao" msprop:Generator_UserColumnName="dtUltimaCalibracao" msprop:Generator_ColumnPropNameInRow="dtUltimaCalibracao" msprop:Generator_ColumnVarNameInTable="columndtUltimaCalibracao" msprop:Generator_ColumnPropNameInTable="dtUltimaCalibracaoColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VerificacoesAgrupadas" msprop:Generator_UserTableName="VerificacoesAgrupadas" msprop:Generator_RowDeletedName="VerificacoesAgrupadasRowDeleted" msprop:Generator_RowChangedName="VerificacoesAgrupadasRowChanged" msprop:Generator_RowClassName="VerificacoesAgrupadasRow" msprop:Generator_RowChangingName="VerificacoesAgrupadasRowChanging" msprop:Generator_RowEvArgName="VerificacoesAgrupadasRowChangeEvent" msprop:Generator_RowEvHandlerName="VerificacoesAgrupadasRowChangeEventHandler" msprop:Generator_TableClassName="VerificacoesAgrupadasDataTable" msprop:Generator_TableVarName="tableVerificacoesAgrupadas" msprop:Generator_RowDeletingName="VerificacoesAgrupadasRowDeleting" msprop:Generator_TablePropName="VerificacoesAgrupadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numero" msprop:Generator_UserColumnName="numero" msprop:Generator_ColumnVarNameInTable="columnnumero" msprop:Generator_ColumnPropNameInRow="numero" msprop:Generator_ColumnPropNameInTable="numeroColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Equipamento" msprop:Generator_UserColumnName="Equipamento" msprop:Generator_ColumnVarNameInTable="columnEquipamento" msprop:Generator_ColumnPropNameInRow="Equipamento" msprop:Generator_ColumnPropNameInTable="EquipamentoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="concelho" msprop:Generator_UserColumnName="concelho" msprop:Generator_ColumnVarNameInTable="columnconcelho" msprop:Generator_ColumnPropNameInRow="concelho" msprop:Generator_ColumnPropNameInTable="concelhoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="conformidade" msprop:Generator_UserColumnName="conformidade" msprop:Generator_ColumnVarNameInTable="columnconformidade" msprop:Generator_ColumnPropNameInRow="conformidade" msprop:Generator_ColumnPropNameInTable="conformidadeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VerificacoesAgrupadasTotal" msprop:Generator_UserTableName="VerificacoesAgrupadasTotal" msprop:Generator_RowDeletedName="VerificacoesAgrupadasTotalRowDeleted" msprop:Generator_RowChangedName="VerificacoesAgrupadasTotalRowChanged" msprop:Generator_RowClassName="VerificacoesAgrupadasTotalRow" msprop:Generator_RowChangingName="VerificacoesAgrupadasTotalRowChanging" msprop:Generator_RowEvArgName="VerificacoesAgrupadasTotalRowChangeEvent" msprop:Generator_RowEvHandlerName="VerificacoesAgrupadasTotalRowChangeEventHandler" msprop:Generator_TableClassName="VerificacoesAgrupadasTotalDataTable" msprop:Generator_TableVarName="tableVerificacoesAgrupadasTotal" msprop:Generator_RowDeletingName="VerificacoesAgrupadasTotalRowDeleting" msprop:Generator_TablePropName="VerificacoesAgrupadasTotal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numero" msprop:Generator_UserColumnName="numero" msprop:Generator_ColumnVarNameInTable="columnnumero" msprop:Generator_ColumnPropNameInRow="numero" msprop:Generator_ColumnPropNameInTable="numeroColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="concelho" msprop:Generator_UserColumnName="concelho" msprop:Generator_ColumnVarNameInTable="columnconcelho" msprop:Generator_ColumnPropNameInRow="concelho" msprop:Generator_ColumnPropNameInTable="concelhoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="conformidade" msprop:Generator_UserColumnName="conformidade" msprop:Generator_ColumnVarNameInTable="columnconformidade" msprop:Generator_ColumnPropNameInRow="conformidade" msprop:Generator_ColumnPropNameInTable="conformidadeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PlanoVerificacoes" msprop:Generator_UserTableName="PlanoVerificacoes" msprop:Generator_RowDeletedName="PlanoVerificacoesRowDeleted" msprop:Generator_TableClassName="PlanoVerificacoesDataTable" msprop:Generator_RowChangedName="PlanoVerificacoesRowChanged" msprop:Generator_RowClassName="PlanoVerificacoesRow" msprop:Generator_RowChangingName="PlanoVerificacoesRowChanging" msprop:Generator_RowEvArgName="PlanoVerificacoesRowChangeEvent" msprop:Generator_RowEvHandlerName="PlanoVerificacoesRowChangeEventHandler" msprop:Generator_TablePropName="PlanoVerificacoes" msprop:Generator_TableVarName="tablePlanoVerificacoes" msprop:Generator_RowDeletingName="PlanoVerificacoesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Equipamento" msprop:Generator_UserColumnName="Equipamento" msprop:Generator_ColumnPropNameInRow="Equipamento" msprop:Generator_ColumnVarNameInTable="columnEquipamento" msprop:Generator_ColumnPropNameInTable="EquipamentoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="concelho" msprop:Generator_UserColumnName="concelho" msprop:Generator_ColumnPropNameInRow="concelho" msprop:Generator_ColumnVarNameInTable="columnconcelho" msprop:Generator_ColumnPropNameInTable="concelhoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="empresa" msprop:Generator_UserColumnName="empresa" msprop:Generator_ColumnPropNameInRow="empresa" msprop:Generator_ColumnVarNameInTable="columnempresa" msprop:Generator_ColumnPropNameInTable="empresaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="periodicidade" msdata:ReadOnly="true" msdata:Caption="conformidade" msprop:Generator_UserColumnName="periodicidade" msprop:Generator_ColumnPropNameInRow="periodicidade" msprop:Generator_ColumnVarNameInTable="columnperiodicidade" msprop:Generator_ColumnPropNameInTable="periodicidadeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtProximaCalibracao" msdata:Caption="dtUltimaCalibracao" msprop:Generator_UserColumnName="dtProximaCalibracao" msprop:Generator_ColumnPropNameInRow="dtProximaCalibracao" msprop:Generator_ColumnVarNameInTable="columndtProximaCalibracao" msprop:Generator_ColumnPropNameInTable="dtProximaCalibracaoColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

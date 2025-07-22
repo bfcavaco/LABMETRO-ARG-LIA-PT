@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PSI.BL.BO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="RecordType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Proposal" />
+      <xs:enumeration value="Project" />
+      <xs:enumeration value="Oportunity" />
+      <xs:enumeration value="CV" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RecordType" nillable="true" type="tns:RecordType" />
+  <xs:complexType name="ArrayOfPSIListSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIListSearch" nillable="true" type="tns:PSIListSearch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIListSearch" nillable="true" type="tns:ArrayOfPSIListSearch" />
+  <xs:complexType name="PSIListSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbbreviationDir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ArchiveURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsProgram" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManagerLoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OUId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProposalStateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIListSearch" nillable="true" type="tns:PSIListSearch" />
+  <xs:complexType name="ArrayOfPSIWSProposal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIWSProposal" nillable="true" type="tns:PSIWSProposal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIWSProposal" nillable="true" type="tns:ArrayOfPSIWSProposal" />
+  <xs:complexType name="PSIWSProposal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adjudicado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataAdjudicado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataRegisto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direcao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoProposta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginResponsavelProposta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomeResponsavelProposta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroProposta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorProposta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIWSProposal" nillable="true" type="tns:PSIWSProposal" />
+</xs:schema>

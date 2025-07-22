@@ -1,0 +1,131 @@
+﻿#navcontainer /*contentor do menu*/
+{
+    padding: 0 0 0 0;
+    height: 0px;
+    border-right:none; 
+    border-bottom:none; 
+    border-top:none;
+    width: 121px;
+    /*background-color: #B90000*/
+ 
+}
+
+
+#navcontainer ul /*lista dentro do menu - com os items de menu*/
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: menu;
+    background-color: #dcdcdc;
+}
+
+#navcontainer li /*items de menu*/
+{
+    border-bottom: 1px solid white;
+    margin: 0;
+    padding: 0;
+}
+
+#navcontainer li a /*items de menu-links*/
+{
+	font-family:Tahoma, Arial, Sans-Serif; 
+    display: block;
+    padding: 2px 2px 2px 0.5em;
+    border-left: 10px solid #a9a9a9;
+    color: #000;
+    text-decoration: none;
+    width: 100%; 
+}
+
+#navcontainer li a:hover
+{
+    border-left: 10px solid #696969;
+    background-color: #999999;
+    color: #000;
+}
+
+#navcontainer li a:active
+{
+    border-left: 10px solid #696969;
+    background-color: #999999;
+    color: #fff;
+}
+
+.liSelected /*depois de assumir isto, o item fica sempre com a classe atribuida ao link, e a unica coisa
+que funciona aqui é o background color, que não é assumido para o link, e pode ser mudado aqui, o resto
+que é definido aqui */
+{
+    background-color:  #999999;
+    color:White; /*n é assumido*/
+    	
+}
+.menuSelected
+{
+    /* border-left: 10px solid #696969;     background-color: #999999;*/
+    color: #ffffff;
+}
+
+
+.tdBtnMenu /* td dos botoes - pais de items de menu*/
+{
+    /*background-color: #FFCB05;vermelho*/
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    padding: 0 0 0 0;
+    height:20px;
+    
+   
+}
+
+#tdMenu
+{
+	/*para todo o td do menu ter a côr de fundo, tenho de colocar na master pois nao aceita esta propriedade*/ 
+	background-color:	#FFCB05;
+	}
+	
+.btnMenu /* botoes - pais de items de menu*/
+{
+    background-color:#FFCB05;/*laranja - tem de ter a mm cor que  a cor de fundodo td acima e da classe bgMenu*/
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;/*12px;*/
+    font-weight: bold;
+    width: 130px;
+    border-bottom: 1px solid white;
+    border-left:1px solid white;
+    border-right: none;
+    border-top: none;
+    color: #FFFFFF;
+    padding: 0 0 0 0;
+    margin-right: 2px;
+}
+.btnAlerta /* botão para voltar para a homepage*/
+{
+    background-color:#FFFFFF;
+    font-size: 1em;/*11px;*/
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color:#FFCB05;/*laranja*/
+    padding: 0 0 0 0;
+}
+
+.btnLogout /*botao de terminar sessao*/
+{
+    background-color:#FFCB05;  /* #B71313; vermelho*/
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 100%;
+    border: 1px solid #FFFFFF;
+    color: white;
+    font: menu;
+}
+
+.bgMenu
+{
+	background-color: #FFCB05;
+}

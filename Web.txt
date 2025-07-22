@@ -1,0 +1,323 @@
+﻿<?xml version="1.0"?>
+<!--<?xml version="1.0"?>-->
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="LabMetro.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="Application_Country" value="ANG_LABMETRO"/>
+    <!-- nao trocar-->
+    <add key="connectionstringESPANHA" value="Server=oerdb01;DataBase=weblabmetroes;User ID=LabMetro;Password=edfh+178;Trusted_Connection=False;Min Pool Size=5; Max Pool Size=100; Connect Timeout=60"/>
+    <!-- nao trocar end-->
+    <add key="ConnectionStringPTCOMERCIAL" value="Server=VNGDB01\SQLEXPRESS;DataBase=ISQ_VENDASMET;User ID=edificacoes;Password=A+12345b;Trusted_Connection=False;Min Pool Size=5; Max Pool Size=100; Connect Timeout=60"/>
+    
+   <!-- atenção no localhost é trustedconnection true mas isso nao funciona em producao senao assume formato errado de datas-->
+    <add key="ConnectionString2" value="Server=localhost;DataBase=webLabmetroint;User ID=Labmetro;Password=edfh+178;Trusted_Connection=true;Min Pool Size=5; Max Pool Size=100; Connect Timeout=60"/>
+    <!--<add key="ConnectionString2" value="Server=localhost;DataBase=webLabmetroint;User ID=Labmetro;Password=edfh+178;Trusted_Connection=False;Min Pool Size=5; Max Pool Size=100; Connect Timeout=60"/>-->
+    <add key="csvConnSAP" value="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=http:\\labmetroint.isq.pt\uploads\SAP\IN\DM\;Extended Properties='text;HDR=Yes;FMT=Delimited'"/>
+    <add key="csvConnSAPLOGS" value="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dmelamed\source\repos\labmetro\UPLOADS\SAP\IN\LOGS\;Extended Properties='text;HDR=Yes;FMT=Delimited'"/>
+    <!-- CONNECTIONSTRING CYRSTAL REPORTS-->
+    <add key="ServerName" value="localhost"/>
+    <add key="DatabaseName" value="webLabmetroint"/>
+    <add key="UserID" value="LabMetro"/>
+    <add key="Password" value="edfh+178"/>
+    <add key="CommandTimeOut" value="120"/>
+    <add key="LOG_PATH_ABS" value="C:\Inetpub\wwwroot\Labmetro\LOGS"/>
+    <add key="LOG_PATH_REL" value="\LOGS"/>
+    <add key="TEMP_PATH_REL" value="\TEMPORARY"/>
+    <add key="TEMP_PATH" value="\UPLOADS\TEMP"/>
+    <add key="UPLOAD_REQ_PATH_REL" value="\UPLOADS\REQUISICOES"/>
+    <add key="UPLOAD_REQ_PATH_ABS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\REQUISICOES"/>
+    <add key="UPLOAD_REQ_URL" value="UPLOADS\REQUISICOES"/>
+    <add key="FACTURACAO_PATH_ABS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\FACTURAS"/>
+    <add key="FACTURACAO_PATH_REL" value="\UPLOADS\FACTURAS"/>
+    <add key="FACTURACAO_ES_PASTA" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\FACTURAS"/>
+    <add key="ROOT_CERTIFICADOS_PATH" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS"/>
+    <add key="ROOT_CERTIFICADOS_URL" value="http://localhost/LabMetro/UPLOADS/CERTIFICADOS"/>
+    <add key="PASTA_TEMPORARIA_CERT" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\TEMPORARY"/>
+    <add key="PATHREL_CERT_TEMP" value="UPLOADS\CERTIFICADOS\TEMPORARY"/>
+    <add key="PATHREL_CERT_ORIGINAIS" value="UPLOADS\CERTIFICADOS\ORIGINAIS\ORIGEM"/>
+    <add key="PATHREL_CERT_FINAIS_CERTIFICADOS" value="UPLOADS/CERTIFICADOS/FINAIS/CERTIFICADOS"/>
+    <add key="PATHABS_CERT_FINAIS_CERTIFICADOS" value="http://localhost/LabMetro/UPLOADS/CERTIFICADOS/FINAIS/CERTIFICADOS"/>
+    <add key="PATHREL_CERT_FINAIS_CONSTRUCAO" value="UPLOADS/CERTIFICADOS/FINAIS/CONSTRUCAO"/>
+    <add key="PASTA_CERT_ORIGINAIS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\ORIGINAIS\ORIGEM"/>
+    <add key="PASTA_CERT_ORIGINAIS_BACKUP" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\ORIGINAIS\BACKUP"/>
+    <!--mudar aqui o ano para o qual quero arquivar//martelada-->
+    <add key="PASTA_CERT_MOVE_ANO" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\FINAIS\CERTIFICADOS\2007"/>
+    <add key="PASTA_CERT_FINAIS_CONSTRUCAO" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\FINAIS\CONSTRUCAO"/>
+    <!--add key="PASTA_CERT_FINAIS_CERTIFICADOS" value="\\oer-app01\f$\Shares\labmetroint.isq.pt\UPLOADS\CERTIFICADOS\FINAIS\CERTIFICADOS" /-->
+    <add key="PASTA_CERT_FINAIS_CERTIFICADOS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\FINAIS\CERTIFICADOS"/>
+    <add key="PASTA_CERT_FINAIS_CERTIFICADOS_ES" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\FINAIS\CERTIFICADOSES"/>
+    <add key="PASTA_CERT_ZIPS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\ZIPS\"/>
+    <add key="PASTA_TEMPLATES" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\TEMPLATES\GERAL"/>
+    <add key="PASTA_SIMBOLOS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\TEMPLATES\ACREDITACAO"/>
+    <add key="PASTA_ASSINATURAS_CERTIFICADOS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\ASSINATURAS\"/>
+    <add key="CAMINHO_CERTIFICADO" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\CERTIFICADOS\CERTIFICADO\LabmetroOnline.pfx"/>
+    <add key="UPLOAD_PEDIDOSORC_PATH_REL" value="\UPLOADS\PEDIDOSORC"/>
+    <add key="UPLOAD_CRITERIOS_CLIENTES" value="\UPLOADS\CRITERIOSACCLIENTES"/>
+    <add key="UPLOAD_CRITERIOS_URL" value="UPLOADS\CRITERIOSACCLIENTES"/>
+    <add key="UPLOAD_CERTIFICADOS_ESPANHA" value="\UPLOADS\CERTIFS"/>
+    <add key="UPLOAD_PEDIDOSORC_URL" value="UPLOADS\PEDIDOSORC"/>
+    <add key="CERT_PASSWORD" value="labmcer123"/>
+    <add key="CERT_REASON" value=" Document approuvé numériquement"/>
+    <add key="CERT_LOCATION" value="LabMetro online"/>
+    <add key="TEMPLATE_PAGINA" value="certif.pdf"/>
+    <add key="TEMPLATE_PAGINA_ES" value="certif_ES.pdf"/>
+    <add key="TEMPLATE_PAGINA_IPAC" value="certif_IPAC.pdf"/>
+    <add key="TEMPLATE_PAGINA_REP" value="certif_REP.pdf"/>
+    <add key="TEMPLATE_PAGINA_IMG" value="certif_img.jpg"/>
+    <add key="TEMPLATE_PAGINA_IPAC_IMG" value="certif_ipac_img.jpg"/>
+    <add key="NUMPECASPARADESCONTO" value="5"/>
+    <add key="NUMFAX" value="IMCEAFAX-000@isq.pt"/>
+    <add key="IPSERVIDORMAIL" value="10.92.150.42"/>
+    <add key="MAIL_CONFIRMATION_FAXAVISO" value="recepcao@isq.pt"/>
+    <add key="MAIL_CONFIRMATION_ORCAMENTO" value="dmelamed@isq.pt"/>
+    <add key="MAIL_CONFIRMATION_TAXASERVICO" value="dmelamed@isq.pt"/>
+    <add key="Fax_Orcamento" value="+351 21 422 81 02"/>
+    <add key="ID_RESP_TEC_DEFAULT_ORCAM" value="15"/>
+    <add key="CERTIFICADOS_URL" value="UPLOADS\CERTIFICADOS\FINAIS\CERTIFICADOS "/>
+    <add key="MAIL_CONFIRMATION_MARCACOES" value="dmelamed@isq.pt"/>
+    <add key="SAP_PATH_ABS_DM" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\SAP\IN\DM"/>
+    <add key="SAP_PATH_REL_DM" value="\UPLOADS\SAP\IN\DM"/>
+    <add key="ASSINATURAS_PATH_REL" value="\UPLOADS\CERTIFICADOS\ASSINATURAS"/>
+    <add key="SAP_LOGS_REL" value="\UPLOADS\SAP\IN\LOGS"/>
+    <add key="SAP_DM_URL" value="UPLOADS\SAP\IN\DM"/>
+    <add key="SAP_LIDOS_PATH_ABS" value="C:\Users\dmelamed\source\repos\labmetro\UPLOADS\SAP\IN\DM\LIDOS"/>
+    <add key="SAP_LIDOS_PATH_REL" value="\UPLOADS\SAP\IN\DM\LIDOS"/>
+    <add key="ASSINATURAS_PATH_REL" value="\UPLOADS\CERTIFICADOS\ASSINATURAS"/>
+    <add key="HORA_LIMITE_FACTURACAO_MANHA" value="01:28 PM"/>
+    <add key="HORA_LIMITE_FACTURACAO_NOITE" value="09:58 PM "/>
+    <add key="canUpdatePagAtraso" value="dmelamed,admin,banogueira,amsoares,lmgodinho,mccampos"/>
+    <add key="canUpdateContactoInfo" value="dmelamed,admin,lmgodinho,acfalcato,banogueira,afespinha,pacastro,amsoares,jmmoreira,lmgoncalves,jmmedina,fmleal,ejmatias"/>
+    <!--<add key="CrystalImageCleaner-AutoStart" value="true" />
+    <add key="CrystalImageCleaner-Sleep" value="60000" />
+    <add key="CrystalImageCleaner-Age" value="120000" />-->
+    <add key="versaoAplicacao" value="LabMetro versão 2.0"/>
+    <add key="nomeAplicacao" value="LabMetro"/>
+    <add key="M0046" value="Laboratório de Calibração em Metrologia Física"/>
+    <add key="L0268" value=" Laboratório de Ensaios Físicos"/>
+    <add key="M0059" value="Laboratório de Calibração em Metrologia Electro-Física"/>
+    <add key="L0342" value="Laboratório de Ensaios de Controlo Dimensional"/>
+    <add key="M0009" value="Laboratório de Metrologia Dimensional"/>
+    <add key="L0610" value="Labmetro Saúde Laboratório de Metrologia Equipamento Clínico Hospitalar "/>
+    <add key="nomeLaboratorioHeader" value="Laboratório de Metrologia"/>
+    <!--add key="CrystalImageCleaner-AutoStart" value="true" />
+
+      <add key="CrystalImageCleaner-Sleep" value="60000" />
+
+      <add key="CrystalImageCleaner-Age" value="120000" /-->
+  </appSettings>
+  <!--2019atenção a nova connectionstring está aqui.-->
+  <connectionStrings>
+    <add name="connstr" connectionString="Server=oerdb01;DataBase=webLacmetroint;User ID=LabMetro;Password=edfh+178;Trusted_Connection=False;Min Pool Size=5; Max Pool Size=100; Connect Timeout=20" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <!-- CAMINHO PARA O FICHEIRO DE LOGs -->
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.6.1" />
+      </system.Web>
+  -->
+  <system.web>
+    <pages validateRequest="true" styleSheetTheme="myTheme" controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID"/>
+    <!-- usado em testes a partir da minha maquina para aceder aos ficheiros que estao no servidor, usando o meu login, que tem permissoes para aceder- FUNCIONA-->
+    <!--identity impersonate="true" userName="isq\dmelamed" password="dme66dme!" /-->
+    <httpRuntime executionTimeout="600" appRequestQueueLimit="100"/>
+    <!-- disable session state for application -->
+    <!-- debug a false em producao -->
+    <compilation debug="true" defaultLanguage="c#" targetFramework="4.6.1">
+      <assemblies>
+        <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <!--<add assembly="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+        <add assembly="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+        <add assembly="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+        <add assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+        <add assembly="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />-->
+        <!--<add assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />-->
+        <!--<add assembly="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />-->
+        <add assembly="Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+      </assemblies>
+      <buildProviders>
+        <add extension=".rdlc" type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+      </buildProviders>
+    </compilation>
+    <!--  CUSTOM ERROR MESSAGES
+        
+    -->
+    <customErrors mode="Off" defaultRedirect="PagErro.aspx"/>
+    <!--  AUTHENTICATION 
+        
+    -->
+    <!-- enable Forms authentication -->
+    <authentication mode="Forms">
+      <!-- name : o nome do cookie-->
+      <forms name=".LABMAUTH" loginUrl="Default.aspx" protection="All" path="/" timeout="40"/>
+    </authentication>
+    <!--  APPLICATION-LEVEL TRACE LOGGING
+          Application-level tracing enables trace log output for every page within an application. 
+          Set trace enabled="true" to enable application trace logging.  If pageOutput="true", the
+          trace information will be displayed at the bottom of each page.  Otherwise, you can view the 
+          application trace log by browsing the "trace.axd" page from your web application
+          root. 
+    -->
+    <trace enabled="false" requestLimit="10" pageOutput="true" traceMode="SortByCategory" localOnly="true"/>
+    <!--  SESSION STATE SETTINGS
+          By default ASP.NET uses cookies to identify which requests belong to a particular session. 
+          If cookies are not available, a session can be tracked by adding a session identifier to the URL. 
+          To disable cookies, set sessionState cookieless="true".
+    -->
+    <sessionState mode="InProc" stateConnectionString="tcpip=127.0.0.1:42424" sqlConnectionString="data source=127.0.0.1;Trusted_Connection=yes" cookieless="false" timeout="60"/>
+    <!--  GLOBALIZATION
+          This section sets the globalization settings of the application. 
+    -->
+    <globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="pt-PT" uiCulture="pt-PT" fileEncoding="utf-8"/>
+ 
+    <!--By default, ASP.NET is 
+configured to intercept and to stop requests for several different file types 
+that are used in ASP.NET applications. These file types are ones that must not 
+be retrieved by users. These file types include .config files that store 
+configuration information for the application and .cs files that store the 
+source code of the application. ASP.NET ensures the privacy of these files by 
+associating both file types with System.Web.HttpForbiddenHandler. 
+System.Web.HttpForbiddenHandler returns an error to the user who requests the 
+file. This method of protecting files can be used for any file type. This method 
+is useful for protecting files that exist in the folder of the Web application 
+and must never be retrieved by users.-->
+    <!--  AUTHORIZATION 
+          This section sets the authorization policies of the application. You can allow or deny access
+          to application resources by user or role. Wildcards: "*" mean everyone, "?" means anonymous 
+          (unauthenticated) users.
+    -->
+    <authorization>
+      <deny users="?"/>
+    </authorization>
+    <!-- Register the ajax handler -->
+    <httpHandlers>
+      <!--<add path="CrystalImageHandler.aspx" verb="GET" type="CrystalDecisions.Web.CrystalImageHandler, CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+      <add path="Reserved.ReportViewerWebControl.axd" verb="*" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        validate="false" />-->
+    </httpHandlers>
+    <!--Unless you know of known issues that your site has when running in XHTML mode (and which you don't have time yet to fix), I'd always recommend removing the <xhtmlConformance>
+      section from your web.config file (or you can explicitly set it to "Transitional" or "Strict") quando deixo isso descomentado, parece-me que fica tudo ajax-enabled. daniela: vou deixar em transitional, com legacy parece-me que algumas coisas de updatepanels nao funcionam-->
+    <xhtmlConformance mode="Transitional"/>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <handlers>
+      <!--<add name="CrystalImageHandler.aspx_GET" verb="GET" path="CrystalImageHandler.aspx" type="CrystalDecisions.Web.CrystalImageHandler, CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" preCondition="integratedMode" />-->
+      <!--validation validateIntegratedModeConfiguration="false" /-->
+      <!-- coisas do ajax acho eu-->
+      <!--<add name="ReportViewerWebControlHandler" preCondition="integratedMode" verb="*" path="Reserved.ReportViewerWebControl.axd" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />-->
+    </handlers>
+  </system.webServer>
+  <!--system.web.extensions>
+    <scripting>
+      <webServices>
+        <jsonSerialization maxJsonLength="800000"/>isto para aumentar o tamanho para dd's com muitos valores
+      </webServices>
+    </scripting>
+  </system.web.extensions-->
+  <applicationSettings>
+    <LabMetro.Properties.Settings>
+      <setting name="LabMetro_pt_isq_bdcomercial_WebService2" serializeAs="String">
+        <value>http://bdcomercial.isq.pt/WEBSERVICE2.ASMX</value>
+      </setting>
+      <setting name="LabMetro_pt_isq_wservices_comm" serializeAs="String">
+        <value>http://wservices.isq.pt/isqglobalsrv/comm.asmx</value>
+      </setting>
+    </LabMetro.Properties.Settings>
+  </applicationSettings>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="basicHttpBinding">
+          <security mode="TransportCredentialOnly">
+            <transport clientCredentialType="Ntlm"/>
+          </security>
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <!--84 produção -->
+      <endpoint address="http://10.92.150.82:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?wsdl" binding="basicHttpBinding" bindingConfiguration="basicHttpBinding" contract="WebServicePSI.IProposalService" name="basicHttpBinding"/>
+    </client>
+  </system.serviceModel>
+  <!-- qq do crystal-->
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+  <!-- fim qq coisa do crystal-->
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.CrystalReports.Engine" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportSource" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.Shared" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.Web" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.Windows.Forms" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.ClientDoc" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.CommonControls" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.CommonObjectModel" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.Controllers" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.CubeDefModel" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.DataDefModel" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.DataSetConversion" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.ObjectFactory" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.Prompting" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.ReportDefModel" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="CrystalDecisions.ReportAppServer.XmlSerialize" publicKeyToken="692fbea5521e1304" culture="neutral"/>
+        <bindingRedirect oldVersion="13.0.2000.0" newVersion="13.0.3500.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

@@ -1,0 +1,217 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>Sequencia Estados</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 0;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 0.444423;
+		viewMgr.visBBoxRight = 10.507126;
+		viewMgr.visBBoxBottom = 0.700328;
+		viewMgr.visBBoxTop = 7.956683;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="Shows the location of the selected shape" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:5.546974in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="2773,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="2773,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:2773.5;height:2000.0;position:absolute" coordSize="2773,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_1.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Recepcionado" origTitle="Recepcionado"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -193,-892 l 78,-892 l 78,-992 l -193,-992 l -193,-892xe" onmouseover="UpdateTooltip(this,0,1)" onclick="OnShapeClick(0,1)" onfocus="UpdateTooltip(this,0,1);" onkeyup="OnShapeKey(0,1)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Aguarda Calibração" origTitle="Aguarda Calibração"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -862,-782 l -912,-782 l -912,-674 l -696,-674 l -696,-782 l -738,-782 l -738,-787 l -862,-787 l -862,-782xe" onmouseover="UpdateTooltip(this,0,2)" onclick="OnShapeClick(0,2)" onfocus="UpdateTooltip(this,0,2);" onkeyup="OnShapeKey(0,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Aguarda Subcontrataç." origTitle="Aguarda Subcontrataç."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 745,-782 l 694,-782 l 694,-674 l 910,-674 l 910,-782 l 869,-782 l 869,-787 l 745,-787 l 745,-782xe" onmouseover="UpdateTooltip(this,0,3)" onclick="OnShapeClick(0,3)" onfocus="UpdateTooltip(this,0,3);" onkeyup="OnShapeKey(0,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Calibrado" origTitle="Calibrado"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -133,-362 l 83,-362 l 83,-470 l -133,-470 l -133,-362xe" onmouseover="UpdateTooltip(this,0,5)" onclick="OnShapeClick(0,5)" onfocus="UpdateTooltip(this,0,5);" onkeyup="OnShapeKey(0,5)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Anulado" origTitle="Anulado"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -912,-362 l -696,-362 l -696,-470 l -912,-470 l -912,-362xe" onmouseover="UpdateTooltip(this,0,6)" onclick="OnShapeClick(0,6)" onfocus="UpdateTooltip(this,0,6);" onkeyup="OnShapeKey(0,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Avariado" origTitle="Avariado"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -512,-362 l -296,-362 l -296,-470 l -512,-470 l -512,-362xe" onmouseover="UpdateTooltip(this,0,7)" onclick="OnShapeClick(0,7)" onfocus="UpdateTooltip(this,0,7);" onkeyup="OnShapeKey(0,7)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Suspenso" origTitle="Suspenso"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 245,-360 l 462,-360 l 462,-468 l 245,-468 l 245,-360xe" onmouseover="UpdateTooltip(this,0,8)" onclick="OnShapeClick(0,8)" onfocus="UpdateTooltip(this,0,8);" onkeyup="OnShapeKey(0,8)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Subcontr. em Calibração" origTitle="Subcontr. em Calibração"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 851,-636 l 834,-636 l 712,-636 l 712,-630 l 694,-630 l 694,-522 l 910,-522 l 910,-630 l 902,-630 l 902,-636 l 851,-636xe" onmouseover="UpdateTooltip(this,0,16)" onclick="OnShapeClick(0,16)" onfocus="UpdateTooltip(this,0,16);" onkeyup="OnShapeKey(0,16)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Subcontrataç. Calibrada" origTitle="Subcontrataç. Calibrada"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 893,-474 l 714,-474 l 714,-468 l 700,-468 l 700,-360 l 916,-360 l 916,-468 l 910,-468 l 910,-474 l 893,-474xe" onmouseover="UpdateTooltip(this,0,17)" onclick="OnShapeClick(0,17)" onfocus="UpdateTooltip(this,0,17);" onkeyup="OnShapeKey(0,17)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Subcontratação c/ Certif." origTitle="Subcontratação c/ Certif."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 709,-155 l 700,-155 l 700,-47 l 916,-47 l 916,-155 l 906,-155 l 906,-160 l 709,-160 l 709,-155xe" onmouseover="UpdateTooltip(this,0,19)" onclick="OnShapeClick(0,19)" onfocus="UpdateTooltip(this,0,19);" onkeyup="OnShapeKey(0,19)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Entregue" origTitle="Entregue"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -133,657 l 83,657 l 83,549 l -133,549 l -133,657xe" onmouseover="UpdateTooltip(this,0,24)" onclick="OnShapeClick(0,24)" onfocus="UpdateTooltip(this,0,24);" onkeyup="OnShapeKey(0,24)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Equip. Anulado na Recepção" origTitle="Equip. Anulado na Recepção"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -813,56 l -830,56 l -908,56 l -908,61 l -912,61 l -912,169 l -696,169 l -696,97 l -692,97 l -692,56 l -813,56xe" onmouseover="UpdateTooltip(this,0,26)" onclick="OnShapeClick(0,26)" onfocus="UpdateTooltip(this,0,26);" onkeyup="OnShapeKey(0,26)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Entregue Anulado" origTitle="Entregue Anulado"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -866,526 l -912,526 l -912,634 l -696,634 l -696,526 l -734,526 l -734,520 l -866,520 l -866,526xe" onmouseover="UpdateTooltip(this,0,28)" onclick="OnShapeClick(0,28)" onfocus="UpdateTooltip(this,0,28);" onkeyup="OnShapeKey(0,28)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Certificado entr. p/ Recep" origTitle="Certificado entr. p/ Recep"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 583,756 l 548,756 l 548,864 l 764,864 l 764,756 l 738,756 l 738,750 l 583,750 l 583,756xe" onmouseover="UpdateTooltip(this,0,22)" onclick="OnShapeClick(0,22)" onfocus="UpdateTooltip(this,0,22);" onkeyup="OnShapeKey(0,22)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Certificado entr. p/ Corr." origTitle="Certificado entr. p/ Corr."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 248,756 l 213,756 l 213,864 l 429,864 l 429,756 l 402,756 l 402,750 l 248,750 l 248,756xe" onmouseover="UpdateTooltip(this,0,23)" onclick="OnShapeClick(0,23)" onfocus="UpdateTooltip(this,0,23);" onkeyup="OnShapeKey(0,23)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Calibrado c/ Certif. Ext." origTitle="Calibrado c/ Certif. Ext."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 1100,-47 l 1316,-47 l 1316,-155 l 1100,-155 l 1100,-47xe" onmouseover="UpdateTooltip(this,0,25)" onclick="OnShapeClick(0,25)" onfocus="UpdateTooltip(this,0,25);" onkeyup="OnShapeKey(0,25)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Calibrado  Com Certif." origTitle="Calibrado  Com Certif."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -91,-133 l -133,-133 l -133,-25 l 83,-25 l 83,-133 l 49,-133 l 49,-139 l -91,-139 l -91,-133xe" onmouseover="UpdateTooltip(this,0,29)" onclick="OnShapeClick(0,29)" onfocus="UpdateTooltip(this,0,29);" onkeyup="OnShapeKey(0,29)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Equipamento na Recepç." origTitle="Equipamento na Recepç."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -133,158 l 83,158 l 83,50 l -133,50 l -133,158xe" onmouseover="UpdateTooltip(this,0,30)" onclick="OnShapeClick(0,30)" onfocus="UpdateTooltip(this,0,30);" onkeyup="OnShapeKey(0,30)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Entregue  Com Certif." origTitle="Entregue  Com Certif."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 746,547 l 700,547 l 700,655 l 916,655 l 916,547 l 878,547 l 878,542 l 746,542 l 746,547xe" onmouseover="UpdateTooltip(this,0,31)" onclick="OnShapeClick(0,31)" onfocus="UpdateTooltip(this,0,31);" onkeyup="OnShapeKey(0,31)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Aguarda Entrega" origTitle="Aguarda Entrega"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m -133,342 l 83,342 l 83,234 l -133,234 l -133,342xe" onmouseover="UpdateTooltip(this,0,32)" onclick="OnShapeClick(0,32)" onfocus="UpdateTooltip(this,0,32);" onkeyup="OnShapeKey(0,32)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Anulado  No Exterior" origTitle="Anulado  No Exterior"  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 1532,-371 l 1749,-371 l 1749,-479 l 1532,-479 l 1532,-371xe" onmouseover="UpdateTooltip(this,0,33)" onclick="OnShapeClick(0,33)" onfocus="UpdateTooltip(this,0,33);" onkeyup="OnShapeKey(0,33)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="Aguarda  Calib.Ext." origTitle="Aguarda  Calib.Ext."  style="top:-1000;left:-1000;width:2773;height:2000;position:absolute" path=" m 1377,-782 l 1327,-782 l 1327,-674 l 1543,-674 l 1543,-782 l 1501,-782 l 1501,-787 l 1377,-787 l 1377,-782xe" onmouseover="UpdateTooltip(this,0,34)" onclick="OnShapeClick(0,34)" onfocus="UpdateTooltip(this,0,34);" onkeyup="OnShapeKey(0,34)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

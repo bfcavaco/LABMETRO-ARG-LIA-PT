@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSNumCalibracoesFuncionario" targetNamespace="http://tempuri.org/DSNumCalibracoesFuncionario.xsd" xmlns:mstns="http://tempuri.org/DSNumCalibracoesFuncionario.xsd" xmlns="http://tempuri.org/DSNumCalibracoesFuncionario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="connstr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connstr (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.connstr.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSNumCalibracoesFuncionario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSNumCalibracoesFuncionario" msprop:Generator_UserDSName="DSNumCalibracoesFuncionario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTCalibracoesPorFuncionario" msprop:Generator_TableClassName="DTCalibracoesPorFuncionarioDataTable" msprop:Generator_TableVarName="tableDTCalibracoesPorFuncionario" msprop:Generator_TablePropName="DTCalibracoesPorFuncionario" msprop:Generator_RowDeletingName="DTCalibracoesPorFuncionarioRowDeleting" msprop:Generator_UserTableName="DTCalibracoesPorFuncionario" msprop:Generator_RowChangingName="DTCalibracoesPorFuncionarioRowChanging" msprop:Generator_RowEvHandlerName="DTCalibracoesPorFuncionarioRowChangeEventHandler" msprop:Generator_RowDeletedName="DTCalibracoesPorFuncionarioRowDeleted" msprop:Generator_RowEvArgName="DTCalibracoesPorFuncionarioRowChangeEvent" msprop:Generator_RowChangedName="DTCalibracoesPorFuncionarioRowChanged" msprop:Generator_RowClassName="DTCalibracoesPorFuncionarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idFuncionario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnidFuncionario" msprop:Generator_ColumnPropNameInRow="idFuncionario" msprop:Generator_ColumnPropNameInTable="idFuncionarioColumn" msprop:Generator_UserColumnName="idFuncionario" type="xs:int" />
+              <xs:element name="funcionario" msprop:Generator_ColumnVarNameInTable="columnfuncionario" msprop:Generator_ColumnPropNameInRow="funcionario" msprop:Generator_ColumnPropNameInTable="funcionarioColumn" msprop:Generator_UserColumnName="funcionario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numCalibracoes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnumCalibracoes" msprop:Generator_ColumnPropNameInRow="numCalibracoes" msprop:Generator_ColumnPropNameInTable="numCalibracoesColumn" msprop:Generator_UserColumnName="numCalibracoes" type="xs:int" minOccurs="0" />
+              <xs:element name="tipoEquipamento" msprop:Generator_ColumnVarNameInTable="columntipoEquipamento" msprop:Generator_ColumnPropNameInRow="tipoEquipamento" msprop:Generator_ColumnPropNameInTable="tipoEquipamentoColumn" msprop:Generator_UserColumnName="tipoEquipamento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idTipoEquipamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnidTipoEquipamento" msprop:Generator_ColumnPropNameInRow="idTipoEquipamento" msprop:Generator_ColumnPropNameInTable="idTipoEquipamentoColumn" msprop:Generator_UserColumnName="idTipoEquipamento" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DTServicosPorFuncionarioTipo" msprop:Generator_TableClassName="DTServicosPorFuncionarioTipoDataTable" msprop:Generator_TableVarName="tableDTServicosPorFuncionarioTipo" msprop:Generator_TablePropName="DTServicosPorFuncionarioTipo" msprop:Generator_RowDeletingName="DTServicosPorFuncionarioTipoRowDeleting" msprop:Generator_UserTableName="DTServicosPorFuncionarioTipo" msprop:Generator_RowChangingName="DTServicosPorFuncionarioTipoRowChanging" msprop:Generator_RowEvHandlerName="DTServicosPorFuncionarioTipoRowChangeEventHandler" msprop:Generator_RowDeletedName="DTServicosPorFuncionarioTipoRowDeleted" msprop:Generator_RowEvArgName="DTServicosPorFuncionarioTipoRowChangeEvent" msprop:Generator_RowChangedName="DTServicosPorFuncionarioTipoRowChanged" msprop:Generator_RowClassName="DTServicosPorFuncionarioTipoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idFuncionario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnidFuncionario" msprop:Generator_ColumnPropNameInRow="idFuncionario" msprop:Generator_ColumnPropNameInTable="idFuncionarioColumn" msprop:Generator_UserColumnName="idFuncionario" type="xs:int" />
+              <xs:element name="idTipoEquipamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnidTipoEquipamento" msprop:Generator_ColumnPropNameInRow="idTipoEquipamento" msprop:Generator_ColumnPropNameInTable="idTipoEquipamentoColumn" msprop:Generator_UserColumnName="idTipoEquipamento" type="xs:int" />
+              <xs:element name="refServico" msprop:Generator_ColumnVarNameInTable="columnrefServico" msprop:Generator_ColumnPropNameInRow="refServico" msprop:Generator_ColumnPropNameInTable="refServicoColumn" msprop:Generator_UserColumnName="refServico">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DTCalibracoesPorFuncionario" />
+      <xs:field xpath="mstns:idFuncionario" />
+      <xs:field xpath="mstns:idTipoEquipamento" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,2813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="Accao" xml:space="preserve">
+    <value>Acción</value>
+  </data>
+  <data name="AccoesOrcamento" xml:space="preserve">
+    <value>Acciones Oferta</value>
+  </data>
+  <data name="Acesso" xml:space="preserve">
+    <value>Acceso</value>
+  </data>
+  <data name="AcessoCertificados" xml:space="preserve">
+    <value>Acceso a los certificados digitales</value>
+  </data>
+  <data name="AcessoCertififcadosSemRequisicao" xml:space="preserve">
+    <value>Mostrar certificados Online sin Pedido</value>
+  </data>
+  <data name="Acreditado" xml:space="preserve">
+    <value>Acreditado</value>
+  </data>
+  <data name="Actividade" xml:space="preserve">
+    <value>Actividad</value>
+  </data>
+  <data name="Activo" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="Actualizar" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="AdicionarEquipBRE" xml:space="preserve">
+    <value>Añadir Equipo BRE</value>
+  </data>
+  <data name="AdicionarFamilia" xml:space="preserve">
+    <value>Añadir Familia</value>
+  </data>
+  <data name="AdicionarGrandeza" xml:space="preserve">
+    <value>Añadir Magnitud</value>
+  </data>
+  <data name="AdicionarLaboratorio" xml:space="preserve">
+    <value>Añadir Laboratorio</value>
+  </data>
+  <data name="AdicionarLinha" xml:space="preserve">
+    <value>Añadir Línea</value>
+  </data>
+  <data name="AdicionarMarca" xml:space="preserve">
+    <value>Añadir Marca</value>
+  </data>
+  <data name="AdicionarModelo" xml:space="preserve">
+    <value>Añadir Modelo</value>
+  </data>
+  <data name="AdicionarRegisto" xml:space="preserve">
+    <value>Añadir Registro</value>
+  </data>
+  <data name="AdicionarRequisicao" xml:space="preserve">
+    <value>Añadir Pedido</value>
+  </data>
+  <data name="AdicionarTipo" xml:space="preserve">
+    <value>Añadir Tipo</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>AGE</value>
+  </data>
+  <data name="AjudasCustoDeslocacoes" xml:space="preserve">
+    <value>Gastos / Desplazamiento</value>
+  </data>
+  <data name="AlcanceAlt" xml:space="preserve">
+    <value>Alcance (alt)</value>
+  </data>
+  <data name="AlertaMarcas" xml:space="preserve">
+    <value>No crear marcas '---'. </value>
+  </data>
+  <data name="AlertaModelos" xml:space="preserve">
+    <value>Todos los modelos deben ser asociados a una marca con un nombre distinto. No crear modelos para marcas "---' o similar. </value>
+  </data>
+  <data name="AlertasLevantamentos" xml:space="preserve">
+    <value>Recibe alertas Equips. a recoger</value>
+  </data>
+  <data name="AlertasNovosCertificados" xml:space="preserve">
+    <value>Recibe alertas nuevos Certificados</value>
+  </data>
+  <data name="AlertasPlanosCalibracao" xml:space="preserve">
+    <value>Recibe Planos de Calibración por Email</value>
+  </data>
+  <data name="Alterar" xml:space="preserve">
+    <value>Actualizar datos</value>
+  </data>
+  <data name="AlterarPassword" xml:space="preserve">
+    <value>Cambiar Password</value>
+  </data>
+  <data name="Amarelo" xml:space="preserve">
+    <value>Amarillo</value>
+  </data>
+  <data name="Analisadores" xml:space="preserve">
+    <value>Analizadores</value>
+  </data>
+  <data name="Ano" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="AnularServico" xml:space="preserve">
+    <value>Cancelar servicio</value>
+  </data>
+  <data name="Apagar" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="AprovacaoCertificados" xml:space="preserve">
+    <value>Aprobación Certificados </value>
+  </data>
+  <data name="AprovadoPor" xml:space="preserve">
+    <value>Aprobado por</value>
+  </data>
+  <data name="Aprovar" xml:space="preserve">
+    <value>Aprobar</value>
+  </data>
+  <data name="AprovarCertificados" xml:space="preserve">
+    <value>Aprobar Certificados </value>
+  </data>
+  <data name="AprovarTodos" xml:space="preserve">
+    <value>Aprobar Todos</value>
+  </data>
+  <data name="AreaActividade" xml:space="preserve">
+    <value>Área Actividad</value>
+  </data>
+  <data name="AreasResponsabilidade" xml:space="preserve">
+    <value>Áreas de responsabilidad</value>
+  </data>
+  <data name="Asterisco" xml:space="preserve">
+    <value>Asterisco</value>
+  </data>
+  <data name="AvisoCampoAsterisco" xml:space="preserve">
+    <value>Rellena por favor los campos señalados con *</value>
+  </data>
+  <data name="AvisoDataEtiquetaCalibracao" xml:space="preserve">
+    <value>Se la etiqueta fuera impresa antes de estar calibrado el equipo, la etiqueta asume la fecha de entrada del equipo como fecha de calibración</value>
+  </data>
+  <data name="BloqSistemaCentral" xml:space="preserve">
+    <value>Bloqueo Sistema Central</value>
+  </data>
+  <data name="Bloqueio" xml:space="preserve">
+    <value>Bloqueo</value>
+  </data>
+  <data name="BloqueioInterno" xml:space="preserve">
+    <value>Bloqueo Interno</value>
+  </data>
+  <data name="BoletimRecepcaoEquipamento" xml:space="preserve">
+    <value>Boletin de Recepción de Equipo</value>
+  </data>
+  <data name="BoletimSaidaEquipamento" xml:space="preserve">
+    <value>Boletin de Salida de Equipos</value>
+  </data>
+  <data name="BRE" xml:space="preserve">
+    <value>BRE</value>
+  </data>
+  <data name="BREDef" xml:space="preserve">
+    <value>BRE&lt;br /&gt;def.</value>
+  </data>
+  <data name="BREExterno" xml:space="preserve">
+    <value>BRE Externo</value>
+  </data>
+  <data name="BREsEmpresa" xml:space="preserve">
+    <value>BREs Empresa</value>
+  </data>
+  <data name="BRESemRequisicaoNaoFacturados" xml:space="preserve">
+    <value>BREs Sin Pedidos No Facturados</value>
+  </data>
+  <data name="BresNaoFacturados" xml:space="preserve">
+    <value>BRE's no Facturados</value>
+  </data>
+  <data name="BREsPosteriores" xml:space="preserve">
+    <value>BRE's posteriores a</value>
+  </data>
+  <data name="BRESubcontrato" xml:space="preserve">
+    <value>BRE de Subcontrato</value>
+  </data>
+  <data name="BSE" xml:space="preserve">
+    <value>BSE</value>
+  </data>
+  <data name="BSESubcontrato" xml:space="preserve">
+    <value>BSE Subcontratado</value>
+  </data>
+  <data name="CalibExt" xml:space="preserve">
+    <value>Calib. Ext.</value>
+  </data>
+  <data name="CalibExterna" xml:space="preserve">
+    <value>Calib. Externa</value>
+  </data>
+  <data name="CalibracoesEmAtraso" xml:space="preserve">
+    <value>Calibraciones en Retraso (plano cal.)</value>
+  </data>
+  <data name="CalibradoComValidacao" xml:space="preserve">
+    <value>Calibrado con Validación</value>
+  </data>
+  <data name="CalibradoInternamente" xml:space="preserve">
+    <value>Calibrado Internamente</value>
+  </data>
+  <data name="CalibradoPor" xml:space="preserve">
+    <value>Calibrado por</value>
+  </data>
+  <data name="CalibSemValidacao" xml:space="preserve">
+    <value>Calibrado sin Validación</value>
+  </data>
+  <data name="CampExtra1" xml:space="preserve">
+    <value>Campo Extra 1</value>
+  </data>
+  <data name="CampExtra2" xml:space="preserve">
+    <value>Campo Extra 2</value>
+  </data>
+  <data name="CanalDistribuicao" xml:space="preserve">
+    <value>Canal distribución</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Cargo" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="CarregarFicheiro" xml:space="preserve">
+    <value>Cargar Fichero</value>
+  </data>
+  <data name="CentroB" xml:space="preserve">
+    <value>Centro B</value>
+  </data>
+  <data name="Certif" xml:space="preserve">
+    <value>Certif.</value>
+  </data>
+  <data name="Certificacao" xml:space="preserve">
+    <value>Certificación</value>
+  </data>
+  <data name="Certificado" xml:space="preserve">
+    <value>Certificado</value>
+  </data>
+  <data name="CertificadoConclusivo" xml:space="preserve">
+    <value>Certificado Conclusivo</value>
+  </data>
+  <data name="Certificados" xml:space="preserve">
+    <value>Certificados</value>
+  </data>
+  <data name="CertificadosemRequisicao" xml:space="preserve">
+    <value>Certificado sin pedido de compra</value>
+  </data>
+  <data name="Classe" xml:space="preserve">
+    <value>Clase</value>
+  </data>
+  <data name="ClasseAlt" xml:space="preserve">
+    <value>Clase (alt)</value>
+  </data>
+  <data name="Cliente" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="ClienteConsigncao" xml:space="preserve">
+    <value>Cliente Consignación</value>
+  </data>
+  <data name="ClienteEsporadico" xml:space="preserve">
+    <value>Cliente Esporádico</value>
+  </data>
+  <data name="ClienteInactivoSAP" xml:space="preserve">
+    <value>Cliente Inactivo Axapta</value>
+  </data>
+  <data name="ClientePotencial" xml:space="preserve">
+    <value>Cliente Potencial</value>
+  </data>
+  <data name="ClientesNacionaisSedes" xml:space="preserve">
+    <value>Clientes Nacion.(Sedes)</value>
+  </data>
+  <data name="ClientesOutrosPaises" xml:space="preserve">
+    <value>Clientes Otros Paises</value>
+  </data>
+  <data name="ClientesUE" xml:space="preserve">
+    <value>Clientes UE</value>
+  </data>
+  <data name="CodClienteSAP" xml:space="preserve">
+    <value>Cód. Cliente</value>
+  </data>
+  <data name="Codigo" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="CodigoBloqueio" xml:space="preserve">
+    <value>Cod. Bloqueo</value>
+  </data>
+  <data name="CodigoEquipamento" xml:space="preserve">
+    <value>Cód. Equip.</value>
+  </data>
+  <data name="CodigoPostal" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="CodigosLaboratorios" xml:space="preserve">
+    <value>Codigos Laborales</value>
+  </data>
+  <data name="CodServico" xml:space="preserve">
+    <value>Ref. Servicio</value>
+  </data>
+  <data name="ComDataValida" xml:space="preserve">
+    <value>Con Fecha Valida</value>
+  </data>
+  <data name="ComDesconto" xml:space="preserve">
+    <value>Con Descuento</value>
+  </data>
+  <data name="ComDeslocacao" xml:space="preserve">
+    <value>Con Desplazamiento</value>
+  </data>
+  <data name="Comentario" xml:space="preserve">
+    <value>Comentario</value>
+  </data>
+  <data name="ComentariosTipoOrcamento" xml:space="preserve">
+    <value>Comentarios Tipo Oferta</value>
+  </data>
+  <data name="ComentáriosOrcamento" xml:space="preserve">
+    <value>Cometario al Oferta</value>
+  </data>
+  <data name="Completa" xml:space="preserve">
+    <value>Completa</value>
+  </data>
+  <data name="Completo" xml:space="preserve">
+    <value>Completo</value>
+  </data>
+  <data name="ComTotal" xml:space="preserve">
+    <value>Con Total</value>
+  </data>
+  <data name="Concelho" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="Concessionario" xml:space="preserve">
+    <value>Taller</value>
+  </data>
+  <data name="CondicoesPagamento" xml:space="preserve">
+    <value>Condiciones Pago</value>
+  </data>
+  <data name="CondicoesPagamentoEmpresa" xml:space="preserve">
+    <value>Condiciones de Pago Empresa</value>
+  </data>
+  <data name="CondPagam" xml:space="preserve">
+    <value>Cond. Pago</value>
+  </data>
+  <data name="Confirmar" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Conforme" xml:space="preserve">
+    <value>Conforme</value>
+  </data>
+  <data name="Conformidade" xml:space="preserve">
+    <value>Conformidad</value>
+  </data>
+  <data name="ConsultarEstadoCertifcado" xml:space="preserve">
+    <value>Consulta Estado Certificado</value>
+  </data>
+  <data name="Contacto" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="ContactoPrincipal" xml:space="preserve">
+    <value>Contacto Principal</value>
+  </data>
+  <data name="Contactos" xml:space="preserve">
+    <value>Contactos</value>
+  </data>
+  <data name="ContactosActivos" xml:space="preserve">
+    <value>Contactos Activos</value>
+  </data>
+  <data name="ContactosInactivos" xml:space="preserve">
+    <value>Contactos Inactivos</value>
+  </data>
+  <data name="Contencioso" xml:space="preserve">
+    <value>Contencioso</value>
+  </data>
+  <data name="Contrato" xml:space="preserve">
+    <value>Contrato</value>
+  </data>
+  <data name="ControlOrcamentos" xml:space="preserve">
+    <value>Control Ofertas</value>
+  </data>
+  <data name="CriadaPor" xml:space="preserve">
+    <value>Creada por</value>
+  </data>
+  <data name="CriadoPor" xml:space="preserve">
+    <value>Creado por</value>
+  </data>
+  <data name="CriarNovo" xml:space="preserve">
+    <value>Crear nueva</value>
+  </data>
+  <data name="CriteriosAceitacao" xml:space="preserve">
+    <value>Criterios de Aceptación</value>
+  </data>
+  <data name="CriteriosPesquisa" xml:space="preserve">
+    <value>Criterios &lt;br /&gt; de búsqueda</value>
+  </data>
+  <data name="CTA" xml:space="preserve">
+    <value>ITV</value>
+  </data>
+  <data name="CustoEmEuros" xml:space="preserve">
+    <value>Coste (€)</value>
+  </data>
+  <data name="CustoEquipamento" xml:space="preserve">
+    <value>Coste del equipo</value>
+  </data>
+  <data name="DadosBRE" xml:space="preserve">
+    <value>Datos BRE</value>
+  </data>
+  <data name="DadosEquipamento" xml:space="preserve">
+    <value>Datos Equipo</value>
+  </data>
+  <data name="DadosFactura" xml:space="preserve">
+    <value>Datos Factura</value>
+  </data>
+  <data name="DadosOperacionais" xml:space="preserve">
+    <value>Datos Operacionales</value>
+  </data>
+  <data name="DadosRelativosCalibracao" xml:space="preserve">
+    <value>Datos sobre la calibración</value>
+  </data>
+  <data name="DadosServico" xml:space="preserve">
+    <value>Datos Servicio</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="DataAdmissao" xml:space="preserve">
+    <value>Fecha Admisión</value>
+  </data>
+  <data name="DataAssumida" xml:space="preserve">
+    <value>Fecha asumida</value>
+  </data>
+  <data name="DataBRE" xml:space="preserve">
+    <value>Fecha BRE</value>
+  </data>
+  <data name="DataBRESub" xml:space="preserve">
+    <value>Fecha BRE (Sub.)</value>
+  </data>
+  <data name="DataBSE" xml:space="preserve">
+    <value>Fecha BSE</value>
+  </data>
+  <data name="DataBSESub" xml:space="preserve">
+    <value>Fecha BSE (sub.)</value>
+  </data>
+  <data name="DataCalibracao" xml:space="preserve">
+    <value>Fecha Calib.</value>
+  </data>
+  <data name="DataEmissao" xml:space="preserve">
+    <value>Fecha de Emisión</value>
+  </data>
+  <data name="DataEntrada" xml:space="preserve">
+    <value>Fecha Entrada</value>
+  </data>
+  <data name="DataEstados" xml:space="preserve">
+    <value>Fecha Estados</value>
+  </data>
+  <data name="DataFactura" xml:space="preserve">
+    <value>Fecha Factura</value>
+  </data>
+  <data name="DataFax" xml:space="preserve">
+    <value>Fecha &lt;br /&gt; Fax</value>
+  </data>
+  <data name="DataFim" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="DataInicio" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="DataIntroducao" xml:space="preserve">
+    <value>Fecha Introducción</value>
+  </data>
+  <data name="DataInvalida" xml:space="preserve">
+    <value>Fecha Inválida</value>
+  </data>
+  <data name="DataMarcacao" xml:space="preserve">
+    <value>Fecha Planificada</value>
+  </data>
+  <data name="DataOrc" xml:space="preserve">
+    <value>Fecha oferta</value>
+  </data>
+  <data name="DataOrcamento" xml:space="preserve">
+    <value>Fecha de la oferta</value>
+  </data>
+  <data name="DataPedido" xml:space="preserve">
+    <value>Fecha del Pedido</value>
+  </data>
+  <data name="DataPrevisao" xml:space="preserve">
+    <value>Fecha prevista entrega</value>
+  </data>
+  <data name="DatasAnteriores" xml:space="preserve">
+    <value>Fechas Anteriores</value>
+  </data>
+  <data name="DataUltimaCalibracao" xml:space="preserve">
+    <value>Última Fecha &lt;br /&gt; Calibración</value>
+  </data>
+  <data name="DataValidade" xml:space="preserve">
+    <value>Fecha de Validación</value>
+  </data>
+  <data name="DataVisita" xml:space="preserve">
+    <value>Fecha de la visita</value>
+  </data>
+  <data name="De" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="Departamento" xml:space="preserve">
+    <value>Departamento.</value>
+  </data>
+  <data name="Desassociar" xml:space="preserve">
+    <value>Desasociar</value>
+  </data>
+  <data name="DescontoEmPercentagem" xml:space="preserve">
+    <value>% Descuento</value>
+  </data>
+  <data name="DescontoTotal" xml:space="preserve">
+    <value>Descuento Total</value>
+  </data>
+  <data name="Descricao" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DespesasEnvio" xml:space="preserve">
+    <value>Gastos de envío</value>
+  </data>
+  <data name="Detalhes" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="DetalhesEmpresa" xml:space="preserve">
+    <value>Detalles Empresa</value>
+  </data>
+  <data name="DetalhesEquipamento" xml:space="preserve">
+    <value>Detalles Equipo</value>
+  </data>
+  <data name="DetOrcamento" xml:space="preserve">
+    <value>Detalles Oferta</value>
+  </data>
+  <data name="DiagramaSequenciaEstados" xml:space="preserve">
+    <value>Diagrama de Secuencia de Estados</value>
+  </data>
+  <data name="Dias" xml:space="preserve">
+    <value>Día(s)</value>
+  </data>
+  <data name="DiasSemMudanca" xml:space="preserve">
+    <value>Días sin cambio</value>
+  </data>
+  <data name="Distrito" xml:space="preserve">
+    <value>Comunidad</value>
+  </data>
+  <data name="Divisao" xml:space="preserve">
+    <value>División</value>
+  </data>
+  <data name="Documentos" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="DtCriacao" xml:space="preserve">
+    <value>Fecha Creación</value>
+  </data>
+  <data name="DtEntradaServico" xml:space="preserve">
+    <value>Fecha Entrada Servicio</value>
+  </data>
+  <data name="DtEstado" xml:space="preserve">
+    <value>Fecha Estado&lt;br /&gt;Servicio</value>
+  </data>
+  <data name="DtReq" xml:space="preserve">
+    <value>Fecha Pedido</value>
+  </data>
+  <data name="DtUltDia" xml:space="preserve">
+    <value>Fecha últ. Día</value>
+  </data>
+  <data name="DtVal" xml:space="preserve">
+    <value>Fecha Val</value>
+  </data>
+  <data name="Editar" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="EditarRequisicao" xml:space="preserve">
+    <value>(Editar) &lt;br /&gt;Pedido</value>
+  </data>
+  <data name="EfectuadoPor" xml:space="preserve">
+    <value>Efectuado por</value>
+  </data>
+  <data name="Ele" xml:space="preserve">
+    <value>Él</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailDirecto" xml:space="preserve">
+    <value>Email Directo</value>
+  </data>
+  <data name="EmailGeral" xml:space="preserve">
+    <value>Email General</value>
+  </data>
+  <data name="EmpContrat" xml:space="preserve">
+    <value>Emp. Contrato.</value>
+  </data>
+  <data name="EmpFact" xml:space="preserve">
+    <value>Emp. Fact.</value>
+  </data>
+  <data name="EmpManutCTA" xml:space="preserve">
+    <value>Emp. Manut.&lt;br /&gt;(só CTA)</value>
+  </data>
+  <data name="Empresa" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="EmpresaASubcontratar" xml:space="preserve">
+    <value>Empresa a Subcontratar</value>
+  </data>
+  <data name="EmpresaBRE" xml:space="preserve">
+    <value>Empresa BRE</value>
+  </data>
+  <data name="EmpresaClienteVerReq" xml:space="preserve">
+    <value>Empresa Cliente&lt;br /&gt;(ver pedidos)</value>
+  </data>
+  <data name="EmpresaComEquipCalib" xml:space="preserve">
+    <value>Empresa con equipo calibrado</value>
+  </data>
+  <data name="EmpresaContratante" xml:space="preserve">
+    <value>Empresa Contratante</value>
+  </data>
+  <data name="EmpresaContratou" xml:space="preserve">
+    <value>Empresa Contrató</value>
+  </data>
+  <data name="Empresas" xml:space="preserve">
+    <value>Empresas</value>
+  </data>
+  <data name="EmpresasComBloqueio" xml:space="preserve">
+    <value>Empresas con Bloqueos</value>
+  </data>
+  <data name="EmpresaSubcontratada" xml:space="preserve">
+    <value>Empresa Subcontratada</value>
+  </data>
+  <data name="EmpresasVerificarNumSAP" xml:space="preserve">
+    <value>Empresas con código cliente por verificar</value>
+  </data>
+  <data name="EmpresaTemContrato" xml:space="preserve">
+    <value>Empresa &lt;br /&gt; con&lt;br /&gt; Contrato?</value>
+  </data>
+  <data name="EnsaiadoPor" xml:space="preserve">
+    <value>Ensayado por</value>
+  </data>
+  <data name="Ensaio" xml:space="preserve">
+    <value>Ensayo</value>
+  </data>
+  <data name="EntidadeUltimaCalibracao" xml:space="preserve">
+    <value>Entidad de la última calibración</value>
+  </data>
+  <data name="EntreguePor" xml:space="preserve">
+    <value>Entregado por</value>
+  </data>
+  <data name="Enviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="EnviarFax" xml:space="preserve">
+    <value>Enviar por Fax</value>
+  </data>
+  <data name="EnviarFaxAviso" xml:space="preserve">
+    <value>Enviar Fax Advertencia</value>
+  </data>
+  <data name="EnviarMail" xml:space="preserve">
+    <value>Enviar por Mail</value>
+  </data>
+  <data name="EnviarPara" xml:space="preserve">
+    <value>Enviar para</value>
+  </data>
+  <data name="Equipamento" xml:space="preserve">
+    <value>Equipo</value>
+  </data>
+  <data name="EquipamentoASerLevantadoEM" xml:space="preserve">
+    <value>Equipo a ser Recogido en</value>
+  </data>
+  <data name="EquipamentoCalibrado" xml:space="preserve">
+    <value>Equipo Calibrado</value>
+  </data>
+  <data name="EquipamentoNaoCalibraco" xml:space="preserve">
+    <value>Equipo Sin Calibrar</value>
+  </data>
+  <data name="Equipamentos" xml:space="preserve">
+    <value>Equipos</value>
+  </data>
+  <data name="EquipamentosACalibrar" xml:space="preserve">
+    <value>Equipos a Calibrar (plano cal.)</value>
+  </data>
+  <data name="EquipamentosActivos" xml:space="preserve">
+    <value>Equipos Activos</value>
+  </data>
+  <data name="EquipamentosAIncluir" xml:space="preserve">
+    <value>Equipos a Incluir</value>
+  </data>
+  <data name="EquipamentosDaEmpresa" xml:space="preserve">
+    <value>Equipos de la Empresa</value>
+  </data>
+  <data name="EquipamentosDefinitivos" xml:space="preserve">
+    <value>Equipos Definitivos</value>
+  </data>
+  <data name="EquipamentosDoCliente" xml:space="preserve">
+    <value>Equipos del Cliente</value>
+  </data>
+  <data name="EquipamentosInactivos" xml:space="preserve">
+    <value>Equipos Inactivos</value>
+  </data>
+  <data name="EquipamentosPorActualizarMais30dias" xml:space="preserve">
+    <value>Equipo con estado para actualizar a más de 30 días</value>
+  </data>
+  <data name="EquipamentosPorEstado" xml:space="preserve">
+    <value>Equipos por estado (C/Filtro P/alcance)</value>
+  </data>
+  <data name="EquipFacturadosPrecoZero" xml:space="preserve">
+    <value>Equipos Facturados a Precio 0 </value>
+  </data>
+  <data name="EquipNaoFacturadoAgrupadoBRE" xml:space="preserve">
+    <value>Equipos no Facturados Agrupado por BRE</value>
+  </data>
+  <data name="EquipNaoFacturadoAgrupadoEmpresa" xml:space="preserve">
+    <value>Equipos no Facturados Agrupado por Empresas</value>
+  </data>
+  <data name="EquipNaoFacturadoPorBRE" xml:space="preserve">
+    <value>Equipos no Facturados Agrupado por BRE</value>
+  </data>
+  <data name="EquipNaoFacturdoPesquisaPorEmpresa" xml:space="preserve">
+    <value>Equipos no Facturados Agrupado // Busca por Empresas</value>
+  </data>
+  <data name="Equips" xml:space="preserve">
+    <value>Equips</value>
+  </data>
+  <data name="EquipsPorCalibrarMais30Dias" xml:space="preserve">
+    <value>Equipos por calibrar más 30 días</value>
+  </data>
+  <data name="Erro" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ERR_CARREGAMENTO_FICHEIRO" xml:space="preserve">
+    <value>Error en cargar el fichero</value>
+  </data>
+  <data name="ERR_CLIENTE_SEM_EMAIL" xml:space="preserve">
+    <value>El cliente no tiene dirección de email</value>
+  </data>
+  <data name="ERR_CLIENTE_SEM_NUMFAX" xml:space="preserve">
+    <value>El cliente no tiene nº de fax</value>
+  </data>
+  <data name="ERR_CRIACAO_FICHEIRO" xml:space="preserve">
+    <value>Error en la creación del fichero. El fichero no ha sido creado!</value>
+  </data>
+  <data name="ERR_DATAS_INCORRECTAS" xml:space="preserve">
+    <value>Fecha/s Incorrecta/s</value>
+  </data>
+  <data name="ERR_DATA_FIM_SUPERIOR_DATA_INICIO" xml:space="preserve">
+    <value>La fecha de inicio no puede ser superior a la fecha de fin</value>
+  </data>
+  <data name="ERR_DB" xml:space="preserve">
+    <value>Operación no efectuada</value>
+  </data>
+  <data name="ERR_DELETE" xml:space="preserve">
+    <value>Error al cerrar el registro. Operación no efectuada!</value>
+  </data>
+  <data name="ERR_DUPLICATE_KEY" xml:space="preserve">
+    <value>Clave duplicada</value>
+  </data>
+  <data name="ERR_EMAIL_FORMATO_INVALIDO" xml:space="preserve">
+    <value>Email de formato inválido</value>
+  </data>
+  <data name="ERR_FILE_EXTENSION" xml:space="preserve">
+    <value>Error con alguna extensión del fichero</value>
+  </data>
+  <data name="ERR_GENERAL_ERROR" xml:space="preserve">
+    <value>Error de aplicación. Por favor inténtelo más tarde.</value>
+  </data>
+  <data name="ERR_INDICAR_MAIL_FUNCIONARIO" xml:space="preserve">
+    <value>Tiene que rellenar una cuenta de email. Actualice la información del empleado.</value>
+  </data>
+  <data name="ERR_INSERT" xml:space="preserve">
+    <value>Error en la inserción del registro. Registro no insertado!</value>
+  </data>
+  <data name="ERR_JA_EXISTE_EMPRESA_NIF" xml:space="preserve">
+    <value>Tiene que asociar la empresa a un grupo pues ya existe una empresa con el NIF indicado</value>
+  </data>
+  <data name="ERR_JA_EXISTE_FICHEIRO_NOME" xml:space="preserve">
+    <value>Ya existe un fichero con el mismo nombre</value>
+  </data>
+  <data name="ERR_LOGIN" xml:space="preserve">
+    <value>Acceso inválido</value>
+  </data>
+  <data name="ERR_MISSING_FIELDS" xml:space="preserve">
+    <value>Tiene que rellenar todos los campos</value>
+  </data>
+  <data name="ERR_NAO_TEM_MESMO_NIF" xml:space="preserve">
+    <value>La empresa no puede ser asociada al grupo seleccionado pues no tiene el mismo NIF</value>
+  </data>
+  <data name="ERR_SESSION_TIMEOUT" xml:space="preserve">
+    <value>La sesión ha expirado. Por favor vuelva a registrarse.</value>
+  </data>
+  <data name="ERR_UPDATE" xml:space="preserve">
+    <value>Error en la actualización del registro. Registro no actualizado</value>
+  </data>
+  <data name="ERR_USERNAME" xml:space="preserve">
+    <value>Ya existe un usuario con este userName</value>
+  </data>
+  <data name="ERR_USER_REDIRECT" xml:space="preserve">
+    <value>Ha intentado acceder a una página para la cual no tiene permiso. Por favor registrese nuevamente.</value>
+  </data>
+  <data name="ERR_VALORES_INCORRECTOS" xml:space="preserve">
+    <value>Valor/es incorrecto/s</value>
+  </data>
+  <data name="EscritaMais" xml:space="preserve">
+    <value>+ Escrita</value>
+  </data>
+  <data name="EscritorioVendas" xml:space="preserve">
+    <value>Oficina Ventas</value>
+  </data>
+  <data name="Especificacoes" xml:space="preserve">
+    <value>Especificaciones</value>
+  </data>
+  <data name="Estado" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="EstadoCertificado" xml:space="preserve">
+    <value>Estado Certificado</value>
+  </data>
+  <data name="EstadoEmpresa" xml:space="preserve">
+    <value>Estado Empresa</value>
+  </data>
+  <data name="EstadoEquipamento" xml:space="preserve">
+    <value>Estado del Equipo</value>
+  </data>
+  <data name="EstadoOrcamento" xml:space="preserve">
+    <value>Estado de la Oferta</value>
+  </data>
+  <data name="EstadoRelacaoCalibracao" xml:space="preserve">
+    <value>Estado Rel. Calib.</value>
+  </data>
+  <data name="EstadoServico" xml:space="preserve">
+    <value>Estado servicio</value>
+  </data>
+  <data name="EstadoUtilizacao" xml:space="preserve">
+    <value>Estado uso</value>
+  </data>
+  <data name="Estatisticas" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="EtiquetaCalibracao" xml:space="preserve">
+    <value>Etiqueta Calibración</value>
+  </data>
+  <data name="EtiquetaRecepcao" xml:space="preserve">
+    <value>Etiqueta Recepción</value>
+  </data>
+  <data name="EXP" xml:space="preserve">
+    <value>Exp.</value>
+  </data>
+  <data name="Expedicao" xml:space="preserve">
+    <value>Expedición</value>
+  </data>
+  <data name="ExportarParaExcel" xml:space="preserve">
+    <value>Export to Excel</value>
+  </data>
+  <data name="EXT" xml:space="preserve">
+    <value>EXT</value>
+  </data>
+  <data name="Extensao" xml:space="preserve">
+    <value>Extensión</value>
+  </data>
+  <data name="Fabricante" xml:space="preserve">
+    <value>Fabricante</value>
+  </data>
+  <data name="Fact" xml:space="preserve">
+    <value>Fact.</value>
+  </data>
+  <data name="FactTpEquip" xml:space="preserve">
+    <value>Facturación por tipo de equipo</value>
+  </data>
+  <data name="Factura" xml:space="preserve">
+    <value>Factura</value>
+  </data>
+  <data name="Facturacao" xml:space="preserve">
+    <value>Facturación</value>
+  </data>
+  <data name="FacturacaoAcumuladaUltimos3Anos" xml:space="preserve">
+    <value>Facturación de los ultimos 3 años</value>
+  </data>
+  <data name="FacturacaoMensalPorLaboratorioGrandeza" xml:space="preserve">
+    <value>Facturación mensual por laboratório / magnitud</value>
+  </data>
+  <data name="FacturacaoPorConjuntoTiposEquipamento" xml:space="preserve">
+    <value>Facturación por conjunto de tipo de equipo</value>
+  </data>
+  <data name="FacturacaoPorFamiliaEquipamentos" xml:space="preserve">
+    <value>Facturación por familia de equipo</value>
+  </data>
+  <data name="FacturacaoPorLaboratorioGrandeza" xml:space="preserve">
+    <value>Facturación por laboratório / magnitud</value>
+  </data>
+  <data name="FacturarA" xml:space="preserve">
+    <value>Facturar a</value>
+  </data>
+  <data name="FacturarEquipamentos" xml:space="preserve">
+    <value>Facturar Equipos</value>
+  </data>
+  <data name="FacturarSemRequisicao" xml:space="preserve">
+    <value>Facturar sin Pedido</value>
+  </data>
+  <data name="Falencia" xml:space="preserve">
+    <value>Cerrada</value>
+  </data>
+  <data name="Familia" xml:space="preserve">
+    <value>Família</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FaxContacto" xml:space="preserve">
+    <value>Fax Contacto</value>
+  </data>
+  <data name="FaxDir" xml:space="preserve">
+    <value>Fax Directo</value>
+  </data>
+  <data name="FaxEmpresa" xml:space="preserve">
+    <value>Fax Empresa</value>
+  </data>
+  <data name="FaxesEnviadosAnterior" xml:space="preserve">
+    <value>Faxes enviados anterior</value>
+  </data>
+  <data name="FazerMarcacao" xml:space="preserve">
+    <value>Hacer planificación</value>
+  </data>
+  <data name="Ficheiro" xml:space="preserve">
+    <value>Fichero</value>
+  </data>
+  <data name="FicheiroCalibracao" xml:space="preserve">
+    <value>Archivo calibración</value>
+  </data>
+  <data name="FiliaisOutraMorada" xml:space="preserve">
+    <value>Filiales / Otras direcciones</value>
+  </data>
+  <data name="Filtrar" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="FiltrarEquipamentos" xml:space="preserve">
+    <value>Filtrar Equipos</value>
+  </data>
+  <data name="FiltrarEquipamentosPorBRE" xml:space="preserve">
+    <value>Filtrar equipos por BRE</value>
+  </data>
+  <data name="FiltrarGrandeza" xml:space="preserve">
+    <value>Filtro magnitud</value>
+  </data>
+  <data name="FiltrarResultados" xml:space="preserve">
+    <value>filtrado se aplica&lt;br /&gt; a los resultados</value>
+  </data>
+  <data name="FiltrarTiposDef" xml:space="preserve">
+    <value>Filtrar tipos definidos</value>
+  </data>
+  <data name="Filtro" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="ForcarData" xml:space="preserve">
+    <value>Forzar Fecha</value>
+  </data>
+  <data name="Forma" xml:space="preserve">
+    <value>Forma</value>
+  </data>
+  <data name="FormatoErrado" xml:space="preserve">
+    <value>Formato Inválido</value>
+  </data>
+  <data name="Formula" xml:space="preserve">
+    <value>Formula</value>
+  </data>
+  <data name="Fornecedor" xml:space="preserve">
+    <value>Proveedor</value>
+  </data>
+  <data name="FraseAccaoCalibComValid" xml:space="preserve">
+    <value>El responsable tiene que aprobar el certificado en la página "Aprobar Certificados".</value>
+  </data>
+  <data name="FraseAccaoCalibSemValid" xml:space="preserve">
+    <value>El Técnico tiene que validar el certificado en la página "Validar Documentos".</value>
+  </data>
+  <data name="FraseAccaoCertificado" xml:space="preserve">
+    <value>El certificado aparece en el Listado de certificados tanto internamente como de los clientes registrados.</value>
+  </data>
+  <data name="FraseAccaoPassar" xml:space="preserve">
+    <value>Pasar servicio a calibrado y crear PDF.</value>
+  </data>
+  <data name="FraseAccaoRejTecnico" xml:space="preserve">
+    <value>El técnico tendrá que crear un nuevo pdf (con el mismo nombre que el primero) y colocarlo en la carpeta de los certificados, y aprobarlo otra vez.</value>
+  </data>
+  <data name="FraseAditamentos_BOEstado" xml:space="preserve">
+    <value>(corredores, debe suprimirse manualmente)</value>
+  </data>
+  <data name="FraseAtencaoCamposMarc" xml:space="preserve">
+    <value>Atención a los campos marcados</value>
+  </data>
+  <data name="FraseAtencao_BOEstado" xml:space="preserve">
+    <value>&lt;b&gt;Atención: servicios deberán ser anulados solamente en casos pontuales.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;Servicios no calibrados poderán ser anulados dentro de los BRE's en que deran entrada, seleccionando la opción REMOVER (en la linea del servicio).&lt;br /&gt;&lt;br /&gt;Servicios calibrados o facturados deberan ser anulados en casos de haber entradas duplicadas, entradas en la empresa errada, o por otro motivo similar.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;En el caso da anular el servicio después de calibrado con certificado, el respectivo certificado será APAGADO.&lt;/b&gt;)</value>
+  </data>
+  <data name="FraseAvisoBOMarcas" xml:space="preserve">
+    <value>para borrar una marca, todos los modelos
+Pasará esa marca de la marca para mantener
+se debe Borrar y, a continuación,</value>
+  </data>
+  <data name="FraseAvisoBOUtilCalib" xml:space="preserve">
+    <value>Atención: Esto solo funciona para los servicios cuyes licencias no han sido aprobados. &lt;br /&gt; Certificados para validar siempre aparecen en nombre de la última persona que lo a aprobado/rechazado</value>
+  </data>
+  <data name="FraseAvisoClique" xml:space="preserve">
+    <value>Pincha en cualquier parte de la linea para ver el documento.</value>
+  </data>
+  <data name="FraseAvisoConsultaCert" xml:space="preserve">
+    <value>El usuario que validó el certificado tambiém se aplica al último certificado (debido a la arquitectura de la base de datos, que en el futuro podrá ser revisada).</value>
+  </data>
+  <data name="FraseAvisoDocFicheiroFalta" xml:space="preserve">
+    <value>Documentos Rechazados o Ficheros En falta.</value>
+  </data>
+  <data name="FraseAvisoErrosFacturacao" xml:space="preserve">
+    <value>Cuado el servicio ya está facturado, debe contactar con la facturación para transmitir los cambios. Las cancelaciones se registran.</value>
+  </data>
+  <data name="FraseBloqAmarelo" xml:space="preserve">
+    <value>Amarillo: Pago retrasado y/o falta pedido. No se entregan los certificados. </value>
+  </data>
+  <data name="FraseBloqAzul" xml:space="preserve">
+    <value>Azul: Empresas con número de cliente inactivo en Axapta. Las empresas tienen que ser actualizadas con urgencia con un número de cliente axapta activo. Para listar todas las empresas con este criterio seleccionar 'Cliente Inactivo' dentro del listado del 'Bloqueo del Sistema Central'</value>
+  </data>
+  <data name="FraseBloqBranco" xml:space="preserve">
+    <value>Blanco: Sin Bloqueo</value>
+  </data>
+  <data name="FraseBloqLaranja" xml:space="preserve">
+    <value>Naranja: Pago retrasado. No se entregan ni equipos ni certificados, a no ser que paguen el retraso.</value>
+  </data>
+  <data name="FraseBloqVermelho" xml:space="preserve">
+    <value>Rojo: Empresas Bloqueadas por el Sistema Central. No son entregados ni equipos ni certificados, a no ser mediante pago en metálico.</value>
+  </data>
+  <data name="FraseBOAtencaoServCalib" xml:space="preserve">
+    <value>ATENCIÓN: se el servicio estuvier calibrado, o con certificado, o con factura (campo idFactura rellenado) o entregue o otro estado o situación em que el cambio de equipo no hace sentido, por favor no cambiar)</value>
+  </data>
+  <data name="FraseBOServico" xml:space="preserve">
+    <value>Seleccionar servicio de los equipos para el cambio</value>
+  </data>
+  <data name="FraseBOServTextoAtencao" xml:space="preserve">
+    <value>El el caso de cambiar el equipo cuando este ya tenga sido facturado, estas alteracaiones debem ser comunicadas al servicio de facturación (cuando se cambia un tipo de equipo por otro, que puede tener un precio diferente). &lt;/FONT&gt;&lt;FONT face="Verdana" color="#ff0033" size="2"&gt;&lt;br /&gt;&lt;FONT color="#000000"&gt;En el caso de un serviço no se encontrar calibrado, pueden cambiar el equipo.&lt;br /&gt;&lt;br /&gt;En el caso de ya se encontrar calibrado, deberán revisar el certifi  correspondiente (datos del equipo en el certificado.&lt;br /&gt;&lt;br /&gt;En el caso de estar facturado, deben consultar el departamiento de facturación, para perceber las implicaciones que el cambio pueda traer.&lt;br /&gt;&lt;br /&gt;Las alteraciones fican registradas juntamente con el nombre de la persona que hace la alteración.&lt;/FONT&gt;&lt;/FONT&gt;)</value>
+  </data>
+  <data name="FraseCaixaDesmarcada" xml:space="preserve">
+    <value>Caja sin marcar significa que el equipo hay sido suspendido</value>
+  </data>
+  <data name="FraseCalibOutroUser" xml:space="preserve">
+    <value>Calibraciones de otro usuario o Revisiones, suplementos etc.</value>
+  </data>
+  <data name="FraseCalibUtilizadorLog" xml:space="preserve">
+    <value>Calibraciones del usuario introducido</value>
+  </data>
+  <data name="FraseCaractConsiderados" xml:space="preserve">
+    <value>* Serán considerados de carácter</value>
+  </data>
+  <data name="FraseContactoMantar" xml:space="preserve">
+    <value>Contacto para mantener</value>
+  </data>
+  <data name="FraseDescCalibComValid" xml:space="preserve">
+    <value>El certificado ya fue validado por el técnico y está esperando aprobación por el superior.</value>
+  </data>
+  <data name="FraseDescCalibSemValid" xml:space="preserve">
+    <value>El Pdf ha sido creado pero no ha sido validado por el técnico.</value>
+  </data>
+  <data name="FraseDescCertificado" xml:space="preserve">
+    <value>El certificado ha sido validado por el técnico y aprobado por el Responsable.</value>
+  </data>
+  <data name="FraseDescRejResponsavel" xml:space="preserve">
+    <value>El certificado ha sido rechazado por el Responsable</value>
+  </data>
+  <data name="FraseDescRejTecnico" xml:space="preserve">
+    <value>El certificado ha sido rechazado por el técnico.</value>
+  </data>
+  <data name="FraseEmpresaManter" xml:space="preserve">
+    <value>Empresa a mantener</value>
+  </data>
+  <data name="FraseEquipSelect" xml:space="preserve">
+    <value>Equipos a seren colocados en el servicio seleccionado</value>
+  </data>
+  <data name="FraseEquipSelectSubst" xml:space="preserve">
+    <value>Equipo seleccionado remplazará equipo seleccionado (de color verde) en la cuadro superior</value>
+  </data>
+  <data name="FraseInfoCampExtra" xml:space="preserve">
+    <value>* los campos extra pueden ser utilizados a libre voluntad de cada laboratorio para hacer frente a datos adicionales y específicos para algunos tipos de equipos, y son devueltos al Programa como "campo1" y "campo2" en formato string, pudiendo ser tratados en las aplicaciones de los laboratorios.</value>
+  </data>
+  <data name="FraseInfoProcInterno" xml:space="preserve">
+    <value>Si un procedimiento interno lo exige, se deverá introducir el pedido también la empresa que envió el mismo</value>
+  </data>
+  <data name="FraseInfoReqEnviada" xml:space="preserve">
+    <value>* Aunque el pedido sea enviado por la empresa que contrató los servicios, el pedido deberá ser asociado a la empresa en cuyo nombre se realizarán los servicios. Esta asociación deberá ser hecha para asociar el pedido A LOS SERVICIOS de la empresa en cuyo nombre se le dará entrada</value>
+  </data>
+  <data name="FraseInfoSubstEquipo" xml:space="preserve">
+    <value>Equipo que hace la sustitución otro tendrá todo el historial de equipo que se retira</value>
+  </data>
+  <data name="FraseLegendaMarcacoes" xml:space="preserve">
+    <value>C + E: sirve para incluir equipos marcados en una marcación, C para hacer una calibración y E para hacer um Ensayo.</value>
+  </data>
+  <data name="FraseListaFuncionariosCert" xml:space="preserve">
+    <value>Listado de empleados relevantes para el workflow de su respectivo perfil (Responsables Técnicos, Técnicos EspeciaListados, Técnicos de Laboratorios y Administradores LabMetro).&lt;br /&gt;.&lt;br /&gt;   Para editar las magnitudes asociadas a un empleado, pincha en las flecha »»»".Para cambiar el perfil de un empleado, pincha en "Editar"."</value>
+  </data>
+  <data name="FraseMarcarCaixasContactosSubstituir" xml:space="preserve">
+    <value>Marca las casillas para reemplazar Contactos</value>
+  </data>
+  <data name="FraseMarcarCaixasEmpresasSubtiruir" xml:space="preserve">
+    <value>Marca las casillas para reemplazar Negocios</value>
+  </data>
+  <data name="FraseNegaCriacaoPDF" xml:space="preserve">
+    <value>Aún no ha sido creado el PDF</value>
+  </data>
+  <data name="FraseNotaDesenvolvimento" xml:space="preserve">
+    <value>** Nota de desarrollo: cuando los cambios de fecha, este estado tiene que estar limpia</value>
+  </data>
+  <data name="FraseProjectoRetalhado" xml:space="preserve">
+    <value>Empresas SAP abiertas para&lt;b&gt;&lt;u&gt; PROYECTO DIVIDIDO</value>
+  </data>
+  <data name="FraseSelectEquipEditar" xml:space="preserve">
+    <value>Seleccionar el equipo para editar (por las flechas, hasta que la linea es de color verde)</value>
+  </data>
+  <data name="FrasetrocarContactosSelect" xml:space="preserve">
+    <value>Modificar Contactos seleccionados</value>
+  </data>
+  <data name="FrasetrocarEmpresasSelect" xml:space="preserve">
+    <value>Modificar las empresas seleccionadas</value>
+  </data>
+  <data name="Funcao" xml:space="preserve">
+    <value>Función</value>
+  </data>
+  <data name="Funcionario" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
+  <data name="FuncionarioGestaoEquipamentos" xml:space="preserve">
+    <value>Empleado Resp. Gestión Equipos</value>
+  </data>
+  <data name="FuncionarioRecepcao" xml:space="preserve">
+    <value>Empleado Recepción</value>
+  </data>
+  <data name="FuncionarioSaida" xml:space="preserve">
+    <value>Persona de Salida</value>
+  </data>
+  <data name="FuncionarioTreino" xml:space="preserve">
+    <value>Func. en formación</value>
+  </data>
+  <data name="Gama" xml:space="preserve">
+    <value>Rango</value>
+  </data>
+  <data name="GamaEntre" xml:space="preserve">
+    <value>Rango de Medida</value>
+  </data>
+  <data name="GerarOrdemVenda" xml:space="preserve">
+    <value>Generar pedidos de Venta</value>
+  </data>
+  <data name="GerirMarcacoesGerais" xml:space="preserve">
+    <value>Gestionar marcas general</value>
+  </data>
+  <data name="Gestao" xml:space="preserve">
+    <value>Gestión</value>
+  </data>
+  <data name="GestaoClasses" xml:space="preserve">
+    <value>Gestión de clases</value>
+  </data>
+  <data name="GestaoCodigosSAP" xml:space="preserve">
+    <value>Gestión de Códigos SAP</value>
+  </data>
+  <data name="GestaoEquipamentos" xml:space="preserve">
+    <value>Gest&lt;br /&gt;Equips.</value>
+  </data>
+  <data name="GestaoEquipamentosClientes" xml:space="preserve">
+    <value>Gestión de Equipos clientes</value>
+  </data>
+  <data name="GestaoFamilias" xml:space="preserve">
+    <value>Gestión de Familias</value>
+  </data>
+  <data name="GestaoGrandezas" xml:space="preserve">
+    <value>Gestión de Magnitudes</value>
+  </data>
+  <data name="GestaoLaboratorios" xml:space="preserve">
+    <value>Gestión de Laboratorios</value>
+  </data>
+  <data name="GestaoMarcacoesGerais" xml:space="preserve">
+    <value>Gestión de Planeamiento general</value>
+  </data>
+  <data name="GestaoMarcas" xml:space="preserve">
+    <value>Gestión de Marcas</value>
+  </data>
+  <data name="GestaoModelos" xml:space="preserve">
+    <value>Gestión de Modelos</value>
+  </data>
+  <data name="GestaoPaises" xml:space="preserve">
+    <value>Gestión de Países/Localidades</value>
+  </data>
+  <data name="GestaoPasswords" xml:space="preserve">
+    <value>Gestión de Passwords</value>
+  </data>
+  <data name="GestaoPerfis" xml:space="preserve">
+    <value>Gestión de Perfiles</value>
+  </data>
+  <data name="GestaoPrecos" xml:space="preserve">
+    <value>Gestión Precios</value>
+  </data>
+  <data name="GestaoTipoEquipamentos" xml:space="preserve">
+    <value>Gestión de Tipos de Equipos</value>
+  </data>
+  <data name="GestaoTiposPrecos" xml:space="preserve">
+    <value>Gestión Tipos Precios</value>
+  </data>
+  <data name="GestaoUnidadesAlcance" xml:space="preserve">
+    <value>Gestión Unidades Rango</value>
+  </data>
+  <data name="GestaoUnidadesClasses" xml:space="preserve">
+    <value>Gestión de Unidades de Clases</value>
+  </data>
+  <data name="GestaoUtilizadores" xml:space="preserve">
+    <value>Gestión de Usuarios</value>
+  </data>
+  <data name="Grandeza" xml:space="preserve">
+    <value>Magnitud</value>
+  </data>
+  <data name="GrandezaLaboratorio" xml:space="preserve">
+    <value>Magnitud / Lab</value>
+  </data>
+  <data name="Grau" xml:space="preserve">
+    <value>Grado</value>
+  </data>
+  <data name="Gravar" xml:space="preserve">
+    <value>Grabar</value>
+  </data>
+  <data name="GravarOrcamento" xml:space="preserve">
+    <value>Grabar Presupuesto</value>
+  </data>
+  <data name="Grupo" xml:space="preserve">
+    <value>Grupo</value>
+  </data>
+  <data name="GrupoContas" xml:space="preserve">
+    <value>Grupo Cuentas</value>
+  </data>
+  <data name="Historico" xml:space="preserve">
+    <value>Histórico</value>
+  </data>
+  <data name="HistoricoEstados" xml:space="preserve">
+    <value>Hist. Estados</value>
+  </data>
+  <data name="IdCliente" xml:space="preserve">
+    <value>ID Cliente</value>
+  </data>
+  <data name="Identificacao" xml:space="preserve">
+    <value>Identificación</value>
+  </data>
+  <data name="IDEquipamentoBD" xml:space="preserve">
+    <value>ID Equipo</value>
+  </data>
+  <data name="IdEstadoCertificado" xml:space="preserve">
+    <value>ID Estado Certificado</value>
+  </data>
+  <data name="IDRequisicao" xml:space="preserve">
+    <value>ID Pedido</value>
+  </data>
+  <data name="IdServico" xml:space="preserve">
+    <value>ID Servicio</value>
+  </data>
+  <data name="IdServicoBD" xml:space="preserve">
+    <value>ID Serv.&lt;br /&gt;(BD)</value>
+  </data>
+  <data name="ID_BD" xml:space="preserve">
+    <value>ID (BD)</value>
+  </data>
+  <data name="IgnorarAmbos" xml:space="preserve">
+    <value>Ignorar todos</value>
+  </data>
+  <data name="IgnorarCaracteres" xml:space="preserve">
+    <value>Ignorar el carácter *</value>
+  </data>
+  <data name="IgnorarEspacos" xml:space="preserve">
+    <value>No haga caso de los espacios</value>
+  </data>
+  <data name="ImprimirEtiquetasCalibracao" xml:space="preserve">
+    <value>Imprimir Etiquetas Calib.</value>
+  </data>
+  <data name="Inactivo" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="Incobravel" xml:space="preserve">
+    <value>Incobrable</value>
+  </data>
+  <data name="Incompletas" xml:space="preserve">
+    <value>Incompletas</value>
+  </data>
+  <data name="Indicacao" xml:space="preserve">
+    <value>Indicación</value>
+  </data>
+  <data name="IniciarSessao" xml:space="preserve">
+    <value>Iniciar Sesión</value>
+  </data>
+  <data name="Injuncao" xml:space="preserve">
+    <value>Juicio</value>
+  </data>
+  <data name="Inserir" xml:space="preserve">
+    <value>Insertar</value>
+  </data>
+  <data name="InserirAlcances" xml:space="preserve">
+    <value>Introducir Alcances</value>
+  </data>
+  <data name="InserirBRESubcontrato" xml:space="preserve">
+    <value>Añadir BRE Subcontratado</value>
+  </data>
+  <data name="InserirBSESubcontrato" xml:space="preserve">
+    <value>Añadir BSE Subcontratado</value>
+  </data>
+  <data name="InserirContactos" xml:space="preserve">
+    <value>Añadir Contactos</value>
+  </data>
+  <data name="InserirEmpresa" xml:space="preserve">
+    <value>Añadir Empresa</value>
+  </data>
+  <data name="InserirEquipamento" xml:space="preserve">
+    <value>Añadir Equipo</value>
+  </data>
+  <data name="InserirFuncionario" xml:space="preserve">
+    <value>Añadir Empleado</value>
+  </data>
+  <data name="InserirNovoEquipamento" xml:space="preserve">
+    <value>Añadir equipo nuevo</value>
+  </data>
+  <data name="InserirRequisicao" xml:space="preserve">
+    <value>Añadir Pedidos</value>
+  </data>
+  <data name="InstrucoesGestaoModelos" xml:space="preserve">
+    <value>&lt;fieldset&gt;&lt;legend&gt;Instrucciones&lt;/legend&gt;    Cuando se encuentren modelos repetidos, se podrán (y deberán) juntar esos modelos y dejar solo un modelo de esa designación. Para esto, se deberán seleccionar en rojo los modelos a ser modificados/borrados y en verde el modelo a ser mantenido. Seguidamente pinchar en el botón "Cambiar modelos".&lt;br /&gt; En este momento, no se pueden borrar marcas, y en breve será incluida una herramienta para este efecto.&lt;br /&gt;&lt;/fieldset&gt;</value>
+  </data>
+  <data name="InstWorkFlowPrimeiroCertificado" xml:space="preserve">
+    <value>Instrucciones WorkFlow para 1 licencia</value>
+  </data>
+  <data name="Interna" xml:space="preserve">
+    <value>Interna</value>
+  </data>
+  <data name="IntervaloMedicaoInferior" xml:space="preserve">
+    <value>Rango de medición Inf.</value>
+  </data>
+  <data name="Intervencoes" xml:space="preserve">
+    <value>Intervenciones</value>
+  </data>
+  <data name="Lab" xml:space="preserve">
+    <value>Lab.</value>
+  </data>
+  <data name="Laboratorio" xml:space="preserve">
+    <value>Laboratorio</value>
+  </data>
+  <data name="Laranja" xml:space="preserve">
+    <value>Naranja</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Legenda" xml:space="preserve">
+    <value>Leyenda</value>
+  </data>
+  <data name="LegendaGestaoMarcas" xml:space="preserve">
+    <value>&lt;fieldset&gt;&lt;legend&gt;Instrucciones&lt;/legend&gt;    Cuando se encuentren marcas repetidas, se podrán juntar estas marcas y seleccionando una marca de esa designación. Para esto, deberá seleccionar en rojo las marcas que han sido modificadas /"borradas" y en verde la marca a mantener. Seguidamente pinchar en el botón "Cambiar marcas".&lt;br /&gt;    Para ver los equipos asociados a cada marca, pinchar en "Equipos".&lt;br /&gt;    Para ver los modelos asociados a cada marca, pinchar en "Modelos".&lt;br /&gt;    En este momento, no se pueden borrar marcas, pero en breve será incluida una herramienta para este efecto.&lt;br /&gt;&lt;/fieldset&gt;</value>
+  </data>
+  <data name="LegServEstadoFinalizar" xml:space="preserve">
+    <value>Servicios con Estado por FINALIZAR a mas de 30 Dias (todas las magnitudes)</value>
+  </data>
+  <data name="LegV001" xml:space="preserve">
+    <value>V001 - Clientes Nacionales (Sedes)</value>
+  </data>
+  <data name="LegV002" xml:space="preserve">
+    <value>V002 - Clientes UE</value>
+  </data>
+  <data name="LegV003" xml:space="preserve">
+    <value>V003 - Clientes Otros Paises</value>
+  </data>
+  <data name="LegV005" xml:space="preserve">
+    <value>V005 - Filiales/Otras Ubicaciones</value>
+  </data>
+  <data name="lembAssocTpPreco" xml:space="preserve">
+    <value>(asociado con el tipo de precio)</value>
+  </data>
+  <data name="Limpar" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="LimparCampos" xml:space="preserve">
+    <value>Borrar Campos</value>
+  </data>
+  <data name="LimparEquipamentos" xml:space="preserve">
+    <value>Borrar Equipos</value>
+  </data>
+  <data name="LimparPesquisa" xml:space="preserve">
+    <value>Borrar Busqueda</value>
+  </data>
+  <data name="LimparResultados" xml:space="preserve">
+    <value>Borrar Resultados</value>
+  </data>
+  <data name="LimparTodos" xml:space="preserve">
+    <value>Borrar todos</value>
+  </data>
+  <data name="LinhasOrcamento" xml:space="preserve">
+    <value>Lineas de la Oferta</value>
+  </data>
+  <data name="LinhasOrcamPrecos" xml:space="preserve">
+    <value>Lineas Oferta Precios</value>
+  </data>
+  <data name="Lisboa" xml:space="preserve">
+    <value>Lisboa</value>
+  </data>
+  <data name="ListaBRESemReqNFact" xml:space="preserve">
+    <value>Listado BREs s/Pedido no cargados</value>
+  </data>
+  <data name="ListaEmpresasComBloqueio" xml:space="preserve">
+    <value>Listado completa empresas con bloqueo</value>
+  </data>
+  <data name="ListaEquipamentos" xml:space="preserve">
+    <value>Listado Equipos</value>
+  </data>
+  <data name="ListaPDF" xml:space="preserve">
+    <value>Listar PDF</value>
+  </data>
+  <data name="Listar" xml:space="preserve">
+    <value>Listar</value>
+  </data>
+  <data name="ListarBRESubcontrato" xml:space="preserve">
+    <value>Listar BRE Subcontratado</value>
+  </data>
+  <data name="ListarBSESubcontrato" xml:space="preserve">
+    <value>Listar BSE Subcontratado</value>
+  </data>
+  <data name="ListarContactos" xml:space="preserve">
+    <value>Listar Contactos</value>
+  </data>
+  <data name="ListarEmpresas" xml:space="preserve">
+    <value>Listar Empresas</value>
+  </data>
+  <data name="ListarEquipamentos" xml:space="preserve">
+    <value>Listar Equipos</value>
+  </data>
+  <data name="ListarFuncionarios" xml:space="preserve">
+    <value>Listar Empleados</value>
+  </data>
+  <data name="ListarRequisicoes" xml:space="preserve">
+    <value>Listar pedidos</value>
+  </data>
+  <data name="ListarServicos" xml:space="preserve">
+    <value>Listar Servicios</value>
+  </data>
+  <data name="Listas" xml:space="preserve">
+    <value>Listados</value>
+  </data>
+  <data name="ListaServicosAguardaCalibInternaPorGrandeza" xml:space="preserve">
+    <value>Servicios en espera calibración interna, por magnitud</value>
+  </data>
+  <data name="Livre" xml:space="preserve">
+    <value>Libre</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="LocalCalibracao" xml:space="preserve">
+    <value>Local de Calibración</value>
+  </data>
+  <data name="LocalEntradaEquipamento" xml:space="preserve">
+    <value>Local Entrada Equipo</value>
+  </data>
+  <data name="LocalEquip" xml:space="preserve">
+    <value>Local Equipo</value>
+  </data>
+  <data name="Localidade" xml:space="preserve">
+    <value>Localidad</value>
+  </data>
+  <data name="LocalidadePostal" xml:space="preserve">
+    <value>Localidad Postal</value>
+  </data>
+  <data name="Localizacao" xml:space="preserve">
+    <value>Ubicación</value>
+  </data>
+  <data name="LocalizacaoEquipamento" xml:space="preserve">
+    <value>Ubicación del &lt;br /&gt; Equipo</value>
+  </data>
+  <data name="LogsErrosVendasSAP" xml:space="preserve">
+    <value>Logs de Error de traspasar pedidos de venda a Axapta</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="MailAlternativo" xml:space="preserve">
+    <value>Mail alternativo</value>
+  </data>
+  <data name="Manter" xml:space="preserve">
+    <value>Mantener</value>
+  </data>
+  <data name="ManterTudoNormal" xml:space="preserve">
+    <value>Mantener todo normal</value>
+  </data>
+  <data name="Manut" xml:space="preserve">
+    <value>Mante.</value>
+  </data>
+  <data name="Manutencao" xml:space="preserve">
+    <value>Mantenimiento</value>
+  </data>
+  <data name="ManutencaoAprovisionamento" xml:space="preserve">
+    <value>Mantenimiento/Aprovisionamiento</value>
+  </data>
+  <data name="Marca" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="Marcacoes" xml:space="preserve">
+    <value>Planificación</value>
+  </data>
+  <data name="MarcaDescont" xml:space="preserve">
+    <value>Marca (descont)</value>
+  </data>
+  <data name="Marcar" xml:space="preserve">
+    <value>Marcar</value>
+  </data>
+  <data name="MarcarCompleta" xml:space="preserve">
+    <value>Marcar&lt;br /&gt;completa</value>
+  </data>
+  <data name="mdelos" xml:space="preserve">
+    <value>Modelos</value>
+  </data>
+  <data name="MelhoresEmpresas" xml:space="preserve">
+    <value>Mejores Empresas</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Meses" xml:space="preserve">
+    <value>(Meses)</value>
+  </data>
+  <data name="Modelo" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="ModeloDescont" xml:space="preserve">
+    <value>Modelo (descont.)</value>
+  </data>
+  <data name="Modelos" xml:space="preserve">
+    <value>Modelos</value>
+  </data>
+  <data name="Morada" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="MostrarEquipamentos" xml:space="preserve">
+    <value>Mostrar equipos</value>
+  </data>
+  <data name="MoverEquipamentos" xml:space="preserve">
+    <value>Mover equipos</value>
+  </data>
+  <data name="MSG_ASSOCIAR_EMPRESA_GRUPO" xml:space="preserve">
+    <value>Tiene que asociar la empresa a un grupo</value>
+  </data>
+  <data name="MSG_AUMENTAR_BLOQ_AMARELO_LARANJA" xml:space="preserve">
+    <value>Tiene que aumentar el nivel de bloqueo interno a amarillo o naranja</value>
+  </data>
+  <data name="MSG_BackofficeAdministrativo" xml:space="preserve">
+    <value>Este es un BackOffice Administrativo, para ser usado con responsabilidad. Por favor, antes de modificar la empresa contratante, verificar las condiciones de pago de la empresa tal como los posibles códigos de bloqueo.&lt;br /&gt;&lt;br /&gt;La empresa contratante podrá ser modificada, desde que los servicios no estén facturados.&lt;br /&gt;&lt;br /&gt;En el caso de que los servicios ya estén facturados, y que sea necesario modificar la empresa para la visualización de certificados, se podrá hacerlo, y se deberá informar la facturación que la factura ha sido enviada a una empresa que ha sido modificada.&lt;br /&gt;&lt;br /&gt;Las modificaciones quedan registradas.&lt;br /&gt;</value>
+  </data>
+  <data name="MSG_BLOQ_DEVE_ESTAR_LIVRE" xml:space="preserve">
+    <value>El nivel de bloqueo tiene que estar libre</value>
+  </data>
+  <data name="MSG_CONFIRMACAO_MARCACAO" xml:space="preserve">
+    <value>Marcación hecha</value>
+  </data>
+  <data name="MSG_DAR_ACESSO_LABMETRO_ONLINE" xml:space="preserve">
+    <value>Dar accesso labmetro online (?)</value>
+  </data>
+  <data name="MSG_DB" xml:space="preserve">
+    <value>Operación efectuada con éxito</value>
+  </data>
+  <data name="MSG_DELETE_DB" xml:space="preserve">
+    <value>Registro borrado con éxito</value>
+  </data>
+  <data name="MSG_DOCS_ALERTA_REFRESH" xml:space="preserve">
+    <value>Los documentos cargados solo aparecen nuevamente en el Item de Menu "Validar Documentos"</value>
+  </data>
+  <data name="MSG_DOCS_PENDENTES" xml:space="preserve">
+    <value>No existen calibraciones pendientes para validar</value>
+  </data>
+  <data name="MSG_DOCS_UPLOAD" xml:space="preserve">
+    <value>Documento cargado</value>
+  </data>
+  <data name="MSG_DOCS_VALIDACAO" xml:space="preserve">
+    <value>No seleccionó ningún documento</value>
+  </data>
+  <data name="MSG_EMPRESA_SEDE_TIRAR_GRUPO" xml:space="preserve">
+    <value>La empresa y sede, el grupo tiene que estar vacío</value>
+  </data>
+  <data name="MSG_FICH_FACTURA" xml:space="preserve">
+    <value>Fichero de facturación creado con éxito</value>
+  </data>
+  <data name="MSG_INDICAR_DESCRICAO" xml:space="preserve">
+    <value>Tiene que indicar una descripción</value>
+  </data>
+  <data name="MSG_INDICAR_EMAIL" xml:space="preserve">
+    <value>Por favor indique una dirección de email</value>
+  </data>
+  <data name="MSG_INDICAR_EMPRESA" xml:space="preserve">
+    <value>Por favor indica una empresa</value>
+  </data>
+  <data name="MSG_INDICAR_FAX" xml:space="preserve">
+    <value>Por favor indica un nº de fax</value>
+  </data>
+  <data name="MSG_INDICAR_PAI_ADITAMENTO" xml:space="preserve">
+    <value>Para suplementos tiene que seleccionar un servicio padre</value>
+  </data>
+  <data name="MSG_INDICAR_PARAMS" xml:space="preserve">
+    <value>Por favor introduzca los parámetros siguientes</value>
+  </data>
+  <data name="MSG_INDICAR_TIPO_SERVICO" xml:space="preserve">
+    <value>Tiene que indicar un tipo de servicio</value>
+  </data>
+  <data name="MSG_INSERIR_EMAIL" xml:space="preserve">
+    <value>Tiene que introducir la dirección de email</value>
+  </data>
+  <data name="MSG_INSERIR_EQUIPAMENTO" xml:space="preserve">
+    <value>Tiene que introducir un equipo.</value>
+  </data>
+  <data name="MSG_INSERIR_LINHA_FACTURA" xml:space="preserve">
+    <value>Tiene que introducir por lo menos una línea en la factura</value>
+  </data>
+  <data name="MSG_INSERIR_MIN_1EQUIPAMENTO" xml:space="preserve">
+    <value>Tiene que introducir el número de identificación del equipo </value>
+  </data>
+  <data name="MSG_INSERIR_NUM_IDENTIFICACAO" xml:space="preserve">
+    <value>Tiene que introducir el número de identificación del equipo </value>
+  </data>
+  <data name="MSG_INSERIR_REGIAO_VENDAS" xml:space="preserve">
+    <value>Existen calibraciones externas. Actualice la región de ventas de la empresa&lt;br&gt; y cargue en el botón "actualizar región" para grabar las modificaciones</value>
+  </data>
+  <data name="MSG_INSERT_DB" xml:space="preserve">
+    <value>Registro insertado con éxito</value>
+  </data>
+  <data name="MSG_LIMPAR_BLOQUEIO_INTERNO" xml:space="preserve">
+    <value>Tiene que Borrar el nivel de bloqueo interno</value>
+  </data>
+  <data name="MSG_MARCACAO_APAGADA" xml:space="preserve">
+    <value>Marcación cerrada</value>
+  </data>
+  <data name="MSG_MINIMUM_SEARCHCONDITION" xml:space="preserve">
+    <value>Tiene que introducir por lo menos un criterio de búsqueda</value>
+  </data>
+  <data name="MSG_NAO_EXISTEM_CONTACTOS" xml:space="preserve">
+    <value>No existen contactos introducidos en esta empresa. &lt;br&gt;Tiene que insertar un contacto primero</value>
+  </data>
+  <data name="MSG_NAO_EXISTEM_REQUISICOES" xml:space="preserve">
+    <value>No existen pedidos para la empresa seleccionada</value>
+  </data>
+  <data name="MSG_NIVEL_BLOQ_TEM_ESTAR_VERMELHO" xml:space="preserve">
+    <value>El nivel de bloqueo tiene que estar rojo</value>
+  </data>
+  <data name="MSG_NIVEL_NAO_PODE_ESTAR_VERMELHO" xml:space="preserve">
+    <value>El nivel de bloqueo no puede estar rojo</value>
+  </data>
+  <data name="MSG_NO_DATA" xml:space="preserve">
+    <value>No existen datos para este registro</value>
+  </data>
+  <data name="MSG_NO_RECORDS" xml:space="preserve">
+    <value>No existen registros</value>
+  </data>
+  <data name="MSG_NO_RESULTS" xml:space="preserve">
+    <value>No fueron encontrados registros para la búsqueda efectuada</value>
+  </data>
+  <data name="MSG_NUMCLIENTE_SAP_INEXISTENTE" xml:space="preserve">
+    <value>Este Nº Sap no existe en nuestras tablas</value>
+  </data>
+  <data name="MSG_PDF_CORROMPIDO" xml:space="preserve">
+    <value>Pdf corrompido. Crear un nuevo.</value>
+  </data>
+  <data name="MSG_PDF_CRIARNOVO" xml:space="preserve">
+    <value>Falta crear nuevo pdf</value>
+  </data>
+  <data name="MSG_PDF_INEXISTENTE" xml:space="preserve">
+    <value>Crear pdf urgente</value>
+  </data>
+  <data name="MSG_PERFIL_NAO_NECESSITA_GRANDEZAS" xml:space="preserve">
+    <value>Este perfil no necesita ser asociado a magnitudes!</value>
+  </data>
+  <data name="MSG_PESQUISA_SERVICOS" xml:space="preserve">
+    <value>Tiene que introducir mínimo un criterio de búsqueda. La búsqueda por Marca y/o Modelo, tiene que tener otro criterio (ej: Magnitud)</value>
+  </data>
+  <data name="MSG_PREENCHER_NUMSERIE_OU_NUMIDENT" xml:space="preserve">
+    <value>Tiene que introducir el número de série o el número de identificación</value>
+  </data>
+  <data name="MSG_REMOVER_PAI" xml:space="preserve">
+    <value>Solamente debe indicar un servicio padre para los suplementos</value>
+  </data>
+  <data name="MSG_SEARCH" xml:space="preserve">
+    <value>Por favor introduzca un criterio de búsqueda</value>
+  </data>
+  <data name="MSG_SELECCIONE_BRE" xml:space="preserve">
+    <value>Por favor seleccione un BRE</value>
+  </data>
+  <data name="MSG_SELECCIONE_CONTACTO" xml:space="preserve">
+    <value>Por favor seleccione un contacto</value>
+  </data>
+  <data name="MSG_SELECCIONE_EMPRESA" xml:space="preserve">
+    <value>Por favor seleccione una empresa</value>
+  </data>
+  <data name="MSG_SELECCIONE_ESTADO" xml:space="preserve">
+    <value>Por favor seleccione un estado</value>
+  </data>
+  <data name="MSG_SELECCIONE_GRANDEZA" xml:space="preserve">
+    <value>Por favor seleccione una magnitud</value>
+  </data>
+  <data name="MSG_SELECCIONE_TIPOEQUIPAMENTO" xml:space="preserve">
+    <value>Tiene que seleccionar un tipo de equipo</value>
+  </data>
+  <data name="MSG_TROCA_EFECTUADA" xml:space="preserve">
+    <value>Cambio efectuado con éxito</value>
+  </data>
+  <data name="MSG_UPDATE_DB" xml:space="preserve">
+    <value>Registro/s actualizado/s con éxito</value>
+  </data>
+  <data name="MudarEstados" xml:space="preserve">
+    <value>Actualizar Estados</value>
+  </data>
+  <data name="MudarEstadosServico" xml:space="preserve">
+    <value>Cambiar Estados Servicio</value>
+  </data>
+  <data name="MudarEstadosServicosSeleccionados" xml:space="preserve">
+    <value>Modificar estados servicios seleccionados</value>
+  </data>
+  <data name="MudarPara" xml:space="preserve">
+    <value>Modificar para</value>
+  </data>
+  <data name="MudarPassword" xml:space="preserve">
+    <value>»» Modificar Contraseña</value>
+  </data>
+  <data name="MultiplosServicos" xml:space="preserve">
+    <value>Multiplos Servicios</value>
+  </data>
+  <data name="Nao" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NaoAcreditado" xml:space="preserve">
+    <value>No Acreditado</value>
+  </data>
+  <data name="NaoConforme" xml:space="preserve">
+    <value>No Conforme</value>
+  </data>
+  <data name="NaoExistente" xml:space="preserve">
+    <value>No existente</value>
+  </data>
+  <data name="NaoPrecisaReqFacturar" xml:space="preserve">
+    <value>No necessita de Pedido para Facturar</value>
+  </data>
+  <data name="NIF" xml:space="preserve">
+    <value>CIF</value>
+  </data>
+  <data name="NivelBloqueio" xml:space="preserve">
+    <value>Nivel Bloqueo</value>
+  </data>
+  <data name="Nome" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NomeAbreviado" xml:space="preserve">
+    <value>Nombre Corto</value>
+  </data>
+  <data name="NomeContacto" xml:space="preserve">
+    <value>Nombre Contacto</value>
+  </data>
+  <data name="NomeDocumento" xml:space="preserve">
+    <value>Nombre Documento</value>
+  </data>
+  <data name="NomeEmpresa" xml:space="preserve">
+    <value>Nombre Empresa</value>
+  </data>
+  <data name="NomeFicheiro" xml:space="preserve">
+    <value>Nombre Fichero</value>
+  </data>
+  <data name="NomeTecnico" xml:space="preserve">
+    <value>Nombre Técnico</value>
+  </data>
+  <data name="NossaRefReq" xml:space="preserve">
+    <value>N/Ref. &lt;br /&gt;Pedido</value>
+  </data>
+  <data name="NotaAnulacaoEquipamentos" xml:space="preserve">
+    <value>Nota: Los equipos solo pueden ser anulados en la carpeta de Ensayo</value>
+  </data>
+  <data name="Notas" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="NotaUsarCampo" xml:space="preserve">
+    <value>Nota: usar este campo con cuidado, de forma general, deben ser introducidos los equipos correctos de la partida</value>
+  </data>
+  <data name="NovaFactura" xml:space="preserve">
+    <value>Nueva Factura</value>
+  </data>
+  <data name="NovasEmpresas" xml:space="preserve">
+    <value>Nuevas Empresas</value>
+  </data>
+  <data name="NovaVersao" xml:space="preserve">
+    <value>Nueva Version</value>
+  </data>
+  <data name="NumBRE" xml:space="preserve">
+    <value>Ref. BRE</value>
+  </data>
+  <data name="NumBRESub" xml:space="preserve">
+    <value>Nº BRE (Sub.)</value>
+  </data>
+  <data name="NumBSE" xml:space="preserve">
+    <value>Numero BSE</value>
+  </data>
+  <data name="NumBSESub" xml:space="preserve">
+    <value>Nº BSE (Sub.)</value>
+  </data>
+  <data name="NumCalibracoesFuncionario" xml:space="preserve">
+    <value>N.º de Calibraciones por Tecnico</value>
+  </data>
+  <data name="NumCalibracoesFuncionarioTreino" xml:space="preserve">
+    <value>N.º de Calibraciones por Tecnico en Formación</value>
+  </data>
+  <data name="NumCalibracoesTipoEquipamento" xml:space="preserve">
+    <value>N.º de Calibraciones por tipo de Equipo</value>
+  </data>
+  <data name="NumCliente" xml:space="preserve">
+    <value>N.º Cliente</value>
+  </data>
+  <data name="NumClienteAntigo" xml:space="preserve">
+    <value>Núm Cliente Antiguo</value>
+  </data>
+  <data name="NumClienteSAP" xml:space="preserve">
+    <value>Cód. Cliente</value>
+  </data>
+  <data name="NumDiasEspera" xml:space="preserve">
+    <value>N.º de días en Espera</value>
+  </data>
+  <data name="NumEntradasTempoMedioEspera" xml:space="preserve">
+    <value>N.º de Entradas y tiempo medio de Espera</value>
+  </data>
+  <data name="NumEquipsNaoFacturados" xml:space="preserve">
+    <value>N.º Equipos no Facturados</value>
+  </data>
+  <data name="Numero" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="NumFactura" xml:space="preserve">
+    <value>Nº Factura</value>
+  </data>
+  <data name="NumFaxAlterantivo" xml:space="preserve">
+    <value>Fax alternativo</value>
+  </data>
+  <data name="NumIdent" xml:space="preserve">
+    <value>Nº ID</value>
+  </data>
+  <data name="NumIdentificacao" xml:space="preserve">
+    <value>Núm Identificación</value>
+  </data>
+  <data name="NumMarcacao" xml:space="preserve">
+    <value>Nº marcacao</value>
+  </data>
+  <data name="NumOrcamentosPorMes" xml:space="preserve">
+    <value>N.º de ofertas por Mes</value>
+  </data>
+  <data name="NumPecas" xml:space="preserve">
+    <value>Nº Piezas</value>
+  </data>
+  <data name="NumPontos" xml:space="preserve">
+    <value>Nº Puntos</value>
+  </data>
+  <data name="NumSerie" xml:space="preserve">
+    <value>Núm Serie</value>
+  </data>
+  <data name="NumVezes" xml:space="preserve">
+    <value>Núm Veces</value>
+  </data>
+  <data name="Obs" xml:space="preserve">
+    <value>Obs.</value>
+  </data>
+  <data name="Observacoes" xml:space="preserve">
+    <value>Observaciones</value>
+  </data>
+  <data name="ObservacoesCliente" xml:space="preserve">
+    <value>Obs. Cliente</value>
+  </data>
+  <data name="ObservacoesEmpresa" xml:space="preserve">
+    <value>Observaciones Empresa</value>
+  </data>
+  <data name="ObservacoesInternas" xml:space="preserve">
+    <value>Obs. Internas</value>
+  </data>
+  <data name="ObservacoesMarcacao" xml:space="preserve">
+    <value>Observaciones Marcado</value>
+  </data>
+  <data name="ObsGama" xml:space="preserve">
+    <value>Obs. Rango</value>
+  </data>
+  <data name="ObsPaisesConcelhos" xml:space="preserve">
+    <value>*el país no está ligado a las provincias/comunidades, solo de portugal</value>
+  </data>
+  <data name="ObsReq" xml:space="preserve">
+    <value>Obs. Pedido</value>
+  </data>
+  <data name="ObsServ" xml:space="preserve">
+    <value>Obs. Servicio</value>
+  </data>
+  <data name="OPC" xml:space="preserve">
+    <value>OPC</value>
+  </data>
+  <data name="Orc" xml:space="preserve">
+    <value>Oferta</value>
+  </data>
+  <data name="Orcamento" xml:space="preserve">
+    <value>Oferta</value>
+  </data>
+  <data name="Orcamentos" xml:space="preserve">
+    <value>Ofertas</value>
+  </data>
+  <data name="OrcamentosEmAtraso" xml:space="preserve">
+    <value>Ofertas con retraso</value>
+  </data>
+  <data name="OrdemVenda" xml:space="preserve">
+    <value>Orden venta</value>
+  </data>
+  <data name="OrdenarResultados" xml:space="preserve">
+    <value>Ordenar Resultados por</value>
+  </data>
+  <data name="Ou" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="OuGama" xml:space="preserve">
+    <value>o Rango</value>
+  </data>
+  <data name="OutrasEstatísticas" xml:space="preserve">
+    <value>Otras Estadisticas</value>
+  </data>
+  <data name="OutroMotivo" xml:space="preserve">
+    <value>Otro Motivo</value>
+  </data>
+  <data name="OutrosServicosEquipamento" xml:space="preserve">
+    <value>Otros servicios efectuados sobre el mismo equipo</value>
+  </data>
+  <data name="Pagina" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="Pais" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="PamentosAtraso" xml:space="preserve">
+    <value>Falta de Pago</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordActual" xml:space="preserve">
+    <value>Password Actual</value>
+  </data>
+  <data name="PasswordNova" xml:space="preserve">
+    <value>Nueva Password</value>
+  </data>
+  <data name="PastaEnsaio" xml:space="preserve">
+    <value>Carpeta prueba</value>
+  </data>
+  <data name="PedidoPor" xml:space="preserve">
+    <value>Pedido por</value>
+  </data>
+  <data name="PedidoRespeitoNomenclatura" xml:space="preserve">
+    <value>Por favor: respectar la nomenclatura existente y no introducir localidades repetidas (escritas de forma diferente). Pesquisar antes de inserir.</value>
+  </data>
+  <data name="PEP3ProjRetalho" xml:space="preserve">
+    <value>PEP3&lt;br /&gt;Proj.Retalho</value>
+  </data>
+  <data name="Perfil" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="PeriodCalibMeses" xml:space="preserve">
+    <value>Period. Calib. (meses)</value>
+  </data>
+  <data name="PeriodicidadeCalib" xml:space="preserve">
+    <value>Periodicidad de calibración</value>
+  </data>
+  <data name="PertenceUtilizador" xml:space="preserve">
+    <value>Pertenece&lt;br /&gt;Utiliz.</value>
+  </data>
+  <data name="per_m" xml:space="preserve">
+    <value>per.(m)</value>
+  </data>
+  <data name="Pesquisar" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="PesquisarBREs" xml:space="preserve">
+    <value>Buscar BREs</value>
+  </data>
+  <data name="PesquisarBREsExternos" xml:space="preserve">
+    <value>Buscar BREs externos</value>
+  </data>
+  <data name="PesquisarBREsSubcontrato" xml:space="preserve">
+    <value>Buscar BREs SubContrato</value>
+  </data>
+  <data name="PesquisarBSEsSubcontrato" xml:space="preserve">
+    <value>Buscar BSE SubContrato</value>
+  </data>
+  <data name="PesquisarCertificados" xml:space="preserve">
+    <value>Buscar Certificados</value>
+  </data>
+  <data name="PesquisarContactos" xml:space="preserve">
+    <value>Buscar Contactos</value>
+  </data>
+  <data name="PesquisaRefCalibracao" xml:space="preserve">
+    <value>Búsqueda por referencia de Calibración</value>
+  </data>
+  <data name="PesquisarEmpresa" xml:space="preserve">
+    <value>Búsqueda Empresas</value>
+  </data>
+  <data name="PesquisarEmpresas" xml:space="preserve">
+    <value>Búsqueda Empresas</value>
+  </data>
+  <data name="PesquisarEmpresasSAP" xml:space="preserve">
+    <value>Búsqueda Empresas</value>
+  </data>
+  <data name="PesquisarEquipamentos" xml:space="preserve">
+    <value>Búsqueda Equipos</value>
+  </data>
+  <data name="PesquisarEquipamentosPorEmpresa" xml:space="preserve">
+    <value>Buscar Equipo Empresas</value>
+  </data>
+  <data name="PesquisarFacturas" xml:space="preserve">
+    <value>Buscar Facturas</value>
+  </data>
+  <data name="PesquisarFuncionarios" xml:space="preserve">
+    <value>Buscar Empleados</value>
+  </data>
+  <data name="PesquisarGrandeza" xml:space="preserve">
+    <value>Buscar Magnitud</value>
+  </data>
+  <data name="PesquisarGrupo" xml:space="preserve">
+    <value>Buscar Grupo</value>
+  </data>
+  <data name="PesquisarListarEquipamentos" xml:space="preserve">
+    <value>Búsqueda / Listar Equipos</value>
+  </data>
+  <data name="PesquisarOrcamentos" xml:space="preserve">
+    <value>Buscar Oferta</value>
+  </data>
+  <data name="PesquisarPorEquipamento" xml:space="preserve">
+    <value>Buscar por equipos</value>
+  </data>
+  <data name="PesquisarServicos" xml:space="preserve">
+    <value>Buscar Servicios</value>
+  </data>
+  <data name="PlanoPagamento" xml:space="preserve">
+    <value>Forma de Pago</value>
+  </data>
+  <data name="PodeFacturarSemRequisicao" xml:space="preserve">
+    <value>Puede Facturar Sin Pedido</value>
+  </data>
+  <data name="PontosCalibracao" xml:space="preserve">
+    <value>Puntos Calibración</value>
+  </data>
+  <data name="Porto" xml:space="preserve">
+    <value>Porto</value>
+  </data>
+  <data name="PrecoCompraEuros" xml:space="preserve">
+    <value>Precio de compra (Euros)</value>
+  </data>
+  <data name="Prioridade" xml:space="preserve">
+    <value>Prioridad</value>
+  </data>
+  <data name="Procurar" xml:space="preserve">
+    <value>Búsqueda</value>
+  </data>
+  <data name="ProcurarPor" xml:space="preserve">
+    <value>Búsqueda de</value>
+  </data>
+  <data name="Qtd" xml:space="preserve">
+    <value>Ctd</value>
+  </data>
+  <data name="Qual" xml:space="preserve">
+    <value>Cal.</value>
+  </data>
+  <data name="Qualidade" xml:space="preserve">
+    <value>Calidad</value>
+  </data>
+  <data name="Quantidade" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="Razao" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
+  <data name="RecebidoPor" xml:space="preserve">
+    <value>Recibido por</value>
+  </data>
+  <data name="RecepcionarEquipamentos" xml:space="preserve">
+    <value>Recepcionar Equipos</value>
+  </data>
+  <data name="Ref" xml:space="preserve">
+    <value>Ref.</value>
+  </data>
+  <data name="RefCalib" xml:space="preserve">
+    <value>Ref Calibración</value>
+  </data>
+  <data name="RefCliente" xml:space="preserve">
+    <value>Ref. Cliente</value>
+  </data>
+  <data name="ReferenciaOrcamento" xml:space="preserve">
+    <value>Referencia Oferta</value>
+  </data>
+  <data name="ReferenciaRequisicao" xml:space="preserve">
+    <value>Ref. Pedido</value>
+  </data>
+  <data name="ReferenciaServico" xml:space="preserve">
+    <value>Referencia Servicio</value>
+  </data>
+  <data name="ReferenciaServicoCompleta" xml:space="preserve">
+    <value>Referencia de Servicio Completa</value>
+  </data>
+  <data name="ReferenciaUltimaCalibracao" xml:space="preserve">
+    <value>Referencia Última Calibración</value>
+  </data>
+  <data name="RefInterna" xml:space="preserve">
+    <value>Ref. Labmetro</value>
+  </data>
+  <data name="RefMarcacao" xml:space="preserve">
+    <value>Ref Planificación</value>
+  </data>
+  <data name="RefOrc" xml:space="preserve">
+    <value>Ref. Oferta</value>
+  </data>
+  <data name="RefOrcamentoANG" xml:space="preserve">
+    <value>Ref. Oferta </value>
+  </data>
+  <data name="RefReq" xml:space="preserve">
+    <value>Ref. Pedidos</value>
+  </data>
+  <data name="RefReqCliente" xml:space="preserve">
+    <value>Ref. Pedido &lt;br /&gt; Cliente</value>
+  </data>
+  <data name="RefRequisicaoANG" xml:space="preserve">
+    <value>Ref. Pedido Cliente</value>
+  </data>
+  <data name="RefServ" xml:space="preserve">
+    <value>Ref. Servicio</value>
+  </data>
+  <data name="RefServico" xml:space="preserve">
+    <value>Ref. Calibración</value>
+  </data>
+  <data name="RefServicoPai" xml:space="preserve">
+    <value>Ref. Servicio PAI</value>
+  </data>
+  <data name="RefUltimaCalibracao" xml:space="preserve">
+    <value>Ref. Última &lt;br /&gt; Calibración</value>
+  </data>
+  <data name="RefVer" xml:space="preserve">
+    <value>Ref. &lt;br /&gt; (ver)</value>
+  </data>
+  <data name="RegiaoVendas" xml:space="preserve">
+    <value>Zona Ventas</value>
+  </data>
+  <data name="RejeitadoPeloResponsavel" xml:space="preserve">
+    <value>Rechazado por el Responsável</value>
+  </data>
+  <data name="RejeitadoPeloTecnico" xml:space="preserve">
+    <value>Rechazado por el técnico</value>
+  </data>
+  <data name="Rejeitar" xml:space="preserve">
+    <value>Rechazar</value>
+  </data>
+  <data name="RejeitarTodos" xml:space="preserve">
+    <value>Rechazar Todos</value>
+  </data>
+  <data name="Remover" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="RemoverFicheiro" xml:space="preserve">
+    <value>Borrar Fichero</value>
+  </data>
+  <data name="RemovReq" xml:space="preserve">
+    <value>Borrar Pedido</value>
+  </data>
+  <data name="Renov" xml:space="preserve">
+    <value>Renov.?</value>
+  </data>
+  <data name="Renovavel" xml:space="preserve">
+    <value>Renovable</value>
+  </data>
+  <data name="ReparadoPor" xml:space="preserve">
+    <value>Reparado por</value>
+  </data>
+  <data name="Replica" xml:space="preserve">
+    <value>Copia</value>
+  </data>
+  <data name="Req" xml:space="preserve">
+    <value>Ped.</value>
+  </data>
+  <data name="ReqPDF" xml:space="preserve">
+    <value>Pedido PDF</value>
+  </data>
+  <data name="RequerCertificadoConclusivo" xml:space="preserve">
+    <value>Requier certificado conclusivo</value>
+  </data>
+  <data name="Requisicao" xml:space="preserve">
+    <value>Pedido</value>
+  </data>
+  <data name="Requisicoes" xml:space="preserve">
+    <value>Pedidos</value>
+  </data>
+  <data name="RequisicoesAtraso" xml:space="preserve">
+    <value>Falta de Pedido</value>
+  </data>
+  <data name="RequisicoesEmpresa" xml:space="preserve">
+    <value>Pedidos Empresa</value>
+  </data>
+  <data name="Resolucao" xml:space="preserve">
+    <value>Resolución</value>
+  </data>
+  <data name="ResponsavelEquipamento" xml:space="preserve">
+    <value>Responsable Equipo </value>
+  </data>
+  <data name="ResponsavelPelaValidacao" xml:space="preserve">
+    <value>Responsável por la Validación</value>
+  </data>
+  <data name="ResponsavelTecnico" xml:space="preserve">
+    <value>Responsável Técnico</value>
+  </data>
+  <data name="ResultadoUltimaCalibracao" xml:space="preserve">
+    <value>Resultados por la última calibración</value>
+  </data>
+  <data name="Retalho" xml:space="preserve">
+    <value>Retallo</value>
+  </data>
+  <data name="Sede" xml:space="preserve">
+    <value>Sede</value>
+  </data>
+  <data name="Seleccionar" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="SeleccionarSetaCodEquip" xml:space="preserve">
+    <value>* seleccionar en la flecha del campo "Cód. Equip."</value>
+  </data>
+  <data name="SeleccionarTodos" xml:space="preserve">
+    <value>Seleccionar todos</value>
+  </data>
+  <data name="SemBloqueio" xml:space="preserve">
+    <value>Sin Bloqueo</value>
+  </data>
+  <data name="SemFax" xml:space="preserve">
+    <value>Sin Fax</value>
+  </data>
+  <data name="ServicoPai" xml:space="preserve">
+    <value>S. Pai</value>
+  </data>
+  <data name="Servicos" xml:space="preserve">
+    <value>Servicios</value>
+  </data>
+  <data name="ServicosAFacturar" xml:space="preserve">
+    <value>Servicios a facturar</value>
+  </data>
+  <data name="ServicosAssociados" xml:space="preserve">
+    <value>Servicios &lt;br /&gt; Asociados</value>
+  </data>
+  <data name="ServicosBRE" xml:space="preserve">
+    <value>Servicios BRE</value>
+  </data>
+  <data name="ServicosSemRequisicao" xml:space="preserve">
+    <value>Servicios sin pedido</value>
+  </data>
+  <data name="Sigla" xml:space="preserve">
+    <value>Sigla</value>
+  </data>
+  <data name="Sim" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="Simbolo" xml:space="preserve">
+    <value>Simbolo</value>
+  </data>
+  <data name="SimboloAcreditacao" xml:space="preserve">
+    <value>Símbolo Acreditación</value>
+  </data>
+  <data name="SoBRECompletos" xml:space="preserve">
+    <value>Solo BRE's Completos</value>
+  </data>
+  <data name="SoComFicheiro" xml:space="preserve">
+    <value>Solo con Fichero</value>
+  </data>
+  <data name="SoContactosActivos" xml:space="preserve">
+    <value>Solo contactos activos</value>
+  </data>
+  <data name="SoEquipActivos" xml:space="preserve">
+    <value>Solo equipos activos</value>
+  </data>
+  <data name="SoSedes" xml:space="preserve">
+    <value>solo sedes</value>
+  </data>
+  <data name="SoServicosFacturados" xml:space="preserve">
+    <value>Solo servicios facturados</value>
+  </data>
+  <data name="SoServicosFacturadosComReq" xml:space="preserve">
+    <value>Solo servicios no facturados y que precisan de pedido para ser facturados</value>
+  </data>
+  <data name="SP" xml:space="preserve">
+    <value>S.P.</value>
+  </data>
+  <data name="Subcontratada" xml:space="preserve">
+    <value>Subcontratada</value>
+  </data>
+  <data name="SubcontratarEquipamentos" xml:space="preserve">
+    <value>Subcontratar Equipos</value>
+  </data>
+  <data name="Subcontrato" xml:space="preserve">
+    <value>Subcontratado</value>
+  </data>
+  <data name="Submeter" xml:space="preserve">
+    <value>Submeter </value>
+  </data>
+  <data name="SubTotal" xml:space="preserve">
+    <value>Sub Total</value>
+  </data>
+  <data name="Tabela" xml:space="preserve">
+    <value>Tabla</value>
+  </data>
+  <data name="Tecnico" xml:space="preserve">
+    <value>Técnico</value>
+  </data>
+  <data name="TecnicoCalibracaoValidacao" xml:space="preserve">
+    <value>Técnico de Calibración Validación</value>
+  </data>
+  <data name="TecnicoCalibValid" xml:space="preserve">
+    <value>Técnico&lt;br /&gt;Calib./&lt;br /&gt;Valid.</value>
+  </data>
+  <data name="TelDir" xml:space="preserve">
+    <value>Teléfono Direto</value>
+  </data>
+  <data name="Telefone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="Telefone1" xml:space="preserve">
+    <value>Teléfono 1</value>
+  </data>
+  <data name="Telefone2" xml:space="preserve">
+    <value>Teléfono 2</value>
+  </data>
+  <data name="TelefoneDirecto" xml:space="preserve">
+    <value>Teléfono Directo</value>
+  </data>
+  <data name="Telemovel" xml:space="preserve">
+    <value>Teléfono móvil</value>
+  </data>
+  <data name="TemContrato" xml:space="preserve">
+    <value>Con Contrato</value>
+  </data>
+  <data name="TempoExecucao" xml:space="preserve">
+    <value>Tiempo de Ejecución</value>
+  </data>
+  <data name="TempoMedioEsperaOrcamentos" xml:space="preserve">
+    <value>Tiempo medio de espera de las Ofertas</value>
+  </data>
+  <data name="TerminarSessao" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+  </data>
+  <data name="TextoLivre" xml:space="preserve">
+    <value>Texto (libre)</value>
+  </data>
+  <data name="Tipo" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="TipoCertif" xml:space="preserve">
+    <value>Tipo Certif.</value>
+  </data>
+  <data name="TipoDoc" xml:space="preserve">
+    <value>Tipo de Doc.</value>
+  </data>
+  <data name="TipoEmpresa" xml:space="preserve">
+    <value>Tipo de Empresa</value>
+  </data>
+  <data name="TipoEquipamento" xml:space="preserve">
+    <value>Tipo de Equipo</value>
+  </data>
+  <data name="TipoIntervencao" xml:space="preserve">
+    <value>Tipo de intervención</value>
+  </data>
+  <data name="TipoPreco" xml:space="preserve">
+    <value>Tipo Precio</value>
+  </data>
+  <data name="TipoServico" xml:space="preserve">
+    <value>Tipo &lt;br /&gt; Servicio</value>
+  </data>
+  <data name="Todas" xml:space="preserve">
+    <value>Todas</value>
+  </data>
+  <data name="Todos" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="TodosC" xml:space="preserve">
+    <value>Todos C</value>
+  </data>
+  <data name="TodosComRequisicao" xml:space="preserve">
+    <value>Todo con Pedido</value>
+  </data>
+  <data name="TodosE" xml:space="preserve">
+    <value>Todos E</value>
+  </data>
+  <data name="TodosV" xml:space="preserve">
+    <value>Todos V</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TrabalhoAEfectuar" xml:space="preserve">
+    <value>Trabajo a realizar</value>
+  </data>
+  <data name="TrabalhosGanhosPerdidos" xml:space="preserve">
+    <value>Trabajos Adjudicados/ Perdidos</value>
+  </data>
+  <data name="TrabefectinstISQ_Cliente" xml:space="preserve">
+    <value>Trabajo a realizar en las instalaciones de Labmetro / cliente</value>
+  </data>
+  <data name="TrabEfectuadoNoCliente" xml:space="preserve">
+    <value>Trabajo a realizar en las instalaciones del cliente</value>
+  </data>
+  <data name="TrabEfectuadoNoISQ" xml:space="preserve">
+    <value>Trabajo a realizar en las instalaciones de Labmetro</value>
+  </data>
+  <data name="TrocarEquipamentos" xml:space="preserve">
+    <value>Cambiar Equipo</value>
+  </data>
+  <data name="TrocarMarcas" xml:space="preserve">
+    <value>Cambiar Marcas</value>
+  </data>
+  <data name="TrocarModelos" xml:space="preserve">
+    <value>Cambiar Modelos</value>
+  </data>
+  <data name="UltCriacao" xml:space="preserve">
+    <value>Util. creación</value>
+  </data>
+  <data name="Unidade" xml:space="preserve">
+    <value>Unidad</value>
+  </data>
+  <data name="UnidadeGama" xml:space="preserve">
+    <value>Unidad por Rango de Medida</value>
+  </data>
+  <data name="UnidMedicaoInf" xml:space="preserve">
+    <value>Unid. Medida Inf.</value>
+  </data>
+  <data name="UnidMedicaoSup" xml:space="preserve">
+    <value>Unid. Medida Sup.</value>
+  </data>
+  <data name="UploadCertificado" xml:space="preserve">
+    <value>Upload Certif web</value>
+  </data>
+  <data name="UsarNumero" xml:space="preserve">
+    <value>Usar Núm.</value>
+  </data>
+  <data name="UserEstado" xml:space="preserve">
+    <value>Usuario Estado</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="UtilizadoresAssociadosAoPerfil" xml:space="preserve">
+    <value>Usuarios Asociados al Perfil</value>
+  </data>
+  <data name="UtilizadoresRegistados" xml:space="preserve">
+    <value>Usuarios Registrados</value>
+  </data>
+  <data name="ValDeCertificados" xml:space="preserve">
+    <value>Validación de Certif.</value>
+  </data>
+  <data name="ValFactEquip" xml:space="preserve">
+    <value>Valores facturados por equipo</value>
+  </data>
+  <data name="Validade" xml:space="preserve">
+    <value>Validez</value>
+  </data>
+  <data name="ValidadeEmMeses" xml:space="preserve">
+    <value>Validaz en meses</value>
+  </data>
+  <data name="ValidadoPor" xml:space="preserve">
+    <value>Validado por</value>
+  </data>
+  <data name="ValidarDocumentos" xml:space="preserve">
+    <value>Validar Documentos</value>
+  </data>
+  <data name="ValMeses" xml:space="preserve">
+    <value>Val. mes</value>
+  </data>
+  <data name="Valor" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="ValoresFactura" xml:space="preserve">
+    <value>Valores de factura</value>
+  </data>
+  <data name="ValorFinal" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="ValorLinha" xml:space="preserve">
+    <value>Valor por Linea</value>
+  </data>
+  <data name="ValorLinhaBR" xml:space="preserve">
+    <value>Valor Linea BR</value>
+  </data>
+  <data name="ValorSuperior" xml:space="preserve">
+    <value>Valor Superior a</value>
+  </data>
+  <data name="ValorTotal" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="ValorUnit" xml:space="preserve">
+    <value>Valor&lt;br /&gt;Unit.</value>
+  </data>
+  <data name="ValorUnitario" xml:space="preserve">
+    <value>Valor unitario</value>
+  </data>
+  <data name="Ver" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="VerBre" xml:space="preserve">
+    <value>Ver BRE</value>
+  </data>
+  <data name="VerBRESub" xml:space="preserve">
+    <value>Ver BRE (sub)</value>
+  </data>
+  <data name="VerBSE" xml:space="preserve">
+    <value>Ver BSE</value>
+  </data>
+  <data name="VerBSESub" xml:space="preserve">
+    <value>Ver BSE (Sub.)</value>
+  </data>
+  <data name="VerDoc" xml:space="preserve">
+    <value>Visualizar Documento</value>
+  </data>
+  <data name="VerDocumento" xml:space="preserve">
+    <value>Visualizar doc</value>
+  </data>
+  <data name="verEmpresas" xml:space="preserve">
+    <value>Buscar Empresas</value>
+  </data>
+  <data name="VerEtiquetas" xml:space="preserve">
+    <value>Ver Etiquetas</value>
+  </data>
+  <data name="VerFactura" xml:space="preserve">
+    <value>Ver Factura</value>
+  </data>
+  <data name="VerFax" xml:space="preserve">
+    <value>Ver Fax</value>
+  </data>
+  <data name="VerFaxesEnviados" xml:space="preserve">
+    <value>Ver faxes enviados</value>
+  </data>
+  <data name="VerGrandezasAssociadas" xml:space="preserve">
+    <value>Visualizar&lt;br /&gt; Magnitudes &lt;br /&gt;Asociadas</value>
+  </data>
+  <data name="VerHistoricoEstados" xml:space="preserve">
+    <value>Buscar Historico de Estados</value>
+  </data>
+  <data name="VerificadoPor" xml:space="preserve">
+    <value>Verificado por</value>
+  </data>
+  <data name="VerLinhas" xml:space="preserve">
+    <value>Ver Lineas</value>
+  </data>
+  <data name="VerLinhasUnicas" xml:space="preserve">
+    <value>Ver lineas unicas</value>
+  </data>
+  <data name="VerMail" xml:space="preserve">
+    <value>Ver Mail</value>
+  </data>
+  <data name="Vermelho" xml:space="preserve">
+    <value>Rojo</value>
+  </data>
+  <data name="VerOcultarOrcamentos" xml:space="preserve">
+    <value>Ver/Ocultar Oferta</value>
+  </data>
+  <data name="VerOcultarRequisicoes" xml:space="preserve">
+    <value>Ver/Ocultar Pedido</value>
+  </data>
+  <data name="VerPermissoesPerfil" xml:space="preserve">
+    <value>Ver permisos para perfil</value>
+  </data>
+  <data name="VerRequisicoes" xml:space="preserve">
+    <value>Ver Pedidos</value>
+  </data>
+  <data name="Versao" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VerServicos" xml:space="preserve">
+    <value>Ver Servicios</value>
+  </data>
+  <data name="VerTodos" xml:space="preserve">
+    <value>Ver Todos</value>
+  </data>
+  <data name="ZiparCertificados" xml:space="preserve">
+    <value>Comprimir Certificados</value>
+  </data>
+  <data name="AdicionarEquipamento" xml:space="preserve">
+    <value>Añadir Equipamiento</value>
+  </data>
+  <data name="CalibracoesEmAtrasoPlanoCal" xml:space="preserve">
+    <value>Calibraciones en Retraso (plano cal.)</value>
+  </data>
+  <data name="CodigosSAP" xml:space="preserve">
+    <value>Códigos Laboratorios (CC, PEP, Reg.Ventas)</value>
+  </data>
+  <data name="EquipamantoACalibrarPlanoCal" xml:space="preserve">
+    <value>Equipamientos a Calibrar (plano cal.)</value>
+  </data>
+  <data name="EquipamentoNaoFacturadoAgrupadoBRE" xml:space="preserve">
+    <value>Equipamiento No Facturado - Agrupado por BRE</value>
+  </data>
+  <data name="EquipamentoNaoFacturadoAgrupadoEmpresa" xml:space="preserve">
+    <value>Equipamiento No Facturado - Agrupado por Empresa</value>
+  </data>
+  <data name="EquipamentoNaoFacturadoPesquisaEmpresa" xml:space="preserve">
+    <value>Equipamiento No Facturado //BÚSQUEDA POR EMPRESA(s)</value>
+  </data>
+  <data name="EquipamentoNaoFacturadoPorBRE" xml:space="preserve">
+    <value>Equipamiento No Facturado por BRE</value>
+  </data>
+  <data name="EquipamentoPorEstadoConGrandeza" xml:space="preserve">
+    <value>Equipamientos por Estado (c/ búsqueda p/Magnitud)</value>
+  </data>
+  <data name="EquipamentoPorEstadoFacturarAngola" xml:space="preserve">
+    <value>Equipamientos por Estado para facturar Angola</value>
+  </data>
+  <data name="EquipamentosPrecoZero" xml:space="preserve">
+    <value>Equipamiento Facturado con Precio Cero</value>
+  </data>
+  <data name="MelhoresEmpresas1" xml:space="preserve">
+    <value>Mejores Empresas</value>
+  </data>
+  <data name="NovasEmpresas1" xml:space="preserve">
+    <value>Nuevas Empresas</value>
+  </data>
+  <data name="NumCalibracoesPorFuncionario" xml:space="preserve">
+    <value>Nº de Calibraciones por Funcionario</value>
+  </data>
+  <data name="NumCalibracoesPorFuncionarioDetalhes" xml:space="preserve">
+    <value>Nº de Calibraciones por Funcionario con detalle de Servicios</value>
+  </data>
+  <data name="NumCalibracoesPorTipoEquipamento" xml:space="preserve">
+    <value>Nº de Calibraciones por Tipo de Equipamiento</value>
+  </data>
+  <data name="NumEquipamentosNaoFacturados" xml:space="preserve">
+    <value>Nº de Equipamientos No Facturados</value>
+  </data>
+  <data name="Periodo" xml:space="preserve">
+    <value>Período</value>
+  </data>
+  <data name="PlanoCalibracao" xml:space="preserve">
+    <value>Plano de Calibración</value>
+  </data>
+  <data name="PlanoCalibracaoExcel" xml:space="preserve">
+    <value>Plano Calibración en excel</value>
+  </data>
+  <data name="PrimTrimestre" xml:space="preserve">
+    <value>1º Trimestre</value>
+  </data>
+  <data name="SegTrimestre" xml:space="preserve">
+    <value>2º Trimestre</value>
+  </data>
+  <data name="SuperiorA" xml:space="preserve">
+    <value>Superior a</value>
+  </data>
+  <data name="UltimoAno" xml:space="preserve">
+    <value>Último año</value>
+  </data>
+  <data name="Variacao" xml:space="preserve">
+    <value>Variación</value>
+  </data>
+  <data name="DataAguarda" xml:space="preserve">
+    <value>Data Espera Calib.</value>
+  </data>
+  <data name="DiasDesdeAguardaCalib" xml:space="preserve">
+    <value>Dias desde Espera Calib.</value>
+  </data>
+  <data name="DiasDesdeBRE" xml:space="preserve">
+    <value>Dias desde BRE</value>
+  </data>
+  <data name="ReportsListas" xml:space="preserve">
+    <value>Reports - Listados</value>
+  </data>
+  <data name="ServicoFacturadoNaoAlterar" xml:space="preserve">
+    <value>Serviço facturado.&lt;br /&gt;Não alterar dados do serviço sem comunicar à facturação.</value>
+  </data>
+  <data name="codigoIPQ" xml:space="preserve">
+    <value>code IPQ</value>
+  </data>
+  <data name="FacturacaoPorTipoEquipamento" xml:space="preserve">
+    <value>Facturación por tipo de equipo</value>
+  </data>
+  <data name="LaboratorioGrandeza" xml:space="preserve">
+    <value>Laboratorio / Magnitud</value>
+  </data>
+  <data name="ValorFacturadoPorEquipamento" xml:space="preserve">
+    <value>Valores Facturados por Equipo</value>
+  </data>
+  <data name="BresSemRequisicaoNaoFacturados" xml:space="preserve">
+    <value>BRE Sem Requisição Não Facturados</value>
+  </data>
+  <data name="CalibracoesPorFuncionario" xml:space="preserve">
+    <value>Calibraciones por Funcionario</value>
+  </data>
+  <data name="EquipamentoNaoFacturadoAgrupadodBRE" xml:space="preserve">
+    <value>Equipamiento No Facturado agrupado por BRE</value>
+  </data>
+  <data name="NumCalibracoesPorFuncionarioEmTreino" xml:space="preserve">
+    <value>Nº de Calibraciones por Tecnico en Formación</value>
+  </data>
+  <data name="NumCalibracoesPorFuncionarioPesquisaServicos" xml:space="preserve">
+    <value>Nº de Calibraciones por Funcionario c/busqueda Servicio</value>
+  </data>
+  <data name="NumOrcamentosMes" xml:space="preserve">
+    <value>Num.Presupuestos/Mes</value>
+  </data>
+  <data name="LocalDestino" xml:space="preserve">
+    <value>Local Destino (Para)</value>
+  </data>
+  <data name="LocalActual" xml:space="preserve">
+    <value>Local actual:</value>
+  </data>
+  <data name="LegendaMS" xml:space="preserve">
+    <value>Multiplos servicios: significa que hay otros servicios a serem realizados sobre el mismo equipamiento. Dar prioridad al servicio para optimizar los tiempos.</value>
+  </data>
+  <data name="Aprovado" xml:space="preserve">
+    <value>Aprobado</value>
+  </data>
+  <data name="AprovadoParcialmente" xml:space="preserve">
+    <value>Aprobado parcialmente</value>
+  </data>
+</root>

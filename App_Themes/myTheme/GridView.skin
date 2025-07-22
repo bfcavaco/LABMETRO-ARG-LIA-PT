@@ -1,0 +1,16 @@
+<asp:GridView 
+    runat="server"    
+    BackColor="#dcdcdc" 
+    AlternatingRowStyle-BackColor="#E8E8E8" 
+    HeaderStyle-BackColor="#a9a9a9"
+    RowStyle-HorizontalAlign="Left" 
+    HeaderStyle-HorizontalAlign="Center" 
+    HeaderStyle-Font-Bold="true"
+    BorderWidth="2" 
+    GridLines="Both" 
+    BorderColor="#FFFFFF"
+    PagerStyle-Mode="NumericPages" 
+    CellPadding="2"
+    SelectedRowStyle-BackColor="#F9814D" 
+    Width="100%" 
+    RowStyle-Font-Size="0.9em" />

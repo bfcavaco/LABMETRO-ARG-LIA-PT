@@ -1,0 +1,17 @@
+﻿  <asp:DataGrid 
+    runat="server" 
+    BackColor="#dcdcdc" 
+    AlternatingItemStyle-BackColor="#E8E8E8" 
+    HeaderStyle-BackColor="#a9a9a9"
+    
+    ItemStyle-HorizontalAlign="Left" 
+    HeaderStyle-HorizontalAlign="Center" 
+    HeaderStyle-Font-Bold="true"
+    BorderWidth="2" 
+    GridLines="Both" 
+    BorderColor="#FFFFFF"
+    PagerStyle-Mode="NumericPages" 
+    CellPadding="2"
+    SelectedItemStyle-BackColor="#F9814D" 
+    Width="100%" 
+     ItemStyle-Font-Size="0.9em" />

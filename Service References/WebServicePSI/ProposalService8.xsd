@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PSI.BL.BO.DocumentManagment" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO.DocumentManagment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.92.150.84:55553/PSI.Internal.WCF/WCFServices/Proposals/ProposalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PSI.BL.BO" />
+  <xs:complexType name="ArrayOfPSIDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIDocument" nillable="true" type="tns:PSIDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIDocument" nillable="true" type="tns:ArrayOfPSIDocument" />
+  <xs:complexType name="PSIDocument">
+    <xs:sequence>
+      <xs:element name="_x003C_CheckOut_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_CheckOutby_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CreatedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DisplayName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Extension_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_FullUrl_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_LocalPath_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MajorVersion_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ModifiedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RelativeUrl_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.IO" name="_x003C_Stream_x003E_k__BackingField" nillable="true" type="q1:Stream" />
+      <xs:element name="_x003C_Template_x003E_k__BackingField" nillable="true" type="tns:PSIDocumentTemplate" />
+      <xs:element name="_x003C_TimeCreated_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_TimeModified_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_Versions_x003E_k__BackingField" nillable="true" type="tns:ArrayOfPSIDocumentVersion" />
+      <xs:element name="_x003C_VirtualPath_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIDocument" nillable="true" type="tns:PSIDocument" />
+  <xs:complexType name="PSIDocumentTemplate">
+    <xs:sequence>
+      <xs:element name="_x003C_ApplyNamingRules_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_CanBeDownloaded_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_CanBeTurnedOff_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_CategoryId_x003E_k__BackingField" nillable="true" type="ser:guid" />
+      <xs:element name="_x003C_CategoryName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CompanyId_x003E_k__BackingField" type="ser:guid" />
+      <xs:element name="_x003C_CopyTemplateToProject_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_CopyToProject_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_FolderPath_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Folders_x003E_k__BackingField" nillable="true" type="tns:ArrayOfPSIDocumentFolder" />
+      <xs:element name="_x003C_Formats_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="ser:guid" />
+      <xs:element name="_x003C_IsMandatoryForExecution_x003E_k__BackingField" nillable="true" type="xs:boolean" />
+      <xs:element name="_x003C_IsOff_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsProjectExecution_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsReport_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsVisibleInDocumentsCheckList_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsVisibleInUploadList_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_MandatoryForProjectLevel_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PublicQualificationDocument_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_SharepointId_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_SharepointMajorVersion_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_StartDate_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_TechnicalMemory_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_TranslatedName_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIDocumentTemplate" nillable="true" type="tns:PSIDocumentTemplate" />
+  <xs:complexType name="ArrayOfPSIDocumentFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIDocumentFolder" nillable="true" type="tns:PSIDocumentFolder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIDocumentFolder" nillable="true" type="tns:ArrayOfPSIDocumentFolder" />
+  <xs:complexType name="PSIDocumentFolder">
+    <xs:sequence>
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="ser:guid" />
+      <xs:element name="_x003C_IsProjectExecution_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_ItemCount_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Path_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PSI.BL.BO" name="_x003C_RecordType_x003E_k__BackingField" type="q2:RecordType" />
+      <xs:element name="_x003C_SubFolders_x003E_k__BackingField" nillable="true" type="tns:ArrayOfPSIDocumentFolder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIDocumentFolder" nillable="true" type="tns:PSIDocumentFolder" />
+  <xs:complexType name="ArrayOfPSIDocumentVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIDocumentVersion" nillable="true" type="tns:PSIDocumentVersion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIDocumentVersion" nillable="true" type="tns:ArrayOfPSIDocumentVersion" />
+  <xs:complexType name="PSIDocumentVersion">
+    <xs:sequence>
+      <xs:element name="_x003C_CreatedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Created_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_URL_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Version_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PSIDocumentVersion" nillable="true" type="tns:PSIDocumentVersion" />
+  <xs:complexType name="ArrayOfPSIDocumentTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PSIDocumentTemplate" nillable="true" type="tns:PSIDocumentTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPSIDocumentTemplate" nillable="true" type="tns:ArrayOfPSIDocumentTemplate" />
+</xs:schema>

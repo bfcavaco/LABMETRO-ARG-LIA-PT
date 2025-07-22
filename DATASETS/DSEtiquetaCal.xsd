@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSEtiquetaCal" targetNamespace="http://tempuri.org/DSEtiquetaCal.xsd" xmlns:mstns="http://tempuri.org/DSEtiquetaCal.xsd" xmlns="http://tempuri.org/DSEtiquetaCal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSEtiquetaCal" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="DSEtiquetaCal" msprop:Generator_DataSetName="DSEtiquetaCal">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtEtiquetaCal" msprop:Generator_RowClassName="dtEtiquetaCalRow" msprop:Generator_RowEvHandlerName="dtEtiquetaCalRowChangeEventHandler" msprop:Generator_RowDeletedName="dtEtiquetaCalRowDeleted" msprop:Generator_RowDeletingName="dtEtiquetaCalRowDeleting" msprop:Generator_RowEvArgName="dtEtiquetaCalRowChangeEvent" msprop:Generator_TablePropName="dtEtiquetaCal" msprop:Generator_RowChangedName="dtEtiquetaCalRowChanged" msprop:Generator_UserTableName="dtEtiquetaCal" msprop:Generator_RowChangingName="dtEtiquetaCalRowChanging" msprop:Generator_TableClassName="dtEtiquetaCalDataTable" msprop:Generator_TableVarName="tabledtEtiquetaCal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idBRE" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="idBRE" msprop:Generator_ColumnPropNameInTable="idBREColumn" msprop:Generator_ColumnVarNameInTable="columnidBRE" msprop:Generator_UserColumnName="idBRE" type="xs:int" />
+              <xs:element name="refBRE" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="refBRE" msprop:Generator_ColumnPropNameInTable="refBREColumn" msprop:Generator_ColumnVarNameInTable="columnrefBRE" msprop:Generator_UserColumnName="refBRE" type="xs:string" minOccurs="0" />
+              <xs:element name="dtBRE" msprop:Generator_ColumnPropNameInRow="dtBRE" msprop:Generator_ColumnPropNameInTable="dtBREColumn" msprop:Generator_ColumnVarNameInTable="columndtBRE" msprop:Generator_UserColumnName="dtBRE" type="xs:dateTime" />
+              <xs:element name="observacoes" msprop:Generator_ColumnPropNameInRow="observacoes" msprop:Generator_ColumnPropNameInTable="observacoesColumn" msprop:Generator_ColumnVarNameInTable="columnobservacoes" msprop:Generator_UserColumnName="observacoes" type="xs:string" minOccurs="0" />
+              <xs:element name="idServico" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="idServico" msprop:Generator_ColumnPropNameInTable="idServicoColumn" msprop:Generator_ColumnVarNameInTable="columnidServico" msprop:Generator_UserColumnName="idServico" type="xs:int" />
+              <xs:element name="refServico" msprop:Generator_ColumnPropNameInRow="refServico" msprop:Generator_ColumnPropNameInTable="refServicoColumn" msprop:Generator_ColumnVarNameInTable="columnrefServico" msprop:Generator_UserColumnName="refServico" type="xs:string" />
+              <xs:element name="tipoEquipamento" msprop:Generator_ColumnPropNameInRow="tipoEquipamento" msprop:Generator_ColumnPropNameInTable="tipoEquipamentoColumn" msprop:Generator_ColumnVarNameInTable="columntipoEquipamento" msprop:Generator_UserColumnName="tipoEquipamento" type="xs:string" />
+              <xs:element name="empresa" msprop:Generator_ColumnPropNameInRow="empresa" msprop:Generator_ColumnPropNameInTable="empresaColumn" msprop:Generator_ColumnVarNameInTable="columnempresa" msprop:Generator_UserColumnName="empresa" type="xs:string" minOccurs="0" />
+              <xs:element name="numSerie" msprop:Generator_ColumnPropNameInRow="numSerie" msprop:Generator_ColumnPropNameInTable="numSerieColumn" msprop:Generator_ColumnVarNameInTable="columnnumSerie" msprop:Generator_UserColumnName="numSerie" type="xs:string" minOccurs="0" />
+              <xs:element name="acreditado" msprop:Generator_ColumnPropNameInRow="acreditado" msprop:Generator_ColumnPropNameInTable="acreditadoColumn" msprop:Generator_ColumnVarNameInTable="columnacreditado" msprop:Generator_UserColumnName="acreditado" type="xs:string" minOccurs="0" />
+              <xs:element name="sIdServico" msprop:Generator_ColumnPropNameInRow="sIdServico" msprop:Generator_ColumnPropNameInTable="sIdServicoColumn" msprop:Generator_ColumnVarNameInTable="columnsIdServico" msprop:Generator_UserColumnName="sIdServico" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtEtiquetaPosCalib" msprop:Generator_RowClassName="dtEtiquetaPosCalibRow" msprop:Generator_RowEvHandlerName="dtEtiquetaPosCalibRowChangeEventHandler" msprop:Generator_RowDeletedName="dtEtiquetaPosCalibRowDeleted" msprop:Generator_RowDeletingName="dtEtiquetaPosCalibRowDeleting" msprop:Generator_RowEvArgName="dtEtiquetaPosCalibRowChangeEvent" msprop:Generator_TablePropName="dtEtiquetaPosCalib" msprop:Generator_RowChangedName="dtEtiquetaPosCalibRowChanged" msprop:Generator_UserTableName="dtEtiquetaPosCalib" msprop:Generator_RowChangingName="dtEtiquetaPosCalibRowChanging" msprop:Generator_TableClassName="dtEtiquetaPosCalibDataTable" msprop:Generator_TableVarName="tabledtEtiquetaPosCalib">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idBRE" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="idBRE" msprop:Generator_ColumnPropNameInTable="idBREColumn" msprop:Generator_ColumnVarNameInTable="columnidBRE" msprop:Generator_UserColumnName="idBRE" type="xs:int" />
+              <xs:element name="refBRE" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="refBRE" msprop:Generator_ColumnPropNameInTable="refBREColumn" msprop:Generator_ColumnVarNameInTable="columnrefBRE" msprop:Generator_UserColumnName="refBRE" type="xs:string" minOccurs="0" />
+              <xs:element name="dtBRE" msprop:Generator_ColumnPropNameInRow="dtBRE" msprop:Generator_ColumnPropNameInTable="dtBREColumn" msprop:Generator_ColumnVarNameInTable="columndtBRE" msprop:Generator_UserColumnName="dtBRE" type="xs:dateTime" />
+              <xs:element name="observacoes" msprop:Generator_ColumnPropNameInRow="observacoes" msprop:Generator_ColumnPropNameInTable="observacoesColumn" msprop:Generator_ColumnVarNameInTable="columnobservacoes" msprop:Generator_UserColumnName="observacoes" type="xs:string" minOccurs="0" />
+              <xs:element name="idServico" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="idServico" msprop:Generator_ColumnPropNameInTable="idServicoColumn" msprop:Generator_ColumnVarNameInTable="columnidServico" msprop:Generator_UserColumnName="idServico" type="xs:int" />
+              <xs:element name="refServico" msprop:Generator_ColumnPropNameInRow="refServico" msprop:Generator_ColumnPropNameInTable="refServicoColumn" msprop:Generator_ColumnVarNameInTable="columnrefServico" msprop:Generator_UserColumnName="refServico" type="xs:string" />
+              <xs:element name="tipoEquipamento" msprop:Generator_ColumnPropNameInRow="tipoEquipamento" msprop:Generator_ColumnPropNameInTable="tipoEquipamentoColumn" msprop:Generator_ColumnVarNameInTable="columntipoEquipamento" msprop:Generator_UserColumnName="tipoEquipamento" type="xs:string" />
+              <xs:element name="empresa" msprop:Generator_ColumnPropNameInRow="empresa" msprop:Generator_ColumnPropNameInTable="empresaColumn" msprop:Generator_ColumnVarNameInTable="columnempresa" msprop:Generator_UserColumnName="empresa" type="xs:string" minOccurs="0" />
+              <xs:element name="dtEstado" msprop:Generator_ColumnPropNameInRow="dtEstado" msprop:Generator_ColumnPropNameInTable="dtEstadoColumn" msprop:Generator_ColumnVarNameInTable="columndtEstado" msprop:Generator_UserColumnName="dtEstado" type="xs:dateTime" />
+              <xs:element name="FuncionarioCalibrou" msprop:Generator_ColumnPropNameInRow="FuncionarioCalibrou" msprop:Generator_ColumnPropNameInTable="FuncionarioCalibrouColumn" msprop:Generator_ColumnVarNameInTable="columnFuncionarioCalibrou" msprop:Generator_UserColumnName="FuncionarioCalibrou" type="xs:string" minOccurs="0" />
+              <xs:element name="numSerie" msprop:Generator_ColumnPropNameInRow="numSerie" msprop:Generator_ColumnPropNameInTable="numSerieColumn" msprop:Generator_ColumnVarNameInTable="columnnumSerie" msprop:Generator_UserColumnName="numSerie" type="xs:string" minOccurs="0" />
+              <xs:element name="numIdentificacao" msprop:Generator_ColumnPropNameInRow="numIdentificacao" msprop:Generator_ColumnPropNameInTable="numIdentificacaoColumn" msprop:Generator_ColumnVarNameInTable="columnnumIdentificacao" msprop:Generator_UserColumnName="numIdentificacao" type="xs:string" minOccurs="0" />
+              <xs:element name="periodicidadeCalibracao" msprop:Generator_ColumnPropNameInRow="periodicidadeCalibracao" msprop:Generator_ColumnPropNameInTable="periodicidadeCalibracaoColumn" msprop:Generator_ColumnVarNameInTable="columnperiodicidadeCalibracao" msprop:Generator_UserColumnName="periodicidadeCalibracao" type="xs:short" minOccurs="0" />
+              <xs:element name="etiqueta1" msprop:Generator_ColumnPropNameInRow="etiqueta1" msprop:Generator_ColumnPropNameInTable="etiqueta1Column" msprop:Generator_ColumnVarNameInTable="columnetiqueta1" msprop:Generator_UserColumnName="etiqueta1" type="xs:string" minOccurs="0" />
+              <xs:element name="etiqueta2" msprop:Generator_ColumnPropNameInRow="etiqueta2" msprop:Generator_ColumnPropNameInTable="etiqueta2Column" msprop:Generator_ColumnVarNameInTable="columnetiqueta2" msprop:Generator_UserColumnName="etiqueta2" type="xs:string" minOccurs="0" />
+              <xs:element name="etiqueta3" msprop:Generator_ColumnPropNameInRow="etiqueta3" msprop:Generator_ColumnPropNameInTable="etiqueta3Column" msprop:Generator_ColumnVarNameInTable="columnetiqueta3" msprop:Generator_UserColumnName="etiqueta3" type="xs:string" minOccurs="0" />
+              <xs:element name="acreditado" msprop:Generator_ColumnPropNameInRow="acreditado" msprop:Generator_ColumnPropNameInTable="acreditadoColumn" msprop:Generator_ColumnVarNameInTable="columnacreditado" msprop:Generator_UserColumnName="acreditado" type="xs:string" minOccurs="0" />
+              <xs:element name="dtProximaCalibracao" msprop:Generator_ColumnPropNameInRow="dtProximaCalibracao" msprop:Generator_ColumnPropNameInTable="dtProximaCalibracaoColumn" msprop:Generator_ColumnVarNameInTable="columndtProximaCalibracao" msprop:Generator_UserColumnName="dtProximaCalibracao" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

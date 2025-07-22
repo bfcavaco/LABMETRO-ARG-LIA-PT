@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="labmetro2DataSet" targetNamespace="http://tempuri.org/labmetro2DataSet.xsd" xmlns:mstns="http://tempuri.org/labmetro2DataSet.xsd" xmlns="http://tempuri.org/labmetro2DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="connstr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connstr (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.connstr.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vTempoCalibracoesMinusSuspensosTableAdapter" GeneratorDataComponentClassName="vTempoCalibracoesMinusSuspensosTableAdapter" Name="vTempoCalibracoesMinusSuspensos" UserDataComponentName="vTempoCalibracoesMinusSuspensosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connstr (Web.config)" DbObjectName="labmetro2.dbo.vTempoCalibracoesMinusSuspensos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idFuncionarioEfectuouServico, funcionarioCalibrou, dtCalibracao FROM dbo.vTempoCalibracoesMinusSuspensos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idFuncionarioEfectuouServico" DataSetColumn="idFuncionarioEfectuouServico" />
+              <Mapping SourceColumn="funcionarioCalibrou" DataSetColumn="funcionarioCalibrou" />
+              <Mapping SourceColumn="dtCalibracao" DataSetColumn="dtCalibracao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="labmetro2DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="labmetro2DataSet" msprop:Generator_UserDSName="labmetro2DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vTempoCalibracoesMinusSuspensos" msprop:Generator_TableClassName="vTempoCalibracoesMinusSuspensosDataTable" msprop:Generator_TableVarName="tablevTempoCalibracoesMinusSuspensos" msprop:Generator_TablePropName="vTempoCalibracoesMinusSuspensos" msprop:Generator_RowDeletingName="vTempoCalibracoesMinusSuspensosRowDeleting" msprop:Generator_UserTableName="vTempoCalibracoesMinusSuspensos" msprop:Generator_RowChangingName="vTempoCalibracoesMinusSuspensosRowChanging" msprop:Generator_RowEvHandlerName="vTempoCalibracoesMinusSuspensosRowChangeEventHandler" msprop:Generator_RowDeletedName="vTempoCalibracoesMinusSuspensosRowDeleted" msprop:Generator_RowEvArgName="vTempoCalibracoesMinusSuspensosRowChangeEvent" msprop:Generator_RowChangedName="vTempoCalibracoesMinusSuspensosRowChanged" msprop:Generator_RowClassName="vTempoCalibracoesMinusSuspensosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idFuncionarioEfectuouServico" msprop:Generator_ColumnVarNameInTable="columnidFuncionarioEfectuouServico" msprop:Generator_ColumnPropNameInRow="idFuncionarioEfectuouServico" msprop:Generator_ColumnPropNameInTable="idFuncionarioEfectuouServicoColumn" msprop:Generator_UserColumnName="idFuncionarioEfectuouServico" type="xs:int" minOccurs="0" />
+              <xs:element name="funcionarioCalibrou" msprop:Generator_ColumnVarNameInTable="columnfuncionarioCalibrou" msprop:Generator_ColumnPropNameInRow="funcionarioCalibrou" msprop:Generator_ColumnPropNameInTable="funcionarioCalibrouColumn" msprop:Generator_UserColumnName="funcionarioCalibrou">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dtCalibracao" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndtCalibracao" msprop:Generator_ColumnPropNameInRow="dtCalibracao" msprop:Generator_ColumnPropNameInTable="dtCalibracaoColumn" msprop:Generator_UserColumnName="dtCalibracao" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,6 @@
+=== ALTERAÇÕES LABMETRO ===
+
+-- 03 de Novembro de 2016 --
+-- Criação de 2 novos campos na tabela EMPRESAS --
+bRequerDocEntrada	BIT
+documentacaoEntrada	VARCHAR(250)
