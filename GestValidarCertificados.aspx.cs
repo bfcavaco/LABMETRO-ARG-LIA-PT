@@ -1166,7 +1166,7 @@ namespace LabMetro
 			{
 				string delimStr = "-";
 				char[] delimiter = delimStr.ToCharArray();
-				string[] campos = nomeDocumento.Split(delimiter);
+				string[] campos = nomeDocumento.Replace("PT ", "").Split(delimiter);
 
 				delimStr = ".";
 				delimiter = delimStr.ToCharArray();

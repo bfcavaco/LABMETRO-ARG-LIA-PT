@@ -187,7 +187,7 @@
                         DataTextField="descricao" Width="175px" AppendDataBoundItems="true">
                         <asp:ListItem Value="" Text="---"></asp:ListItem>
                     </asp:DropDownList>--%>
-                     <asp:TextBox ID="txtSearchMarca" runat="server"></asp:TextBox>
+                     <asp:DropDownList ID="txtSearchMarca" runat="server"></asp:DropDownList>
     <asp:HiddenField ID="hfidMarca" runat="server" />
                 </td>
                 <td>

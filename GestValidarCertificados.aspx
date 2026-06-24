@@ -48,7 +48,7 @@
         runat="server" 
         AutoGenerateColumns="False" 
         OnSortCommand="SortGrid" 
-        OnItemDataBound="dgDocumentos_ItemDataBound" 
+        OnItemDataBound="dgDocumentos_ItemDataBound"
         AllowSorting="True"
         OnItemCommand="visualisarDocumento" 
         AllowPaging="False" 
